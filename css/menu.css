@@ -1,0 +1,164 @@
+/**
+ * The CSS in this file is for styling the demo page,
+ * Meny's critical styles (such as transforms) are applied
+ * via JavaScript.
+ *
+ * See the documentation here: https://github.com/hakimel/meny#meny
+ *
+ * @author Hakim El Hattab | http://hakim.se
+ */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.meny a {
+	text-decoration: none;
+	border-radius: 5px;
+	padding: 5px;
+	width: 100%;
+	display: inline-block;
+	-webkit-transition: background 0.4s ease, color 0.4s ease;
+	   -moz-transition: background 0.4s ease, color 0.4s ease;
+	    -ms-transition: background 0.4s ease, color 0.4s ease;
+	     -o-transition: background 0.4s ease, color 0.4s ease;
+	        transition: background 0.4s ease, color 0.4s ease;
+}
+
+h1,
+h2 {
+	font-size: 24px;
+}
+
+.meny {
+	display: none;
+	text-align: center;
+	padding: 10px 10px 0 0;
+	overflow: auto;
+	width: 100%!important;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+html:not(.mobile) .meny { width: 320px !important;}
+
+#jointm, .meny ul {
+		margin: 0;
+		width: 280px;
+		text-align: left;
+		float: right;
+	}
+		.meny ul li {
+			display: inline-block;
+			width: 270px;
+			list-style: none;
+			font-size: 16px;
+			padding: 3px 0;
+		}
+			.meny ul li:before {
+				content: '-';
+				margin-right: 5px;
+				display: none;
+			}
+
+/**
+ * Hint graphic that appears while menu is inactive
+ */
+.meny-arrow {
+	position: absolute;
+	z-index: 2;
+	opacity: 0.7;
+
+	border: 12px solid transparent;
+
+	-webkit-transition: opacity 0.4s ease 0.4s;
+	   -moz-transition: opacity 0.4s ease 0.4s;
+	    -ms-transition: opacity 0.4s ease 0.4s;
+	     -o-transition: opacity 0.4s ease 0.4s;
+	        transition: opacity 0.4s ease 0.4s;
+}
+	.meny-left .meny-arrow {
+		left: 14px;
+		top: 50%;
+		margin-top: -16px;
+	}
+	.meny-right .meny-arrow {
+		right: 0px;
+		top: 50%;
+		margin-top: -12px;
+		transition: right 0.75s ease;
+	}
+
+	.meny-top .meny-arrow {
+		left: 50%;
+		top: 14px;
+		margin-left: -16px;
+	}
+	.meny-bottom .meny-arrow {
+		left: 50%;
+		bottom: 14px;
+		margin-left: -16px;
+	}
+	.meny-active .meny-arrow {
+		right: 300px;
+
+		-webkit-transition: right 0.75s ease;
+		   -moz-transition: right 0.75s ease;
+		    -ms-transition: right 0.75s ease;
+		     -o-transition: right 0.75s ease;
+		        transition: right 0.75s ease;
+	}
+
+/**
+ * Main contents area
+ */
+.contents {
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+	position: relative;
+
+	-webkit-overflow-scrolling: touch;
+	-webkit-transform-style: preserve-3d;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+	.contents>article {
+		max-width: 400px;
+	}
+	.contents p {
+		margin: 10px 0 10px 0;
+		font-size: 18px;
+		line-height: 1.32;
+	}
+	.contents small {
+		display: block;
+		margin-top: 10px;
+		padding-top: 10px;
+		font-size: 0.85em;
+
+		-webkit-text-size-adjust: none;
+	}
+	.contents .sharing {
+		position: absolute;
+		bottom: 20px;
+	}
+/**
+ * Miscelaneous
+ */
+.meny #sharethis {float: left; display: table;}

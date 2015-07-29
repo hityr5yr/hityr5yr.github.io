@@ -1,0 +1,368 @@
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * Copyright (C) 2015 Hakim El Hattab, http://hakim.se
+ */
+section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
+  color: #324B6E; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+ html {
+  background: -moz-linear-gradient(bottom right, #314A6D, #1D313C);
+  background: -webkit-linear-gradient(left top, #314A6D, #1D313C); 
+  background: -o-linear-gradient(bottom right, #314A6D, #1D313C);
+  background: -ms-linear-gradient(bottom right, #314A6D, #1D313C);
+  background: linear-gradient(to bottom right, #314A6D, #1D313C);
+} 
+body {
+  background: url("../../images/viewcont-light.png") no-repeat 5px 5px fixed;
+} 
+
+  }
+
+::selection {
+  color: #fff;
+  background: #bee4fd;
+  text-shadow: none; }
+
+.reveal .slides > section, .reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; 
+  }
+.reveal {
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  color: #fff; 
+  background: -moz-linear-gradient(bottom right, #FFF, #324B6E);
+  background: -webkit-linear-gradient(left top, #FFF, #324B6E);
+  background: -o-linear-gradient(bottom right, #FFF, #324B6E);
+  background: -ms-linear-gradient(bottom right, #FFF, #324B6E);
+  background: linear-gradient(to bottom right, #FFF, #324B6E);
+  }
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 40px; }
+
+.reveal h2 {
+  font-size: 34px; }
+
+.reveal h3 {
+  font-size: 28px; }
+
+.reveal h4 {
+  font-size: 22px; }
+  
+ .reveal h5 {
+  font-size: 20px; 
+  text-transform: none!important;
+  margin: 0!important;}
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  margin: 20px 0;
+  line-height: 1.3; }
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img, .reveal video, .reveal iframe {
+  max-width: 95%;
+  max-height: 95%; 
+  border-radius: 25px;
+  }
+
+.reveal strong, .reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol, .reveal dl, .reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal; }
+
+.reveal ul {
+  list-style-type: disc; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q, .reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  border-radius: 10px;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: #6E9C91;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child, .reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace; }
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+  background: #3F3F3F;
+  color: #DCDCDC; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th, .reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+ }
+
+.reveal table th[align="center"], .reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"], .reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+   .reveal.overview .slides section:hover{
+    outline: 25px solid #FFF;
+	} 
+   .reveal.overview .slides section.present {
+    outline: 25px solid #5A538A;
+	}
+    .reveal.overview .backgrounds .slide-background {
+    outline: 12px solid rgba(90, 83, 138, 0.4);
+	}
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  display: inline;
+  text-decoration: none;
+  -webkit-transition: background 0.4s ease, color 0.4s ease;
+  -moz-transition: background 0.4s ease, color 0.4s ease;
+  -ms-transition: background 0.4s ease, color 0.4s ease;
+  -o-transition: background 0.4s ease, color 0.4s ease;
+  transition: background 0.4s ease, color 0.4s ease; 
+  border-radius: 5px;
+  color: #fff;
+  background: #5A538A;
+  padding: 3px 5px;
+  }
+  .reveal a.imaga{background: none;}
+
+.reveal a:hover {
+  color: #3B336B!important;
+  background: #FFF!important;
+  border-radius: 5px;
+ }
+
+.reveal .roll span:after {
+  color: #5A538A!important;
+  background: #fff!important;
+  border-radius: 5px;
+ }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 3px solid rgba(90, 83, 138, 0.4);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
+  }
+
+.reveal a img {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+
+.reveal a:hover img, .zoomel:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #5A538A;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); 
+  }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: #F4D8AB; }
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: #F4D8AB; }
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #F4D8AB; }
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: #F4D8AB; }
+
+ .reveal .controls div.navigate-left.enabled, 
+ .reveal .controls div.navigate-right.enabled, 
+ .reveal .controls div.navigate-top.enabled,
+ .reveal .controls div.navigate-bottom.enabled  {
+ opacity: 0.7;
+ }
+.reveal .controls div.navigate-left.enabled:hover ,
+.reveal .controls div.navigate-right.enabled:hover, 
+.reveal .controls div.navigate-up.enabled:hover, 
+.reveal .controls div.navigate-down.enabled:hover {
+  opacity: 1; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(64,55,116, 0.3); 
+  background-image: linear-gradient(90deg, rgb(64,55,116) 3%, transparent 0, transparent 100%);
+  }
+
+.reveal .progress span {
+  background: #5A538A;
+  opacity: 0.6;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #3F5472; }
+
+/*********************************************
+* MENU COLORS
+**********************************************/
+.meny {
+  background: -moz-linear-gradient(bottom, #1D313C, #314A6D);
+  background: -webkit-linear-gradient(top, #1D313C, #314A6D);
+  background: -o-linear-gradient(bottom, #1D313C, #314A6D);
+  background: -ms-linear-gradient(bottom, #1D313C, #314A6D);
+  background: linear-gradient(to bottom, #1D313C, #314A6D);
+
+	color: #eee;
+	border-left: 30px solid rgba(244, 216, 171, 0);
+}
+.meny:hover{
+
+}
+.meny a {
+	color: #fff;
+	background: #827CA7;
+}
+.meny a:hover {
+	color: #5A538A;
+	background: #fff;
+}
+.meny ul li:before {
+	color: #F4D8AB;
+}
+.meny-left .meny-arrow {
+	border-left: 20px solid #F4D8AB;
+}
+.meny-right .meny-arrow {
+	border-right: 20px solid #F4D8AB;
+}
+.meny-top .meny-arrow {
+	border-top: 20px solid #F4D8AB;
+}
+.meny-bottom .meny-arrow {
+	border-bottom: 20px solid #F4D8AB;
+}
+.contents small {
+	color: #333;
+	border-top: 1px dashed #ccc;
+}
+.reveal .controls span.menu-icon {
+  background-image: url(../../images/galeria.png); 
+  }
+ .reveal .controls span.info-icon {
+  background-image: url(../../images/info.png); 
+  }
+ .reveal .controls span.en-lang, .meny div.en-lang {
+  background-image: url(../../images/BG.png); 
+  }
+ .reveal .controls span.bg-lang, .meny div.bg-lang {
+  background-image: url(../../images/EN.png); 
+  }

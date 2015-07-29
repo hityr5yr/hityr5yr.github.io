@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>View Control by ViewCont Ltd.</title>
+
+		<meta name="description" content="We make 3D illusions.">
+		<meta name="author" content="ViewCont Ltd.">
+		<meta charset="utf-8">
+		<meta name="keywords" content="3D illusions, street art, augmented reality, interior design, architecture design, outdoor advertising, улично изкуство, интериорен дизайн, добавена реалност, 3D илюзии, външна реклама, архитектурен дизайн">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/menu.css">		
+		<link rel="shortcut icon" href="images/viewcont.ico">
+		
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Browser Recognition, Printing and PDF exports -->
+		<script type="text/javascript">var switchTo5x=true;</script>
+		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+		<script type="text/javascript">stLight.options({publisher: "76930973-14cc-4f8d-8968-6057b7c619dd", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+		<script>
+			function css_browser_selector(u){var ua=u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1},g='gecko',w='webkit',s='safari',o='opera',m='mobile',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3.6')?g+' ff3 ff3_6':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('blackberry')?m+' blackberry':is('android')?m+' android':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?m+' j2me':is('iphone')?m+' iphone':is('ipod')?m+' ipod':is('ipad')?m+' ipad':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win'+(is('windows nt 6.0')?' vista':''):is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; 
+			css_browser_selector(navigator.userAgent);
+			var ismac;
+			if(c.search('mac')!=-1){ismac = false;}
+			else{ismac = true;}
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<script>
+			function change_language(lang1, lang2){
+
+				var i, lng1 = lang1+"-lang", lng2 = lang2+"-lang", textelements1 = document.getElementsByClassName(lng1), textelements2 = document.getElementsByClassName(lng2);		
+				for(i = 0; i < textelements2.length; i++){
+					textelements2[i].style.display="none"; 
+				}
+				for(i = 0; i < textelements1.length; i++){
+						textelements1[i].style.display="block"; 
+					}
+				if(document.getElementsByClassName('bg-map')[0]){
+					if(lang1=='bg'){document.getElementsByClassName('bg-map')[0].style.zIndex = 2;}
+					else{document.getElementsByClassName('bg-map')[0].style.zIndex = 0;};
+				}
+				if(document.querySelectorAll(".reveal #lastpro center span a span")){
+					if(lang1=='bg'){
+						document.getElementById("s1").style.display="block";
+						document.getElementById("s11").style.display="inline-block";
+						document.getElementById("s11").style.opacity=1;
+						document.getElementById("s12").style.opacity=1;						
+						document.getElementById("a1").style.display="inline-block";
+						document.getElementById("a1").style.background="#5A538A";
+						document.getElementById("s12").style.display="inline-block";
+						document.getElementById("s2").style.display="none";
+						document.getElementById("s21").style.display="none";
+						document.getElementById("s22").style.display="none";
+						document.getElementById("a2").style.display="none";						
+						}
+					else{
+						document.getElementById("s1").style.display="none";
+						document.getElementById("s11").style.display="none";
+						document.getElementById("s12").style.display="none";
+						document.getElementById("a1").style.display="none";
+						document.getElementById("s2").style.display="block";
+						document.getElementById("s21").style.display="inline-block";
+						document.getElementById("s21").style.opacity=1;
+						document.getElementById("s22").style.opacity=1;
+						document.getElementById("a2").style.display="inline-block";
+						document.getElementById("a2").style.background="#5A538A";
+						document.getElementById("s22").style.display="inline-block";
+						}
+					}
+				if(c.search('mobile')==-1){
+					document.getElementsByClassName('mobileau')[1].style.display='none';
+				}
+				else{ if(document.body.clientWidth < 734){document.getElementsByClassName('mobileau')[1].style.display='inline-block';}}
+			}
+			function hideunnecessary(){
+				document.getElementById('shortcuts').style.visibility='visible';	
+				document.getElementsByClassName('reveal')[0].style.display='none';
+				meny.close(); 
+			}	
+		</script>
+	</head>
+
+	<body>
+		<script src="js/reveal.js"></script>
+		<script src="js/meny.js"></script>
+		<table id="shortcuts">
+			<tbody class="bg-lang">
+				<tr>
+					<td class="c2" style="padding: 5px 0;"><center>Клавиши за бърз достъп</center></td>
+				</tr>	
+				<tr>
+					<td style="text-align: center; padding: 0 0 5px;">
+						<div class="sitecontrols" style="margin-left: 0;">
+							<center>
+								<div class="c1d" title="Клавиатура">Esc</div>
+								Карта на сайта
+							</center>
+						</div>
+						<div class="sitecontrols">
+							<center>
+								<div class="c1d" title="Клавиатура">Home</div>
+								Челна страница
+							</center>
+						</div>
+						<div class="sitecontrols" style="margin-right: 0;">
+							<center>
+								<div class="c1d" title="Клавиатура">F</div>
+								Цял екран
+							<center>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="c2" style="border-top: 1px solid #fff;"><center style="padding: 5px 0;">Навигация</center></td>
+				</tr>	
+				<tr>
+					<td style="padding: 0 0 5px 0;">
+						<div style="display: table-cell; width: 50%;">
+							<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="c2" colspan="3"><center style="margin-bottom: 1px;"><div class="c1d" style="font-size: 22px;">&#8593;</div></center></td>
+								</tr>
+								<tr>
+									<td class="c2" colspan="3"><center><div class="c1d" style="font-size: 22px; margin-right: 2px; line-height: 36px; display: inline-block;">&#8592;</div><div class="c1d" style="font-size: 22px; margin-right: 2px; line-height: 36px; display: inline-block;">&#8595;</div><div class="c1d" style="font-size: 22px; line-height: 36px; display: inline-block;">&#8594;</div>Клавиатура</center></td>
+								</tr>
+							</table>
+						</div>
+						<div class="ctrl"><img src="images/wheel.png" width="36" height="36">Скролер на мишката<br>(без Magic Mouse)</div>
+						<div class="ctrl"><img src="images/finger.png" width="36" height="36">Сензорен екран</div>
+					</td>
+				</tr>
+			</tbody>
+			<tbody class="en-lang">
+				<tr>
+				<tr>
+					<td class="c2" style="padding: 5px 0 0;"><center>Keyboard shortcuts</center></td>
+				</tr>
+				<td style="text-align: center; padding: 0 0 5px;">
+					<div class="sitecontrols" style="margin-left: 0;">
+						<center>
+							<div class="c1d" title="Клавиатура">Esc</div>
+							Site map
+						</center>
+					</div>
+					<div class="sitecontrols">
+						<center>
+							<div class="c1d" title="Клавиатура">Home</div>
+							Home page
+						</center>
+					</div>
+					<div class="sitecontrols" style="margin-right: 0;">
+						<center>
+							<div class="c1d" title="Клавиатура">F</div>
+							Full screen
+						<center>
+					</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="c2" style="border-top: 1px solid #fff;"><center style="padding: 5px 0;">Site navigation</center></td>
+				</tr>	
+				<tr>
+					<td style="padding: 0 0 5px;">
+						<div style="display: table-cell; width: 50%;">
+							<table cellspacing="0" cellpadding="0">
+								<tr>
+									<td class="c2" colspan="3"><center style="margin-bottom: 1px;"><div class="c1d" style="font-size: 22px;">&#8593;</div></center></td>
+								</tr>
+								<tr>
+									<td class="c2" colspan="3"><center><div class="c1d" style="font-size: 22px; margin-right: 2px; line-height: 36px; display: inline-block;">&#8592;</div><div class="c1d" style="font-size: 22px; margin-right: 2px; line-height: 36px; display: inline-block;">&#8595;</div><div class="c1d" style="font-size: 22px; line-height: 36px; display: inline-block;">&#8594;</div>Keyboard</center></td>
+								</tr>
+							</table>
+						</div>
+						<div class="ctrl"><img src="images/wheel.png">Mouse wheel<br>(No Magic Mouse)</div>
+						<div class="ctrl"><img src="images/finger.png">Touch screen</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<p style="font-size:10px; position: absolute; left: 0; bottom: 6px; width: 270px; color: #fff; text-align: center; padding: 0 25px;">© 2015 VIEWCONT Ltd.</p>
+		<div class="meny">
+			<div id="jointm">
+				<div id="sharethis">
+					<span class='st_sharethis_large' displayText='ShareThis'></span>
+					<span class='st_facebook_large' displayText='Facebook'></span>
+					<span class='st_twitter_large' displayText='Tweet'></span>
+					<span class='st_linkedin_large' displayText='LinkedIn'></span>
+					<span class='st_googleplus_large' displayText='Google +'></span>
+					<span class='st_email_large' displayText='Email'></span>
+				</div>
+				<ul class="bg-lang">
+					<li style="padding-top: 1px;"><a href="#/0" onclick="meny.close()">Начало</a></li>
+					<li><a href="#/1" onclick="meny.close()">Проекти</a></li>
+					<li><a href="#/2" onclick="meny.close()">Технологията</a></li>
+					<li><a href="#/3" onclick="meny.close()">За клиенти</a></li>
+					<li><a href="#/4/0" onclick="meny.close()">Ние</a></li>
+					<li><a href="#/4/1" onclick="meny.close()">Контакти</a></li>
+					<li style="display: none;" class="mobileau"><a href="#/0" onclick="hideunnecessary();">Клавиши и навигация в сайта</a></li>
+				</ul>
+				<ul class="en-lang">
+					<li style="padding-top: 1px;"><a href="#/0" onclick="meny.close()">Home</a></li>
+					<li><a href="#/1" onclick="meny.close()">Projects</a></li>
+					<li><a href="#/2" onclick="meny.close()">The Technology</a></li>
+					<li><a href="#/3" onclick="meny.close()">Customers only</a></li>
+					<li><a href="#/4/0" onclick="meny.close()">About us</a></li>
+					<li><a href="#/4/1" onclick="meny.close()">Contacts</a></li>
+					<li style="display: none;" class="mobileau"><a href="#/0" onclick="hideunnecessary();">Site controls</a></li>
+				</ul>
+				<div class="en-lang" style="display: none;" onclick="change_language('bg', 'en')"></div>
+				<div class="bg-lang" onclick="change_language('en', 'bg')"></div>
+			</div>	
+		</div>
+
+		<div class="meny-arrow" onclick="onMouseMove()"></div>
+
+		<div class="contents">
+			<div class="reveal">
+				<!-- Any section element inside of this container is displayed as a slide -->
+				<div class="slides">
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<center>
+							<div class="sectiondiv" style="width: 940px; padding: 20px!important;">
+								<div class="bg-lang gentext" style="width: 280px; float: left; margin: 0 20px 0 0;">
+									Добавената реалност пленява. Въздействието ѝ е неустоимо. Илюзорните образи, наблюдавани от определени места, са изумителни.
+									<div class="divider2"></div>
+									С помощта на създадените от нас софтуерни инструменти ние постигаме неочакван оптичен ефект, както с рекламни решения и арт творби, 
+									така и с интериорен и дори екстериорен дизайн.
+									<div class="divider2"></div>
+									Убедете се от нашите <a href="#/1/0">проекти</a>.
+								</div>
+								<div class="en-lang gentext" style="width: 280px; float: left; margin: 0 20px 0 0;">
+									The augmented reality is breathtaking. Its impact is irresistible. Illusionary images seen from certain places are amazing.
+									<div class="divider2"></div>
+									<div class="divider"></div>								
+									We created software tools that allowed us achieving unexpected optical effects with advertising solutions, art works, interior and even 
+									exterior design.
+									<div class="divider2"></div>
+									<div class="divider"></div>
+									Convince of our <a href="#/1/0">projects</a>.
+								</div>
+								<iframe class="bg-lang" style="display: block;" src="https://embed-ssl.ted.com/talks/lang/bg/margaret_wertheim_crochets_the_coral_reef.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+								<iframe class="en-lang" src="https://embed-ssl.ted.com/talks/lang/en/margaret_wertheim_crochets_the_coral_reef.html" width="640" height="360" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+							</div>
+						</center>
+					</section>
+					<section id="prosection" data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<section>
+							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
+							<center>
+								<div class="sectiondiv" style="width: 750px;">
+									<p class="protitle">
+										<h5 class="bg-lang titex">
+											Виадукт бул. "Брюксел"*
+										</h5>
+										<h5 class="en-lang titex">
+											Brussels Blwd. Viaduct*
+										</h5>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_1_1" class="zoomel" data-src="projects/triangles.png">
+										<br>	
+										<span class="bg-lang">Отляво</span>
+										<span class="en-lang">From the left</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_1_2" class="zoomel" data-src="projects/bubbles.png">
+										<br>	
+										<span class="bg-lang">Фронтално</span>
+										<span class="en-lang">Head-on</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_1_3" class="zoomel" data-src="projects/canvas.png">
+										<br>	
+										<span class="bg-lang">Отдясно</span>
+										<span class="en-lang">From the right</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация</span>
+										<span class="en-lang note">*Simulation</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="roll navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
+							<center>
+								<div class="sectiondiv" style="width: 750px;">
+									<p class="bg-lang protitle">
+										Метростанция "Централна гара"*
+									</p>
+									<p class="en-lang protitle">
+										Metro station "Central Railway Station"*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_2_1" class="zoomel" data-src="projects/dragons.jpg">
+										<br>	
+										<span class="bg-lang">Отляво</span>
+										<span class="en-lang">From the left</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_2_2" class="zoomel" data-src="projects/hurricane.jpg">
+										<br>	
+										<span class="bg-lang">Фронтално</span>
+										<span class="en-lang">Head-on</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_2_3" class="zoomel" data-src="projects/group-sex.jpg">
+										<br>	
+										<span class="bg-lang">Отдясно</span>
+										<span class="en-lang">From the right</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация</span>
+										<span class="en-lang note">*Simulation</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="roll navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
+							<center>
+								<div class="sectiondiv" style="width: 750px;">
+									<p class="bg-lang protitle">
+										Офис ФИПРА*
+									</p>
+									<p class="en-lang protitle">
+										FIPRA office*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_3_3" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отляво</span>
+										<span class="en-lang">From the left</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_3_2" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Фронтално</span>
+										<span class="en-lang">Head-on</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_3_3" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отдясно</span>
+										<span class="en-lang">From the right</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация</span>
+										<span class="en-lang note">*Simulation</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="roll navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
+							<center>
+								<div class="sectiondiv" style="widt: 750px;">
+									<p class="bg-lang protitle">
+										Петте кьошета*
+									</p>
+									<p class="en-lang protitle">
+										The five corners*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_4_1" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отляво</span>
+										<span class="en-lang">From the left</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_4_2" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Фронтално</span>
+										<span class="en-lang">Head-on</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_4_3" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отдясно</span>
+										<span class="en-lang">From the right</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация</span>
+										<span class="en-lang note">*Simulation</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="roll navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
+							<center>
+								<div class="sectiondiv" style="width: 750px;">
+									<p class="bg-lang protitle">
+										Метро станция "Дружба"*
+									</p>
+									<p class="en-lang protitle">
+										Metro station "Fellowship"*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_5_1" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отляво</span>
+										<span class="en-lang">From the left</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_5_2" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Фронтално</span>
+										<span class="en-lang">Head-on</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_5_3" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отдясно</span>
+										<span class="en-lang">From the right</span>
+									</p>
+									<div class=="pronote">
+										<span class="bg-lang note">*Симулация</span>
+										<span class="en-lang note">*Simulation</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="roll navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
+							<center>
+								<div class="sectiondiv" style="width: 750px;">
+									<p class="bg-lang protitle">
+										Проект №6*
+									</p>
+									<p class="en-lang protitle">
+										Project #6*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_6_1" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отляво</span>
+										<span class="en-lang">From the left</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_6_2" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Фронтално</span>
+										<span class="en-lang">Head-on</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_6_3" class="zoomel" data-src="">
+										<br>	
+										<span class="bg-lang">Отдясно</span>
+										<span class="en-lang">From the right</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация</span>
+										<span class="en-lang note">*Simulation</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<div id="lastpro">
+									<center>
+										<span id="s1" class="bg-lang" style="line-height: 20px; font-size: 20px;"><span id="s11" class="bg-lang" style="display: none: opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; ">Как го правим</span><a id="a1" href="#/2"><span id="s12" style="display: none: opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; font-size: 24px;">?</span></a></span>
+										<span id="s2" class="en-lang" style="line-height: 20px; font-size: 20px;"><span id="s21" class="eg-lang" style="display: none; opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease;">How do we do it</span><a id="a2" href="#/2"><span id="s22" style="display: none; opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; font-size: 24px;">?</span></a></span>
+									</center>					
+								</div>
+							</center>
+						</section>
+					</section>
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<h2 class="bg-lang">Технологията</h2>
+						<h2 class="en-lang">The Technology</h2>
+						<div class="sectiondiv" style="width: 930px;">
+							<table style="font-size: 16px;">
+								<tbody>
+									<tr>
+										<td width = "25%" height="173" style="background: url(images/camera.png) no-repeat center center">
+										</td>
+										<td width = "25%">
+										</td>
+										<td width = "25%">
+										</td>
+										<td width = "25%">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="bg-lang">1. Заснемаме мястото.</div>
+											<div class="en-lang">1. We take pictures of the place.</div>
+										</td>
+										<td>
+											<div class="bg-lang">2. Софтуерът ни превръща снимките в 3D модел на сцената/обекта...</div>
+											<div class="en-lang">2. Our software turns them into a 3D model of the scene/object...</div>
+										</td>
+										<td>
+											<div class="bg-lang">3. ...съвместява визуализационните му параметри с тези на подготвеното изображение...</div>
+											<div class="en-lang">3. ...puts visualisation parameters of both prepared image and the model in accordance...</div>
+										</td>
+										<td>
+											<div class="bg-lang">4. ...и накрая изготвя шаблоните, които да бъдат разположени върху обекта.</div>
+											<div class="en-lang">4. ...and in the end makes templates that have to be placed on the place/object.</div>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="4" style="text-align: center; padding: 10px 110px 0; border-top: 1px solid #fff;">
+											<div class="bg-lang" style="text-align: left;">
+												За потребителя това означава:
+												<ul style="width: 690px; margin: 10px; 0 0">
+													<li>Възможност за реализация на проекти върху големи по размер и сложни по форма обекти;</li>
+													<li>Възможност за оценка и корекция на изображенията преди полагането им;</li>
+													<li>Многократно съкратено време за дизайн и полагане;</li>
+													<li>Гарантирана висока точност на положените изображения.</li>
+												</ul>
+											</div>
+											<div class="en-lang" style="text-align: left;">
+												For the client that means:
+												<ul style="width: 690px; margin: 10px; 0 0">
+													<li>Opportunity for realisation of projects on big and complex objects.</li>
+													<li>Possibility to estimate the image and correct it before applying on the object.</li>
+													<li>Dramatically shortened time of design and application.</li>
+													<li>Guaranteed high accuracy of applied images.</li>
+												</ul>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="divider2"></div>
+						<div class="bg-lang" style="font-size: 18px;">Всъщност какво получава потребителят<a href="#/3" style="font-size: 24px;">?</a></div>						
+						<div class="en-lang" style="font-size: 18px;">In fact, the user gets what<a href="#/3" style="font-size: 24px;">?</a></div>
+					</section>
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<center>
+							<h2 class="bg-lang">За клиенти</h2>
+							<h2 class="en-lang">For customers</h2>
+							<div class="sectiondiv" style="font-size: 18px;">
+								<table style="width: 650px; height: 200px;">
+									<tbody>
+										<tr>
+											<td style="padding: 0!important; width: 200px; border-right: 1px solid #fff; border-bottom: 1px solid #fff;">
+												<span class="bg-lang">АРХИТЕКТИ, ДИЗАЙНЕРИ, РЕКЛАМНИ АГЕНЦИИ, ХУДОЖНИЦИ</span>
+												<span class="en-lang">ARCHITECTS, DESIGNERS, ADVERTISING AGENCIES, ARTISTS</span>
+											</td>
+											<td style="padding: 0 10px!important; text-align: justify; border-bottom: 1px solid #fff;">
+												<span class="bg-lang">Можем да ви консултираме при създаването на вашата творба, ще обработим вашето готово изображение, ще ви предоставим шаблоните и ако искате, ще ви дадем съвети при полагането.</span>
+												<span class="en-lang">We can advise you while you create your work. We will process your image and give you its templates. And if you want we will consult you on application of the image. </span>													
+											</td>
+										</tr>
+										<tr>
+											<td style="padding: 10px 0 0!important; border-right: 1px solid #fff;">
+												<span class="bg-lang">СОБСТВЕНИЦИ НА НЕДВИЖИМИ ИМОТИ</span>
+												<span class="en-lang">REAL ESTATE OWNERS</span>
+											</td>
+											<td style="padding: 10px 10px 0; text-align: justify;">
+												<span class="bg-lang">Ние ще се погрижим да създадем подходящо изображение, да го обработим за предвижданото място, да изготвим шаблоните и да го положим.</span>
+												<span class="en-lang">We will take care for creating a suitable image. We will process it for the envisaged place. We will make the templates and finally we will lay it there.</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</center>
+						<div class="divider2"></div>
+						<div class="bg-lang" style="font-size: 18px;">Е, ако искате - <a href="#/4/1">обадете се</a>.</div>
+						<div class="en-lang" style="font-size: 18px;">So if you want, <a href="#/4/1">contact us</a>.</div>
+					</section>
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<section>
+							<h2 class="bg-lang">Ние</h2>
+							<h2 class="en-lang">About us</h2>
+							<div class="sectiondiv" style="width: 930px; height: 270px;">
+								<div class="bg-lang gentext">
+									Ние сме българска високо-технологична компания, основана през пролетта на 2015 г. Развиваме научно-изследователска дейност в областта 
+									на приложната математика и информационните технологии.<br><br>
+									Целта ни е разработване на софтуерни средства, прилагащи открити от нас математически зависимости в областта на епиполярната геометрия. Последните 
+									разкриват възможности за технологичен пробив в сфери като добавена реалност, компютърно зрение, гейм индустрия и др.<br><br> 
+									Освен собствени математически открития нашето ноу-хау включва собствени иновативни алгоритми и решения, а така също резултати от собствени 
+									научни изследвания.	Притежаваме две патентни заявки, свързани с предмета ни на дейност.<br><br>
+									Може да ни намерите <a href="#/4/1">тук</a>.
+								</div>
+								<div class="en-lang gentext">
+									We are a Bulgarian hi-tech company, established at the beginning of 2015 for scientific research in the field of Applied Mathematics and 
+									Information Technologies.<br><br>
+									Our goal is developing software instruments, which implement the discovered by us mathematical dependencies in the field of epipolar geometry. The 
+									latter reveal great opportunities for technological breakthrough in areas like augmented reality, computer vision, game industry etc.<br><br>
+									Our know-how is based not only on our mathematical discoveries but on our innovative algorithms and solutions, as well as on results from 
+									scientific studies we have conducted. As a result of this work two applications for inventions have been submitted to the Bulgarian Patent Office.<br><br>
+									You can find us <a href="#/4/1">here</a>.
+								</div>
+							</div>
+						</section>
+						<section>
+							<h2 class="bg-lang">Контакти</h2>
+							<h2 class="en-lang">Contacts</h2>
+							<center>
+								<div id="mapsec" style="display: table-cell; vertical-align: middle; background: #6E9C91; height: 430px; width: 900px; border-radius: 25px;">
+									<div class="sectiondiv" style="width: 280px; padding: 20px!important; float: left; height: 420px; margin-left: 0!important;">
+										<div class="bg-lang gentext" style="font-size: 16px!important;">
+											<img style="float: left;" src="images/home.png"><span style="margin: 0 0 0 5px!important; float: left; ">гр. София, ул. Хубча №2,<br>офис 11</span>
+										</div>
+										<div class="en-lang gentext" style="font-size: 16px!important;">
+											<img style="float: left;" src="images/home.png"><span style="margin: 0 0 0 5px!important; float: left;">1618 Sofia, 2 Hubcha str.,<br>Office 11</span>					
+										</div>
+										<div class="divider2"></div>
+										<div id="socialicons" style="display: inline-block; font-size: 16px!important;">
+											<img style="background: rgba(255, 255, 255, 0)!important; box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;float: left;" src="images/email.png"><span><a href="mailto:office@viewcont.com">office@viewcont.com</a></span>
+											<div class="divider2"></div>
+											<img style="background: rgba(255, 255, 255, 0)!important; box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;float: left;" src="images/twitter.png"><span><a href="https://twitter.com/viewcont" target="_blank">@ViewCont</a></span>
+											<div class="divider3" style="border-bottom: 1px solid #FFF;"></div>
+											<div class="divider"></div>
+											<a style="padding: 0;" href="https://facebook.com/viewcont" target="_blank"><img style="" src="images/facebook.png"></a>
+											<a style="padding: 0;" href="https://linkedin.com/company/viewcont-ltd-" target="_blank"><img style="margin: 0 0 0 49px!important;" src="images/linkedin.png"></a>
+											<a style="padding: 0;" href="https://plus.google.com/108811430949420575742" target="_blank"><img src="images/googleplus.png" style="margin: 0 0 0 49px!important;"></a>
+											<a style="padding: 0;" href="https://youtube.com/channel/UCLlmHu1ukSE-5hzMr26uxIA" target="_blank"><img style="margin: 0 0 0 49px!important;" src="images/youtube.png"></a>
+										</div>
+									</div>
+								</div>
+							</center>
+						</section>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script>
+			var deg, plus = 0;
+			switch(document.body.clientWidth){
+			case 533: deg = 90; plus = 46; document.getElementById('shortcuts').style.marginLeft=0; document.getElementById('jointm').style.width="270px"; document.getElementsByTagName('ul')[0].style.width="270px";
+			document.getElementsByClassName('meny')[0].style.background = "none"; document.getElementsByClassName('meny')[0].style.borderLeft = "0px solid transparent"; 
+			document.getElementsByClassName('meny')[0].style.paddingRight = "0px"; break;
+			case 600: deg = 90; plus = 47; document.getElementById('shortcuts').style.marginLeft="5px"; break;
+			case 640: deg = 90; plus = 47; break;
+			case 800: deg = 85; plus = 14; break;
+			case 819: deg = 80.5; plus = 14; break;
+			case 950: deg = 77.5; break;
+			case 922: deg = 77.5; break;
+			case 1024: deg = 65; break;
+			case 1088: deg = 57.6; break;
+			case 1093: deg = 57; break;
+			case 1120: deg = 54.5; break;
+			case 1152: deg = 52; break;
+			case 1280: deg = 42.5; break;
+			case 1344: deg = 38.5; break;
+			case 1360: deg = 37.4; break;
+			case 1366: deg = 37.1; break;
+			case 1400: deg = 35.4; break;
+			case 1440: deg = 33.5; break;
+			case 1536: deg = 29.4; break;
+			case 1600: deg = 27; break;
+			case 1680: deg = 24.5; break;
+			case 1886: deg = 19.5; break;
+			case 1920: deg = 18.5; break;
+			case 2560: deg = 15; break;
+			default: deg = 90; plus = 46; break
+			};
+			// Create an instance of Meny
+			var meny = Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: Meny.getQuery().p || 'right',
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 320,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 20,
+
+				// [optional] Use mouse movement to automatically open/close
+				mouse: true,
+
+				// [optional] Use touch swipe events to open/close
+				touch: false,
+				// Rotation around Y
+				angle: deg
+			});
+
+			// API Methods:
+			// meny.open();
+			// meny.close();
+			// meny.isOpen();
+
+			// Events:
+			// meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+			// meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+			// Embed an iframe if a URL is passed in
+			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+				var contents = document.querySelector( '.contents' );
+				contents.style.padding = '0px';
+				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+			}
+		</script>
+
+		<script src="lib/js/head.min.js"></script>
+
+
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+//					{ src: 'plugin/wave/webcam-swiper-0.1.js'}, // Added by Peter Petrov
+//					{ src: 'plugin/wave/client.js'}  // Added by Peter Petrov
+				]
+			});
+			document.onload = secalc_plus();
+			function secalc_plus(){
+				var secnum = 100/(Reveal.getTotalSlides());
+				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
+				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
+				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseout', 'document.getElementById("menuicon").style.opacity=0.7');	
+			}
+		</script>
+	</body>
+</html>
