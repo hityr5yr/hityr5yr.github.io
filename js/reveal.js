@@ -3851,7 +3851,7 @@ case 40: navigateDown(); break; //
 				// space
 //				case 32: isOverview() ? deactivateOverview() : event.shiftKey ? navigatePrev() : navigateNext(); break;
 				// return
-//				case 13: isOverview() ? deactivateOverview() : triggered = false; break;
+				case 13: isOverview() ? deactivateOverview() : triggered = false; break;
 				// two-spot, semicolon, b, period, Logitech presenter tools "black screen" button
 //				case 58: case 59: case 66: case 190: case 191: togglePause(); break;
 				// f
