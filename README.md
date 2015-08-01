@@ -1,3 +1,3 @@
 # ViewCont
 
-Advanced design solutions.
+Advanced design solutions
