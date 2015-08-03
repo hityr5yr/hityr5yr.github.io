@@ -1,4 +1,4 @@
-var zoomflag = 0;
+var zoomflag = 0; // Added by Peter Petrov
 
 // Custom reveal.js integration
 (function(){
