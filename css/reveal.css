@@ -1347,11 +1347,11 @@ transition: opacity 0.5s ease;
   width: 48%!important;
   }
   .pronote{float: left; border-top: 1px solid #fff;}
-  .note{font-size: 12px!important; text-align: left!important; margin: 0!important; float: left;}
+  .note{font-size: 10px!important; text-align: left!important; margin: 0!important; float: left;}
   
 .en-lang {display: none;}
 .bg-lang {}
-.gentext{ text-align: justify; font-size: 18px!important; }
+.gentext{ text-align: justify; font-size: 16px!important; }
 
 .arrow{height: 38px; line-height:32px!important; font-size:28px!important;}
 .gentext img{
@@ -1365,3 +1365,4 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;
 #socialicons span {float: left; margin: 0!important; line-height: 32px; }
 #socialicons img{border:0; margin: 0 5px 3px 0!important; border-radius: 4px;}
 .reveal ul li{height: 20px;}
+#s11, s12 {font-size: 18px;}
