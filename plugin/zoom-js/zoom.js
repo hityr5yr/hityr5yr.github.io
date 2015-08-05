@@ -181,7 +181,7 @@ var zoom = (function(){
 					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){
 						event.target.title="If the image is blur, move out the cursor.";
 					} 
-					else {event.target.title="Ако изображението не е ясно, преместете курсора извън него.";}
+					else {event.target.title="Ако изображението е неясно, махнете курсора от него.";}
 				}
 			}															//
 			else {														//
