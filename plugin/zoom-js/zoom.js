@@ -176,18 +176,19 @@ var zoom = (function(){
 			if( level !== 1 ) {											//
 				document.documentElement.classList.add( 'zoomed' );		//
 				zoomflag = 1;											//
-				if(c.search('chrome')!=-1){					
-
-					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){
-						event.target.title="If the image is blur,\rmove out the cursor.";
-					} 
-					else {event.target.title="Ако снимката е неясна,\rмахнете курсора от нея.";}
-				}
+				if(c.search('chrome')!=-1){								//
+					var tar = event.target.id;							//
+					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){	 //
+						event.target.title="If the image is blur,\rmove out the cursor.";		 //
+					} 																			 //
+					else {event.target.title="Ако снимката е неясна,\rмахнете курсора от нея.";} //
+					setTimeout('document.getElementById("'+tar+'").title=""',2000);				 //
+				}																				 //
 			}															//
 			else {														//
 				document.documentElement.classList.remove( 'zoomed' );	//
 				zoomflag = 0;											//
-				if(c.search('chrome')!=-1){event.target.title="";}
+				if(c.search('chrome')!=-1){event.target.title="";}		//
 			}															//
 		}																//
 	}
