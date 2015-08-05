@@ -1,5 +1,4 @@
 var zoomflag = 0; // Added by Peter Petrov
-
 // Custom reveal.js integration
 (function(){
 	var isEnabled = true;
@@ -27,7 +26,7 @@ var zoomflag = 0; // Added by Peter Petrov
 					width: ( bounds.width * revealScale ) + ( zoomPadding * 2 ),
 					height: ( bounds.height * revealScale ) + ( zoomPadding * 2 ),
 					pan: false
-					});			
+					});	
 				}																//	Added by Peter Petrov
 			} 
 	} );
@@ -65,11 +64,11 @@ var zoom = (function(){
 
 	if( supportsTransforms ) {
 		// The easing that will be applied when we zoom in/out
-		document.body.style.transition = 'transform 0.8s ease';
-		document.body.style.OTransition = '-o-transform 0.8s ease';
-		document.body.style.msTransition = '-ms-transform 0.8s ease';
-		document.body.style.MozTransition = '-moz-transform 0.8s ease';
-		document.body.style.WebkitTransition = '-webkit-transform 0.8s ease';
+		document.body.style.transition = 'transform 0.6s ease';
+		document.body.style.OTransition = '-o-transform 0.6s ease';
+		document.body.style.msTransition = '-ms-transform 0.6s ease';
+		document.body.style.MozTransition = '-moz-transform 0.6s ease';
+		document.body.style.WebkitTransition = '-webkit-transform 0.6s ease';
 	}
 
 	// Zoom out if the user hits escape
@@ -177,10 +176,18 @@ var zoom = (function(){
 			if( level !== 1 ) {											//
 				document.documentElement.classList.add( 'zoomed' );		//
 				zoomflag = 1;											//
+				if(c.search('chrome')!=-1){					
+
+					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){
+						event.target.title="Click to zoom out.";
+					} 
+					else {event.target.title="Кликнете за смаляване.";}
+				}
 			}															//
 			else {														//
 				document.documentElement.classList.remove( 'zoomed' );	//
 				zoomflag = 0;											//
+				if(c.search('chrome')!=-1){event.target.title="";}
 			}															//
 		}																//
 	}
