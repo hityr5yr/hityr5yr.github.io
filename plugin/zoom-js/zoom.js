@@ -64,11 +64,11 @@ var zoom = (function(){
 
 	if( supportsTransforms ) {
 		// The easing that will be applied when we zoom in/out
-		document.body.style.transition = 'transform 0.6s ease';
-		document.body.style.OTransition = '-o-transform 0.6s ease';
-		document.body.style.msTransition = '-ms-transform 0.6s ease';
-		document.body.style.MozTransition = '-moz-transform 0.6s ease';
-		document.body.style.WebkitTransition = '-webkit-transform 0.6s ease';
+		document.body.style.transition = 'transform 0.6s ease';					//
+		document.body.style.OTransition = '-o-transform 0.6s ease';				//
+		document.body.style.msTransition = '-ms-transform 0.6s ease';			// Changed by Peter Petrov from 0.8s to 0.6s
+		document.body.style.MozTransition = '-moz-transform 0.6s ease';			//
+		document.body.style.WebkitTransition = '-webkit-transform 0.6s ease';	//
 	}
 
 	// Zoom out if the user hits escape
@@ -172,25 +172,25 @@ var zoom = (function(){
 
 		level = scale;
 
-		if( document.documentElement.classList ) {						// Added by Peter Petrov
-			if( level !== 1 ) {											//
-				document.documentElement.classList.add( 'zoomed' );		//
-				zoomflag = 1;											//
-				if(c.search('chrome')!=-1){								//
-					var tar = event.target.id;							//
-					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){	 //
-						event.target.title="If the image is blur,\rmove out the cursor.";		 //
-					} 																			 //
-					else {event.target.title="Ако снимката е неясна,\rмахнете курсора от нея.";} //
-					setTimeout('document.getElementById("'+tar+'").title=""',2000);				 //
-				}																				 //
-			}															//
-			else {														//
-				document.documentElement.classList.remove( 'zoomed' );	//
-				zoomflag = 0;											//
-				if(c.search('chrome')!=-1){event.target.title="";}		//
-			}															//
-		}																//
+		if( document.documentElement.classList ) {															// Added by Peter Petrov
+			if( level !== 1 ) {																				//
+				document.documentElement.classList.add( 'zoomed' );											//
+				zoomflag = 1;																				//
+				if(c.search('chrome')!=-1){																	//
+					var tar = event.target.id;																//
+					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){				//
+						event.target.title="If the image is blur,\rmove out the cursor.";					//
+					} 																						//
+					else {event.target.title="Ако изображението е неясно,\rизтеглете курсора извън него.";} //
+					setTimeout('document.getElementById("'+tar+'").title=""',1000);							//
+				}																							//
+			}																								//
+			else {																							//
+				document.documentElement.classList.remove( 'zoomed' );										//
+				zoomflag = 0;																				//
+				if(c.search('chrome')!=-1){event.target.title="";}											//
+			}																								//
+		}																									//
 	}
 
 	/**
