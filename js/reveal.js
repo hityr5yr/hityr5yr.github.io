@@ -35,8 +35,8 @@
 
 			// The "normal" size of the presentation, aspect ratio will be preserved
 			// when the presentation is scaled to fit different resolutions
-			width: 1024, // Changed by Peter Petrov
-			height: 750, // Changed by Peter Petrov
+			width: 980, // Changed by Peter Petrov
+			height: 715, // Changed by Peter Petrov
 
 			// Factor of the display size that should remain empty around the content
 			margin: 0.1,
