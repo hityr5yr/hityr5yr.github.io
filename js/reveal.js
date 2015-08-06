@@ -490,7 +490,7 @@
 			if(document.body.clientWidth < 734){											 //
 				document.getElementsByClassName('mobileau')[0].style.display='inline-block'; //
 			}																			 	 // 
-			document.getElementsByClassName('slide-number')[0].style.color='#F4D8AB';		 //	
+			document.getElementsByClassName('slide-number')[0].style.color='#506786';		 //	
 		}																					 //
 		else{document.getElementsByClassName('mobileau')[0].style.display='none';} 			 //
 	}

@@ -11,14 +11,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
  html {
-  background: -moz-linear-gradient(bottom right, #314A6D, #1D313C);
-  background: -webkit-linear-gradient(left top, #314A6D, #1D313C); 
-  background: -o-linear-gradient(bottom right, #314A6D, #1D313C);
-  background: -ms-linear-gradient(bottom right, #314A6D, #1D313C);
-  background: linear-gradient(to bottom right, #314A6D, #1D313C);
+  background: fixed url('../../images/pattern-back.gif') repeat 0 0;
 } 
 body {
-  background: url("../../images/viewcont-light.png") no-repeat 5px 5px fixed;
+  background: url("../../images/viewcont.png") no-repeat 5px 5px fixed;
+  background-size: 260px auto;
 } 
 
   }
@@ -36,20 +33,16 @@ body {
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
   font-size: 38px;
   font-weight: normal;
-  color: #fff; 
-  background: -moz-linear-gradient(bottom right, #FFF, #324B6E);
-  background: -webkit-linear-gradient(left top, #FFF, #324B6E);
-  background: -o-linear-gradient(bottom right, #FFF, #324B6E);
-  background: -ms-linear-gradient(bottom right, #FFF, #324B6E);
-  background: linear-gradient(to bottom right, #FFF, #324B6E);
+  color: #2b4261;
+  background: fixed url('../../images/pattern-front.gif') repeat 0 0;
   }
 /*********************************************
  * HEADERS
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
+  color: #b82025;
+  font-family: 'ModeratoG7LRegular', Helvetica, sans-serif !important;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -87,8 +80,13 @@ body {
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img, .reveal video, .reveal iframe {
   max-width: 95%;
-  max-height: 95%; 
-  border-radius: 25px;
+  max-height: 95%;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #FFF !important;
+  -webkit-box-shadow: 6px 6px 0 #3e5574;
+          box-shadow: 6px 6px 0 #3e5574;
   }
 
 .reveal strong, .reveal b {
@@ -135,7 +133,7 @@ body {
   margin: 20px auto;
   padding: 5px;
   font-style: italic;
-  background: #6E9C91;
+  background: #2b4261;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
 
 .reveal blockquote p:first-child, .reveal blockquote p:last-child {
@@ -217,26 +215,6 @@ body {
 /*********************************************
  * LINKS
  *********************************************/
-.reveal a {
-  display: inline;
-  text-decoration: none;
-  -webkit-transition: background 0.4s ease, color 0.4s ease;
-  -moz-transition: background 0.4s ease, color 0.4s ease;
-  -ms-transition: background 0.4s ease, color 0.4s ease;
-  -o-transition: background 0.4s ease, color 0.4s ease;
-  transition: background 0.4s ease, color 0.4s ease; 
-  border-radius: 5px;
-  color: #fff;
-  background: #5A538A;
-  padding: 3px 5px;
-  }
-  .reveal a.imaga{background: none;}
-
-.reveal a:hover {
-  color: #3B336B!important;
-  background: #FFF!important;
-  border-radius: 5px;
- }
 
 .reveal .roll span:after {
   color: #5A538A!important;
@@ -250,9 +228,6 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 3px solid rgba(90, 83, 138, 0.4);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
   }
 
 .reveal a img {
@@ -260,23 +235,18 @@ body {
   -moz-transition: all 0.15s linear;
   transition: all 0.15s linear; }
 
-.reveal a:hover img, .zoomel:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: #5A538A;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); 
-  }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
-  border-right-color: #F4D8AB; }
+  border-right-color: #506786; }
 .reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
-  border-left-color: #F4D8AB; }
+  border-left-color: #506786; }
 .reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #F4D8AB; }
+  border-bottom-color: #506786; }
 .reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
-  border-top-color: #F4D8AB; }
+  border-top-color: #506786; }
 
  .reveal .controls div.navigate-left.enabled, 
  .reveal .controls div.navigate-right.enabled, 
@@ -309,17 +279,15 @@ body {
  * SLIDE NUMBER
  *********************************************/
 .reveal .slide-number {
-  color: #3F5472; }
+  color: #FFF;
+  text-shadow: 0 0 5px #333;
+}
 
 /*********************************************
 * MENU COLORS
 **********************************************/
 .meny {
-  background: -moz-linear-gradient(bottom, #1D313C, #314A6D);
-  background: -webkit-linear-gradient(top, #1D313C, #314A6D);
-  background: -o-linear-gradient(bottom, #1D313C, #314A6D);
-  background: -ms-linear-gradient(bottom, #1D313C, #314A6D);
-  background: linear-gradient(to bottom, #1D313C, #314A6D);
+  background: fixed url('../../images/pattern-back.gif') repeat 0 0;
 
 	color: #eee;
 	border-left: 30px solid rgba(244, 216, 171, 0);
@@ -328,27 +296,12 @@ body {
 
 }
 .meny a {
-	color: #fff;
-	background: #827CA7;
+	color: #2b4261;
 }
 .meny a:hover {
-	color: #5A538A;
-	background: #fff;
 }
 .meny ul li:before {
-	color: #F4D8AB;
-}
-.meny-left .meny-arrow {
-	border-left: 20px solid #F4D8AB;
-}
-.meny-right .meny-arrow {
-	border-right: 20px solid #F4D8AB;
-}
-.meny-top .meny-arrow {
-	border-top: 20px solid #F4D8AB;
-}
-.meny-bottom .meny-arrow {
-	border-bottom: 20px solid #F4D8AB;
+	color: #506786;
 }
 .contents small {
 	color: #333;
@@ -356,13 +309,17 @@ body {
 }
 .reveal .controls span.menu-icon {
   background-image: url(../../images/galeria.png); 
+  background-size: 26px auto;
+  background-color: rgba(80,103,134,0.5);
   }
  .reveal .controls span.info-icon {
   background-image: url(../../images/info.png); 
   }
  .reveal .controls span.en-lang, .meny div.en-lang {
-  background-image: url(../../images/BG.png); 
+  background-image: url(../../images/BG.png);
+  background-size: 30px auto;
   }
  .reveal .controls span.bg-lang, .meny div.bg-lang {
-  background-image: url(../../images/EN.png); 
+  background-image: url(../../images/EN.png);
+  background-size: 30px auto;
   }

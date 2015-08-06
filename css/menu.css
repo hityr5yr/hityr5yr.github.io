@@ -27,15 +27,20 @@ body {
 .meny a {
 	text-decoration: none;
 	border-radius: 5px;
-	padding: 5px;
+	padding: 5px 5px 5px 10px;
 	width: 100%;
 	display: inline-block;
+	font-family: 'ModeratoG7LRegular';
+	font-size: 26px;
+	text-decoration: underline;
 	-webkit-transition: background 0.4s ease, color 0.4s ease;
 	   -moz-transition: background 0.4s ease, color 0.4s ease;
 	    -ms-transition: background 0.4s ease, color 0.4s ease;
 	     -o-transition: background 0.4s ease, color 0.4s ease;
 	        transition: background 0.4s ease, color 0.4s ease;
 }
+
+.meny a:hover { text-decoration: none; }
 
 h1,
 h2 {
@@ -73,15 +78,20 @@ html:not(.mobile) .meny { width: 320px !important;}
 				display: none;
 			}
 
+.meny ul {
+	margin-top: 20px;
+}
 /**
  * Hint graphic that appears while menu is inactive
  */
 .meny-arrow {
+	display: block;
+	width: 20px;
+	height: 40px;
+	background: url('../images/arrow-menu.png') no-repeat 0 0;
+	background-size: 20px auto;
 	position: absolute;
 	z-index: 2;
-	opacity: 0.7;
-
-	border: 12px solid transparent;
 
 	-webkit-transition: opacity 0.4s ease 0.4s;
 	   -moz-transition: opacity 0.4s ease 0.4s;
@@ -95,7 +105,7 @@ html:not(.mobile) .meny { width: 320px !important;}
 		margin-top: -16px;
 	}
 	.meny-right .meny-arrow {
-		right: 0px;
+		right: 0;
 		top: 50%;
 		margin-top: -12px;
 		transition: right 0.75s ease;
@@ -121,6 +131,23 @@ html:not(.mobile) .meny { width: 320px !important;}
 		        transition: right 0.75s ease;
 	}
 
+
+
+.meny ul li {
+	position: relative;
+}
+
+.meny ul li:before {
+	display: inline-block;
+	content: '‣';
+	font-size: 16px;
+	position: absolute;
+	left: 0;
+	top: 14px;
+	color: #2b4261;
+}
+
+
 /**
  * Main contents area
  */
@@ -130,6 +157,7 @@ html:not(.mobile) .meny { width: 320px !important;}
 	height: 100%;
 	overflow-y: hidden;
 	position: relative;
+	z-index: 1;
 
 	-webkit-overflow-scrolling: touch;
 	-webkit-transform-style: preserve-3d;
@@ -137,6 +165,9 @@ html:not(.mobile) .meny { width: 320px !important;}
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
+	
+	-webkit-box-shadow: 6px 6px 0 #3e5574;
+	        box-shadow: 6px 6px 0 #3e5574;
 }
 	.contents>article {
 		max-width: 400px;
@@ -162,3 +193,12 @@ html:not(.mobile) .meny { width: 320px !important;}
  * Miscelaneous
  */
 .meny #sharethis {float: left; display: table;}
+
+#sharethis span span span {
+	overflow: hidden;
+	-webkit-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-box-shadow: 2px 2px 0 rgba(80,103,134,0.5);
+	        box-shadow: 2px 2px 0 rgba(80,103,134,0.5);
+}
+

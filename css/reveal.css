@@ -53,7 +53,8 @@ html, body, .reveal div, .reveal span, .reveal applet, .reveal object, .reveal i
   font-size: 100%;
   font: inherit;
   vertical-align: baseline; 
-  font-family: Arial, Helvetica, sans-serif !important;}
+  font-family: 'ModeratoA5L', Georgia, serif !important;
+}
 
 .reveal article, .reveal aside, .reveal details, .reveal figcaption, .reveal figure, .reveal footer, .reveal header, .reveal hgroup, .reveal menu, .reveal nav, .reveal section {
   display: block; }
@@ -67,10 +68,12 @@ html, body {
   overflow: hidden; }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
   position: relative;
   line-height: 1; }
 
- section {border-radius: 10px;}
 /*********************************************
  * VIEW FRAGMENTS
  *********************************************/
@@ -158,8 +161,7 @@ body {
 
  .reveal .slides section .zoomel{
   margin: 0;
-  cursor: pointer; 
-  border-radius: 10px;
+  cursor: pointer;
 
   }
 /*********************************************
@@ -175,7 +177,14 @@ body {
 
 /** Prevents layering issues in certain browser/transition combinations */
 .reveal a {
-  position: relative; }
+  position: relative;
+  text-decoration: underline;
+  color: #b7c8e0;
+}
+
+.reveal a:hover {
+  text-decoration: none;
+}
 
 .reveal .stretch {
   max-width: none;
@@ -198,11 +207,11 @@ body {
   z-index: 30;
   right: 10px;
   bottom: 0px;
-  -webkit-user-select: none; }
+}
 
 .reveal .controls div {
   position: absolute;
-  opacity: 0.05;
+  opacity: 0.2;
   width: 0;
   height: 0;
   border: 12px solid transparent;
@@ -301,8 +310,9 @@ body {
   }
  .reveal .controls span.en-lang,
  .reveal .controls span.bg-lang  {
-  left: 151px;
-   top: 38px;
+  position: fixed;
+  right: 28px;
+   top: 28px;
   } 
  .reveal .controls span.menu-icon:hover,
  .reveal .controls span.info-icon:hover, 
@@ -312,18 +322,6 @@ body {
  .meny div.bg-lang:hover { 
     opacity: 1;
 	}
-table#shortcuts{
- position: absolute; 
- bottom: 25px; 
- color: #FFF;
- font-size: 12px;
- width: 270px;
- left: 0;
- margin-left: 25px;
- background: #498376;
- border-radius: 25px;
-  }
-table#shortcuts tbody{width: 100%;}
 p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 270px; color: #fff; text-align: center; padding: 0 25px;}
 /*********************************************
  * PROGRESS BAR
@@ -368,6 +366,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   font-size: 24px;
   font-weight: bold;
   z-index: 30;
+  font-family: sans-serif !important;
   cursor: pointer;}
 
 /*********************************************
@@ -380,14 +379,6 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   overflow: hidden;
   -ms-touch-action: none;
       touch-action: none; 
-	  
-  
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
 	  }
 
 .reveal .slides {
@@ -453,7 +444,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
 .reveal.center, .reveal.center .slides, .reveal.center .slides section {
   min-height: 0 !important; }
   
-.sectiondiv { background:#6E9C91; border-radius: 25px; padding: 20px!important; display: inline-block; vertical-align: middle!important;}
+.sectiondiv { background:#2b4261; padding: 20px!important; display: inline-block; vertical-align: middle!important; color: #FFF}
 
 /* Don't allow interaction with invisible slides */
 .reveal .slides > section.future, .reveal .slides > section > section.future, .reveal .slides > section.past, .reveal .slides > section > section.past {
@@ -461,11 +452,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
 
 .reveal.overview .slides > section, .reveal.overview .slides > section > section {
   pointer-events: auto; 
-  background: -moz-linear-gradient(bottom right, #DEE3E9, #2E4566);
-  background: -webkit-linear-gradient(left top, #DEE3E9, #2E4566);
-  background: -o-linear-gradient(bottom right, #DEE3E9, #2E4566);
-  background: -ms-linear-gradient(bottom right, #DEE3E9, #2E4566);
-  background: linear-gradient(to bottom right, #DEE3E9, #2E4566);
+  background: fixed url('../images/pattern-front.gif') repeat 0 0;
   }
 
 .reveal .slides > section.past, .reveal .slides > section.future, .reveal .slides > section > section.past, .reveal .slides > section > section.future {
@@ -1012,6 +999,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
  * OVERVIEW
  *********************************************/
 .reveal.overview {
+  background: fixed url('../images/pattern-back.gif') repeat 0 0;
   -webkit-perspective-origin: 50% 50%;
           perspective-origin: 50% 50%;
   -webkit-perspective: 750px;
@@ -1243,7 +1231,9 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
  * ROLLING LINKS
  *********************************************/
 .reveal .roll {
+  color: #2b4261;
   display: inline-block;
+  text-decoration: none;
   line-height: 1.2;
   overflow: hidden;
   vertical-align: top;
@@ -1351,7 +1341,7 @@ transition: opacity 0.5s ease;
   
 .en-lang {display: none;}
 .bg-lang {}
-.gentext{ text-align: justify; font-size: 16px!important; }
+.gentext{ text-align: left; font-size: 17px!important; }
 
 .arrow{height: 38px; line-height:32px!important; font-size:28px!important;}
 .gentext img{
