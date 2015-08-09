@@ -181,11 +181,25 @@ body {
   text-decoration: underline;
   color: #b7c8e0;
 }
-
+.reveal a.navigate-down.arrow.enabled{
+  display: inline; text-decoration: none; 
+  -webkit-transition: opacity 0.5s ease; 
+  -moz-transition: opacity 0.5s ease; 
+  -ms-transition: opacity 0.5s ease; 
+  -o-transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease; 
+  border-radius: 15px; 
+  color: #fff; 
+  background: #2b4261; 
+  padding: 0 8px; 
+  opacity: 0.7
+}
 .reveal a:hover {
   text-decoration: none;
 }
-
+.reveal a.navigate-down.arrow.enabled:hover {
+  opacity:1!important;
+}
 .reveal .stretch {
   max-width: none;
   max-height: none; }
@@ -1002,10 +1016,10 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   background: fixed url('../images/pattern-back.gif') repeat 0 0;
   -webkit-perspective-origin: 50% 50%;
           perspective-origin: 50% 50%;
-  -webkit-perspective: 750px;
-          perspective: 750px; }
+  -webkit-perspective: 715px;
+          perspective: 715px; }
   .reveal.overview .slides section {
-    height: 750px;
+    height: 715px;
     opacity: 1 !important;
     overflow: hidden;
     visibility: visible !important;
