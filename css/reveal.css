@@ -1334,15 +1334,15 @@ line-height: 20px!important;
 width: 176px;
 }
 #lastpro center span a{
-transition: background 0.5s ease; 
--webkit-transition: background 0.5s ease; 
+opacity: 0;
+transition: opacity 0.5s ease; 
+-webkit-transition: opacity 0.5s ease; 
+color: #2b4261;
+background: transparent!important;
 z-index: 2; 
 font-size: 20px; 
 margin: 0;}
-#lastpro center span span{
-transition: opacity 0.5s ease; 
--webkit-transition: opacity 0.5s ease;
-}
+
   .parentzoomel {
   display: inline-block; 
   line-height: 100%!important; 
@@ -1369,4 +1369,3 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;
 #socialicons span {float: left; margin: 0!important; line-height: 32px; }
 #socialicons img{border:0; margin: 0 5px 3px 0!important; border-radius: 4px;}
 .reveal ul li{height: 20px;}
-#s11, s12 {font-size: 18px;}

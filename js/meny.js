@@ -356,7 +356,7 @@ var Meny = {
 					if(document.getElementsByClassName("meny")[0].clientWidth == 10){arrowpos = document.getElementsByClassName("meny")[0].style.pixelWidth-30;} // Added by Peter Petrov
 					else {arrowpos = document.getElementsByClassName("meny")[0].clientWidth;} // Added by Peter Petrov
 					document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = arrowpos + 10 + "px"; // Added by Peter Petrov
-					dom.cover.style.height = dom.contents.scrollHeight + 'px';
+					dom.cover.style.height = dom.contents.scrollHeight - 3 +'px'; // Changed by Peter Petrov (added -3)
 					dom.cover.style.visibility = 'visible';
 
 					// Use transforms and transitions if available...

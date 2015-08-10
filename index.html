@@ -59,32 +59,20 @@
 					if(lang1=='bg'){document.getElementsByClassName('bg-map')[0].style.zIndex = 2;}
 					else{document.getElementsByClassName('bg-map')[0].style.zIndex = 0;};
 				}
-				if(document.querySelectorAll(".reveal #lastpro center span a span")){
+				if(document.querySelectorAll(".reveal #lastpro center span a")){
 					if(lang1=='bg'){
-						document.getElementById("s1").style.display="block";
-						document.getElementById("s11").style.display="inline-block";
-						document.getElementById("s11").style.opacity=1;
-						document.getElementById("s12").style.opacity=1;						
+						document.getElementById("s1").style.display="block";					
 						document.getElementById("a1").style.display="inline-block";
-						document.getElementById("a1").style.background="#5A538A";
-						document.getElementById("s12").style.display="inline-block";
+						document.getElementById("a1").style.opacity=1;
 						document.getElementById("s2").style.display="none";
-						document.getElementById("s21").style.display="none";
-						document.getElementById("s22").style.display="none";
 						document.getElementById("a2").style.display="none";						
 						}
 					else{
 						document.getElementById("s1").style.display="none";
-						document.getElementById("s11").style.display="none";
-						document.getElementById("s12").style.display="none";
 						document.getElementById("a1").style.display="none";
 						document.getElementById("s2").style.display="block";
-						document.getElementById("s21").style.display="inline-block";
-						document.getElementById("s21").style.opacity=1;
-						document.getElementById("s22").style.opacity=1;
 						document.getElementById("a2").style.display="inline-block";
-						document.getElementById("a2").style.background="#5A538A";
-						document.getElementById("s22").style.display="inline-block";
+						document.getElementById("a2").style.opacity=1;
 						}
 					}
 				if(c.search('mobile')==-1){
@@ -275,14 +263,14 @@
 									<p class="parentzoomel">
 										<img id="pr_4_2" class="zoomel" data-src="projects/15surfaces2.jpg">
 										<br>	
-										<span class="bg-lang">3D модел, поглед отстрани (междинен вариант)</span>
-										<span class="en-lang">3D model, side view (an intermediate variant)</span>
+										<span class="bg-lang">3D модел, поглед отстрани<br>(междинен вариант)</span>
+										<span class="en-lang">3D model, side view<br>(an intermediate variant)</span>
 									</p>
 									<p class="parentzoomel">
 										<img id="pr_4_1" class="zoomel" data-src="projects/15surfaces1.jpg">
 										<br>	
-										<span class="bg-lang">Поглед от зоната на илюзия (oкончателен вариант)</span>
-										<span class="en-lang">View from the illusion area (final variant)</span>
+										<span class="bg-lang">Обект, поглед от зоната на илюзия<br>(oкончателен вариант)</span>
+										<span class="en-lang">Site, view from the illusion area<br>(final variant)</span>
 									</p>
 									<div class=="pronote">
 										<span class="bg-lang note">*Симулация</span>
@@ -292,8 +280,8 @@
 								<div class="divider"></div>
 								<div id="lastpro">
 									<center>
-										<span id="s1" class="bg-lang" style="line-height: 20px; font-size: 20px;"><span id="s11" class="bg-lang" style="display: none: opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; "></span><a id="a1" href="#/2"><span id="s12" style="display: none: opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; font-size: 24px;">Как го правим?</span></a></span>
-										<span id="s2" class="en-lang" style="line-height: 20px; font-size: 20px;"><span id="s21" class="eg-lang" style="display: none; opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease;"></span><a id="a2" href="#/2"><span id="s22" style="display: none; opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; font-size: 24px;">How do we do it?</span></a></span>
+										<span id="s1" class="bg-lang" style="line-height: 20px; font-size: 20px;"><a id="a1" href="#/2">Как го правим?</a></span>
+										<span id="s2" class="en-lang" style="line-height: 20px; font-size: 20px;"><a id="a2" href="#/2">How do we do it?</a></span>
 									</center>					
 								</div>
 							</center>

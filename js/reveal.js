@@ -2501,13 +2501,9 @@
 		if(document.getElementsByClassName('bg-lang')[0].style.display=='none'){language = 2;}
 		if(document.querySelectorAll(".reveal .slides #prosection section")[sections-1].className == "present"){ // Added by Peter Petrov
 			document.getElementById('lastpro').style.display = 'initial'; // Added by Peter Petrov
-			setTimeout('document.getElementById("s'+language+'1").style.display = "inline-block"; document.getElementById("a'+language+'").style.display = "inline-block"; document.getElementById("s'+language+'1").style.opacity = 1; document.getElementById("a'+language+'").style.background = "#5A538A"; document.getElementById("s'+language+'2").style.opacity = 1', 1000); // Added by Peter Petrov			
+			setTimeout('document.getElementById("a'+language+'").style.display = "inline-block"; document.getElementById("a'+language+'").style.opacity = 1', 1000); // Added by Peter Petrov			
 		} //
-		else{document.getElementById('lastpro').style.display = 'none'; //
-//			document.getElementById("s" +language+ "1").style.opacity = 0; 		//
-			document.getElementById("s" +language+ "2").style.opacity = 0; 		//
-//			document.getElementById("s" +language+ "1").style.display = 'none'; //
-			document.getElementById("a"+language).style.background = 'none';  // Added by Peter Petrov
+		else{document.getElementById('lastpro').style.display = 'none';  document.getElementById("a"+language).style.opacity = 0//
 		}//
 		var sections = document.querySelectorAll(".reveal .slides section").length;//
 		if(document.querySelectorAll(".reveal .slides section")[sections-1].className == "present"){ // Added by Peter Petrov

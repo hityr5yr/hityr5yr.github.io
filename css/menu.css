@@ -166,8 +166,8 @@ html:not(.mobile) .meny { width: 320px !important;}
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 	
-	-webkit-box-shadow: 6px 6px 0 #3e5574;
-	        box-shadow: 6px 6px 0 #3e5574;
+	-webkit-box-shadow: 1px 0 0 #3e5574;
+	        box-shadow: 1px 0 0 #3e5574;
 }
 	.contents>article {
 		max-width: 400px;
