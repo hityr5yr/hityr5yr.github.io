@@ -469,7 +469,6 @@ var Meny = {
 			}
 
 			function onMouseMove( event ) {
-				console.log("?");
 				// Prevent opening/closing when mouse is down since
 				// the user may be selecting text
 				document.getElementsByClassName('reveal')[0].style.display = 'inline-block';
@@ -488,11 +487,13 @@ var Meny = {
 							break;
 
 						case POSITION_R:
+				console.log("?1");
 							var w = dom.wrapper.offsetWidth;
 							if( x < w - config.width + 20) { // Changed by Peter Petrov
 								close();
 							}
 							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 50 && y > dom.wrapper.offsetHeight/2 - 50) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 110
+				console.log("?2");
 							open();
 							}
 							break;
