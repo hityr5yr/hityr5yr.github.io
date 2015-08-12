@@ -484,14 +484,10 @@
 
 		dom.statusDiv = createStatusDiv();
 		if(isMobileDevice){																	 // Changed by Peter Petrov: Can be used as well c.search('mobile')!=-1
-			document.getElementById('menuicon').style.display='none'; 						 // Added by Peter Petrov
-			if(document.body.clientWidth < 734){											 //
-				document.getElementsByClassName('mobileau')[0].style.display='inline-block'; //
-			}																			 	 // 
+			document.getElementById('menuicon').style.display='none'; 						 // Added by Peter Petrov																		 	 // 
 			document.getElementsByClassName('slide-number')[0].style.color='#506786';		 //	
 			document.getElementsByClassName('slide-number')[0].style.textShadow='none';		 //	
 		}																					 //
-		else{document.getElementsByClassName('mobileau')[0].style.display='none';} 			 //
 	}
 
 	/**
