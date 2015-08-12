@@ -345,7 +345,6 @@ var Meny = {
 				if( !isOpen ) {
 					isOpen = true;
 					if(c.search('mobile')!=-1 && document.body.clientWidth < 734){
-						document.getElementById('shortcuts').style.visibility='hidden';
 						document.getElementsByClassName('meny')[0].style.maxWidth = 734 + "px";	
 						}
 					if(c.search('mobile')!=-1 && document.body.clientWidth >= 734){
@@ -487,13 +486,11 @@ var Meny = {
 							break;
 
 						case POSITION_R:
-				console.log("?1");
 							var w = dom.wrapper.offsetWidth;
 							if( x < w - config.width + 20) { // Changed by Peter Petrov
 								close();
 							}
 							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 50 && y > dom.wrapper.offsetHeight/2 - 50) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 110
-				console.log("?2");
 							open();
 							}
 							break;
