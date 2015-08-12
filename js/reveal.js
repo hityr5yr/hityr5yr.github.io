@@ -457,9 +457,7 @@
 			'<div class="navigate-right"></div>' +
 			'<div class="navigate-up"></div>' +
 			'<div class="navigate-down"></div>' +
-			'<span id="menuicon" class="menu-icon"></span>' + // Added by Peter Petrov
-			'<span class="en-lang" style="display: none;" onclick="change_language(&#34;bg&#34;, &#34;en&#34;)"></span>' + // Added by Peter Petrov
-			'<span class="bg-lang" onclick="change_language(&#34;en&#34;, &#34;bg&#34;)"></span>'); // Added by Peter Petrov
+			'<span id="menuicon" class="menu-icon"></span>'); // Added by Peter Petrov
 
 		// Slide number
 		dom.slideNumber = createSingletonNode( dom.wrapper, 'div', 'slide-number', '' );

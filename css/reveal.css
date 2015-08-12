@@ -280,9 +280,7 @@ body {
   opacity: 0.3; }
 
 .reveal .controls span.menu-icon, 
-.reveal .controls span.info-icon,
-.reveal .controls span.en-lang,
-.reveal .controls span.bg-lang {
+.reveal .controls span.info-icon{
   opacity: 0.7;
   width: 30px;
   height: 30px;
@@ -297,7 +295,9 @@ body {
 	transition: 0.4s opacity ease; 
   }
 .meny div.en-lang,
-.meny div.bg-lang {
+.meny div.bg-lang,
+.reveal #lan1.en-lang,
+.reveal #lan2.bg-lang  {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -330,8 +330,8 @@ body {
   } 
  .reveal .controls span.menu-icon:hover,
  .reveal .controls span.info-icon:hover, 
- .reveal .controls span.en-lang:hover,
- .reveal .controls span.bg-lang:hover,
+ .reveal #lan1.en-lang:hover,
+ .reveal #lan2.bg-lang:hover,
  .meny div.en-lang:hover,
  .meny div.bg-lang:hover { 
     opacity: 1;

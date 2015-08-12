@@ -315,11 +315,11 @@ body {
  .reveal .controls span.info-icon {
   background-image: url(../../images/info.png); 
   }
- .reveal .controls span.en-lang, .meny div.en-lang {
+ .reveal #lan1.en-lang, .meny div.en-lang {
   background-image: url(../../images/BG.png);
   background-size: 30px auto;
   }
- .reveal .controls span.bg-lang, .meny div.bg-lang {
+ .reveal #lan2.bg-lang, .meny div.bg-lang {
   background-image: url(../../images/EN.png);
   background-size: 30px auto;
   }
