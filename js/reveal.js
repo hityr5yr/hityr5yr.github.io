@@ -489,6 +489,7 @@
 				document.getElementsByClassName('mobileau')[0].style.display='inline-block'; //
 			}																			 	 // 
 			document.getElementsByClassName('slide-number')[0].style.color='#506786';		 //	
+			document.getElementsByClassName('slide-number')[0].style.textShadow='none';		 //	
 		}																					 //
 		else{document.getElementsByClassName('mobileau')[0].style.display='none';} 			 //
 	}
