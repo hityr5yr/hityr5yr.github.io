@@ -469,6 +469,7 @@ var Meny = {
 			}
 
 			function onMouseMove( event ) {
+				console.log("?");
 				// Prevent opening/closing when mouse is down since
 				// the user may be selecting text
 				document.getElementsByClassName('reveal')[0].style.display = 'inline-block';
