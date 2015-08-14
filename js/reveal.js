@@ -483,11 +483,13 @@
 		dom.controlsLang = toArray( document.querySelectorAll( '.bg-lang' ) ); // Added by Peter Petrov
 
 		dom.statusDiv = createStatusDiv();
-		if(isMobileDevice){																	 // Changed by Peter Petrov: Can be used as well c.search('mobile')!=-1
-			document.getElementById('menuicon').style.display='none'; 						 // Added by Peter Petrov																		 	 // 
-			document.getElementsByClassName('slide-number')[0].style.color='#506786';		 //	
-			document.getElementsByClassName('slide-number')[0].style.textShadow='none';		 //	
-		}																					 //
+		if(isMobileDevice){																							 // Changed by Peter Petrov: Can be used as well c.search('mobile')!=-1
+			document.getElementById('menuicon').style.display='none'; 												 // Added by Peter Petrov																		 	 // 
+			document.getElementsByClassName('slide-number')[0].style.color='#506786';								 //	
+			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //	
+			document.getElementsByClassName('controls')[0].style.right = dom.wrapper.offsetWidth/2 - 53 + 'px';		 //	
+			document.getElementsByClassName('slide-number')[0].style.left =	dom.wrapper.offsetWidth/2 - 15 + 'px';	 //				
+		}																											 //
 	}
 
 	/**

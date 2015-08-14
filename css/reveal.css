@@ -216,10 +216,10 @@ body {
 .reveal .controls {
   display: none;
   position: absolute;
-  width: 216px;
-  height: 110px;
+  width: 106px;
+  height: 106px;
   z-index: 30;
-  right: 10px;
+  right: 0;
   bottom: 0px;
 }
 
@@ -244,7 +244,6 @@ body {
   margin-top: 1px; }
 
 .reveal .controls div.navigate-left {
-  left: 10px;
   top: 41px;
   border-right-width: 22px;
   border-right-color: #000; }
@@ -253,7 +252,7 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-right {
-  left: 84px;
+  left: 74px;
   top: 41px;
   border-left-width: 22px;
   border-left-color: #000; }
@@ -262,7 +261,7 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-up {
-  left: 52px;
+  left: 42px;
   top: -1px;
   border-bottom-width: 22px;
   border-bottom-color: #000; }
@@ -271,7 +270,7 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-down {
-  left: 52px;
+  left: 42px;
   top: 73px;
   border-top-width: 22px;
   border-top-color: #000; }
@@ -313,7 +312,7 @@ body {
   }
 
   .reveal .controls span.menu-icon{
-  left: 49px;
+  left: 39px;
   top: 38px;
 
   }
@@ -371,8 +370,8 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
 .reveal .slide-number {
   position: absolute;
   display: block;
-  right: 147px;
-  bottom: 42px;
+  right: 37px;
+  bottom: 38px;
   width: 30px;
   height: 30px;
   text-align: center; 
