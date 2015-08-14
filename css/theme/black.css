@@ -84,11 +84,10 @@ body {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  border: 1px solid #FFF !important;
   -webkit-box-shadow: 6px 6px 0 #3e5574;
           box-shadow: 6px 6px 0 #3e5574;
   }
-
+.soic {border: 1px solid #FFF !important}
 .reveal strong, .reveal b {
   font-weight: bold; }
 
