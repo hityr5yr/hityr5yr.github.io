@@ -159,10 +159,9 @@ body {
 .reveal .slides section .fragment.highlight-current-blue.current-fragment {
   color: #1b91ff; }
 
- .reveal .slides section img.zoomel{
+ .reveal .slides section .zoomel{
   margin: 0 0 3px;
   cursor: pointer;
-  image-rendering: pixelated;
   }
 /*********************************************
  * DEFAULT ELEMENT STYLES
