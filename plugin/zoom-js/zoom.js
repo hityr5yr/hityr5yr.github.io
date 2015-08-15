@@ -196,7 +196,8 @@ var zoom = (function(){
         range.selectNodeContents(text);
         selection.removeAllRanges();
         selection.addRange(range);
-    }						//
+    }	
+    document.getElementById('testdiv').click();					//
 				}																							//
 			}																								//
 			else {																							//
