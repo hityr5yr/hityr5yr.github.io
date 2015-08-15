@@ -176,28 +176,15 @@ var zoom = (function(){
 			if( level !== 1 ) {																				//
 				document.documentElement.classList.add( 'zoomed' );											//
 				zoomflag = 1;																				//
-				if(c.search('chrome')!=-1){																	//
-					var tar = event.target.id;																//
-					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){				//
-						event.target.title="If the image is blur,\rmove out the cursor.";
-					} 																						//
-					else {event.target.title="Ако изображението е неясно,\rизтеглете курсора извън него.";} //
-					setTimeout('document.getElementById("'+tar+'").title=""',1000);	
-    var doc = document;
-    var text = doc.getElementById('autosel');    
-
-    if (doc.body.createTextRange) { // ms
-        var range = doc.body.createTextRange();
-        range.moveToElementText(text);
-        range.select();
-    } else if (window.getSelection) { // moz, opera, webkit
-        var selection = window.getSelection();            
-        var range = doc.createRange();
-        range.selectNodeContents(text);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }	
-
+				if(c.search('chrome')!=-1){																	//																	//
+				    var text = document.getElementById('autosel');    										//
+					if (window.getSelection) { 																//
+				        var selection = window.getSelection();            									//
+				        var range = document.createRange();													//
+				        range.selectNodeContents(text);														//
+				        selection.removeAllRanges();														//
+				        selection.addRange(range);															//
+				    }																						//
 				}																							//
 			}																								//
 			else {																							//
