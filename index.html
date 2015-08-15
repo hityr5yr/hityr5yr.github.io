@@ -118,7 +118,7 @@
 			</div>	
 		</div>
 
-		<div class="meny-arrow" onclick="onMouseMove()"></div>
+		<div class="meny-arrow"></div>
 
 		<div class="contents">
 			<div class="reveal">
@@ -157,10 +157,10 @@
 							<center>
 								<div class="sectiondiv" style="width: 565px;">
 									<p class="bg-lang protitle">
-										1 повърхнина (Метро станция "Дружба"*)
+										Една повърхнина (Метро станция "Дружба"*)
 									</p>
 									<p class="en-lang protitle">
-										1 surface (Metro station "Fellowship"*)
+										One surface (Metro station "Fellowship"*)
 									</p>
 									<p class="parentzoomel">
 										<img id="pr_1_1" class="zoomel" data-src="projects/1surface1.png">
@@ -188,10 +188,10 @@
 							<center>
 								<div class="sectiondiv" style="width: 565px;">
 									<p class="bg-lang protitle">
-										2 повърхнини (Петте кьошета*)
+										Две повърхнини (Петте кьошета*)
 									</p>
 									<p class="en-lang protitle">
-										2 surfaces (The five corners*)
+										Two surfaces (The five corners*)
 									</p>
 									<p class="parentzoomel">
 										<img id="pr_2_1" class="zoomel" data-src="projects/2surfaces1.png">
@@ -219,10 +219,10 @@
 							<center>
 								<div class="sectiondiv" style="width: 565px;">
 									<p class="bg-lang protitle">
-										3 повърхнини (Офис FIPRA*)
+										Три повърхнини (Офис FIPRA*)
 									</p>
 									<p class="en-lang protitle">
-										3 surfaces (FIPRA office*)
+										Three surfaces (FIPRA office*)
 									</p>
 									<p class="parentzoomel">
 										<img id="pr_3_1" class="zoomel" data-src="projects/3surfaces1.png">
@@ -440,35 +440,52 @@
 		</div>
 		<script>
 			var deg, plus = 0;
+			if(c.search('mobile')!=-1){
+				switch(document.body.clientWidth){
+					case 568: deg = 90; plus = 13; break; // Apple iPhone 5
+					case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
+					case 667: deg = 87; break; // Apple iPhone 6
+					case 732: deg = 78.7; break; // Google Nexus 6
+					case 736: deg = 78.3; break; // Apple iPhone 6 plus
+					case 768: deg = 75; break; // Apple ipad 				 - change og background w/h rate!
+					case 800: deg = 71.5; break; // Google Nexus 10			 - change og background w/h rate!
+					case 960: deg = 57.8; break; // Google Nexus 7			 - change og background w/h rate!
+					case 1024: deg = 53.5; break; // Apple ipad 			 - change og background w/h rate!
+					case 1280: deg = 40.5; break; // Google Nexus 10
+					case 1600: deg = 30.5; break; // Amazon Kindle Fire HDX	 - change og background w/h rate!
+					case 2560: deg = 16.4; break; // Amazon Kindle Fire HDX	 - change og background w/h rate!
+					default: deg = 0; break
+				}
+			}
+		else{
 			switch(document.body.clientWidth){
-			case 533: deg = 90; plus = 46; document.getElementById('shortcuts').style.marginLeft=0; document.getElementById('jointm').style.width="270px"; document.getElementsByTagName('ul')[0].style.width="270px";
-			document.getElementsByClassName('meny')[0].style.background = "none"; document.getElementsByClassName('meny')[0].style.borderLeft = "0px solid transparent"; 
-			document.getElementsByClassName('meny')[0].style.paddingRight = "0px"; break;
-			case 600: deg = 90; plus = 47; document.getElementById('shortcuts').style.marginLeft="5px"; break;
-			case 640: deg = 90; plus = 47; break;
-			case 800: deg = 85; plus = 14; break;
-			case 819: deg = 80.5; plus = 14; break;
-			case 950: deg = 77.5; break;
-			case 922: deg = 77.5; break;
-			case 1024: deg = 65; break;
-			case 1088: deg = 57.6; break;
-			case 1093: deg = 57; break;
-			case 1120: deg = 54.5; break;
-			case 1152: deg = 52; break;
-			case 1280: deg = 42.5; break;
-			case 1344: deg = 38.5; break;
-			case 1360: deg = 37.4; break;
-			case 1366: deg = 37.1; break;
-			case 1400: deg = 35.4; break;
-			case 1440: deg = 33.5; break;
-			case 1536: deg = 29.4; break;
-			case 1600: deg = 27; break;
-			case 1680: deg = 24.5; break;
-			case 1886: deg = 19.5; break;
-			case 1920: deg = 23.5; break;
-			case 2560: deg = 15; break;
-			default: deg = 90; plus = 46; break
-			};
+				case 533: deg = 90; plus = 18; break; // Nokia Lumia 520
+				case 600: deg = 90; plus = 7.5; break; // BlackBerry PlayBook - change og background w/h rate!
+				case 640: deg = 90; plus = 1; break; // BlackBerry Z30, Nokia N9, FF
+				case 768: deg = 75; break; // v
+				case 800: deg = 71.8; break; // v
+				case 819: deg = 69.6; break; // FF
+				case 922: deg = 60.7; break; // FF
+				case 1024: deg = 53.5; break;
+				case 1088: deg = 49.5; break; // FF
+				case 1093: deg = 49.2; break; // FF
+				case 1120: deg = 48; break; // FF
+				case 1152: deg = 46.5; break; // FF
+				case 1280: deg = 40.5; break; // v
+				case 1344: deg = 38; break; // FF
+				case 1360: deg = 37.4; break; // v
+				case 1366: deg = 37.2; break; // v
+				case 1400: deg = 36.1; break; // v
+				case 1440: deg = 34.8; break; // v
+				case 1536: deg = 32; break; // v
+				case 1600: deg = 30.5; break; // v
+				case 1680: deg = 28.5; break; // v
+				case 1886: deg = 19.5; break;
+				case 1920: deg = 23.5; break; // v
+				case 2560: deg = 16.4; break; // v
+				default: deg = 0; break
+			}		
+		};
 			// Create an instance of Meny
 			var meny = Meny.create({
 				// The element that will be animated in from off screen
@@ -546,8 +563,8 @@
 				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseout', 'document.getElementById("menuicon").style.opacity=0.7');	
-				document.getElementsByTagName('HTML')[0].style.backgroundSize = window.screen.availWidth + 'px ' + window.screen.availHeight + 'px';
-				document.getElementsByTagName('HTML')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';		
+				document.getElementsByTagName('BODY')[0].style.backgroundSize = window.screen.availWidth + 'px ' + window.screen.availHeight + 'px';
+				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
 			}
 		</script>
 

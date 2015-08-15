@@ -54,7 +54,7 @@ var Meny = {
 				position: POSITION_L,
 				threshold: 40,
 				angle: 30,
-				overlap: 6,
+				overlap: 0,
 				transitionDuration: '0.5s',
 				transitionEasing: 'ease',
 				gradient: 'rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.65) 100%)',
@@ -344,12 +344,9 @@ var Meny = {
 			function open() {	
 				if( !isOpen ) {
 					isOpen = true;
-					if(c.search('mobile')!=-1 && document.body.clientWidth < 734){
-						document.getElementsByClassName('meny')[0].style.maxWidth = 734 + "px";	
+					if(c.search('mobile')!=-1){
+						document.getElementsByClassName('meny')[0].style.maxWidth = 320 + "px";	
 						}
-					if(c.search('mobile')!=-1 && document.body.clientWidth >= 734){
-						document.getElementsByClassName('meny')[0].style.maxWidth = document.body.clientWidth - 320 +'px';
-					}
 					Meny.addClass( dom.wrapper, 'meny-active' );
 					var arrowpos;
 					if(document.getElementsByClassName("meny")[0].clientWidth == 10){arrowpos = document.getElementsByClassName("meny")[0].style.pixelWidth-30;} // Added by Peter Petrov
@@ -490,7 +487,7 @@ var Meny = {
 							if( x < w - config.width + 20) { // Changed by Peter Petrov
 								close();
 							}
-							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 100 && y > dom.wrapper.offsetHeight/2 - 100) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 110
+							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 150 && y > dom.wrapper.offsetHeight/2 - 150) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 110
 							open();
 							}
 							break;
