@@ -179,7 +179,8 @@ var zoom = (function(){
 				if(c.search('chrome')!=-1){																	//
 					var tar = event.target.id;																//
 					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){				//
-						event.target.title="If the image is blur,\rmove out the cursor.";					//
+						event.target.title="If the image is blur,\rmove out the cursor.";
+						document.getElementById('testspan').click();					//
 					} 																						//
 					else {event.target.title="Ако изображението е неясно,\rизтеглете курсора извън него.";} //
 					setTimeout('document.getElementById("'+tar+'").title=""',1000);							//
