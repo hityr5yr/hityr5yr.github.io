@@ -180,10 +180,23 @@ var zoom = (function(){
 					var tar = event.target.id;																//
 					if(document.getElementsByClassName('bg-lang')[0].style.display=="none"){				//
 						event.target.title="If the image is blur,\rmove out the cursor.";
-//						document.getElementById('testspan').click();					//
 					} 																						//
 					else {event.target.title="Ако изображението е неясно,\rизтеглете курсора извън него.";} //
-					setTimeout('document.getElementById("'+tar+'").title=""',1000);							//
+					setTimeout('document.getElementById("'+tar+'").title=""',1000);	
+    var doc = document;
+    var text = doc.getElementById('testspan');    
+
+    if (doc.body.createTextRange) { // ms
+        var range = doc.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) { // moz, opera, webkit
+        var selection = window.getSelection();            
+        var range = doc.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }						//
 				}																							//
 			}																								//
 			else {																							//
