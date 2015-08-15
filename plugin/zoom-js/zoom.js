@@ -183,7 +183,8 @@ var zoom = (function(){
 				        var range = document.createRange();													//
 				        range.selectNodeContents(text);														//
 				        selection.removeAllRanges();														//
-				        selection.addRange(range);															//
+				        selection.addRange(range);	
+				        console.log("?");														//
 				    }																						//
 				}																							//
 			}																								//

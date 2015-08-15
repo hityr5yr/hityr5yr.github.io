@@ -1354,7 +1354,7 @@ margin: 0;}
   .note{font-size: 10px!important; text-align: left!important; margin: 0!important; float: left;}
   
 .en-lang {display: none;}
-.bg-lang {}
+.bg-lang {display: block;}
 .gentext{ text-align: left; font-size: 17px!important; }
 
 .arrow{height: 38px; line-height:32px!important; font-size:28px!important;}
