@@ -184,7 +184,7 @@ var zoom = (function(){
 					else {event.target.title="Ако изображението е неясно,\rизтеглете курсора извън него.";} //
 					setTimeout('document.getElementById("'+tar+'").title=""',1000);	
     var doc = document;
-    var text = doc.getElementById('testspan');    
+    var text = doc.getElementById('autosel');    
 
     if (doc.body.createTextRange) { // ms
         var range = doc.body.createTextRange();
