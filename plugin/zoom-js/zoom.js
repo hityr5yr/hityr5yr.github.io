@@ -197,7 +197,7 @@ var zoom = (function(){
         selection.removeAllRanges();
         selection.addRange(range);
     }	
-    document.getElementById('testdiv').click();					//
+//    document.getElementById('testdiv').click();					//
 //    console.log(document.getElementsByClassName('pronote')[0].id);
 				}																							//
 			}																								//
