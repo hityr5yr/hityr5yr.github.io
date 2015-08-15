@@ -137,7 +137,7 @@
 								<div class="bg-lang gentext" style="width: 250px; float: left; margin: 0 20px 0 0;">
 									Въздействието на добавената реалност е поразително. Илюзорните образи, наблюдавани от определени места, карат човек да се потапя с удоволствие в измисления им свят или да ги съзерцава упорито, в опит да открие границата между действителност и фикция. Даже в простичък пример, като този. 
 									<div class="divider"></div>
-									С помощта на създаденя от нас софтуер ние постигаме неочакван оптичен ефект, както в рекламни решения и арт творби, така и в интериорен и дори екстериорен дизайн. <a href="#/1/0">Убедете се сами!</a>
+									С помощта на създадения от нас софтуер ние постигаме неочакван оптичен ефект, както в рекламни решения и арт творби, така и в интериорен и дори екстериорен дизайн. <a href="#/1/0">Убедете се сами!</a>
 								</div>
 								<div class="en-lang gentext" style="width: 250px; float: left; margin: 0 20px 0 0;">
 									The impact of augmented reality is striking. Illusionary images seen from certain places make one immerse with a pleasure in their fictional world or to contemplate them hard, attempting to find the boundary between reality and fiction. Even in a simple example like this.
@@ -161,7 +161,7 @@
 						<section>
 							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
 							<center>
-								<div class="sectiondiv" style="width: 512px;">
+								<div class="sectiondiv" style="width: 565px;">
 									<p class="bg-lang protitle">
 										1 повърхнина (Метро станция "Дружба"*)
 									</p>
@@ -192,7 +192,7 @@
 						<section>
 							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
 							<center>
-								<div class="sectiondiv" style="width: 512px;">
+								<div class="sectiondiv" style="width: 565px;">
 									<p class="bg-lang protitle">
 										2 повърхнини (Петте кьошета*)
 									</p>
@@ -223,7 +223,7 @@
 						<section>
 							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
 							<center>
-								<div class="sectiondiv" style="width: 512px;">
+								<div class="sectiondiv" style="width: 565px;">
 									<p class="bg-lang protitle">
 										3 повърхнини (Офис FIPRA*)
 									</p>
@@ -254,7 +254,7 @@
 						<section>
 							<h2 class="bg-lang">Проекти</h2><h2 class="en-lang">Projects</h2>
 							<center>
-								<div class="sectiondiv" style="width: 512px;">
+								<div class="sectiondiv" style="width: 564px;">
 									<p class="bg-lang protitle">
 										15 повърхнини (Мост на бул. "Брюксел"*)
 									</p>
@@ -273,7 +273,7 @@
 										<span class="bg-lang">Обект, поглед от зоната на илюзия<br>(oкончателен вариант)</span>
 										<span class="en-lang">Site, view from the illusion area<br>(final variant)</span>
 									</p>
-									<div class=="pronote">
+									<div class="pronote">
 										<span class="bg-lang note">*Симулация</span>
 										<span class="en-lang note">*Simulation</span>
 									</div>
@@ -471,7 +471,7 @@
 			case 1600: deg = 27; break;
 			case 1680: deg = 24.5; break;
 			case 1886: deg = 19.5; break;
-			case 1920: deg = 58.5; break;
+			case 1920: deg = 23.5; break;
 			case 2560: deg = 15; break;
 			default: deg = 90; plus = 46; break
 			};
@@ -552,6 +552,11 @@
 				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseout', 'document.getElementById("menuicon").style.opacity=0.7');	
+				document.getElementsByTagName('HTML')[0].style.backgroundSize = window.screen.availWidth + 'px ' + window.screen.availHeight + 'px';
+				document.getElementsByTagName('HTML')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';		
+				console.log(document.getElementsByTagName('HTML')[0].style.backgroundSize);			
+				console.log(document.getElementsByTagName('HTML')[0].style.backgroundPosition);	
+				console.log(document.body.clientHeight);	
 			}
 		</script>
 

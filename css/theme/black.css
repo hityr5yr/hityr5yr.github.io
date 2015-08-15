@@ -11,11 +11,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
  * GLOBAL STYLES
  *********************************************/
  html {
-  background: fixed url('../../images/pattern-back.gif') repeat 0 0;
+  background: fixed url('../../images/sitebg.png') no-repeat;
 } 
 body {
-  background: url("../../images/viewcont.png") no-repeat 5px 5px fixed;
-  background-size: 260px auto;
+/*  background: url("../../images/viewcont.png") no-repeat 5px 5px fixed; 
+  background-size: 260px auto; */
 } 
 
   }
