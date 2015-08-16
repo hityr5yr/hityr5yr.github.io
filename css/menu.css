@@ -174,7 +174,6 @@ html:not(.mobile) .meny { width: 320px !important;}
 	}
 	.contents p {
 		margin: 10px 0 10px 0;
-		font-size: 18px;
 		line-height: 1.32;
 	}
 	.contents small {

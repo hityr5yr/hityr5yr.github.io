@@ -1325,7 +1325,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   visibility: hidden; }
   
  /* MISCELANEOUS */
-.protitle {margin: 0!important; display: block; line-height: 100%!important; }
+.protitle {margin: 0!important; display: block; line-height: 100%!important; font-size: 18px!important;}
 .titext {}
 .ctrl{vertical-align: top; display: table-cell; text-align: center;}
 .divider{width: 100%; height: 10px; display: block; clear: both;}
