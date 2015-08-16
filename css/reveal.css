@@ -184,16 +184,16 @@ body {
 }
 
 .reveal a.navigate-down.arrow.enabled{
-  display: initial; text-decoration: none; 
+  display: inline-block; text-decoration: none; 
   -webkit-transition: opacity 0.5s ease; 
   -moz-transition: opacity 0.5s ease; 
   -ms-transition: opacity 0.5s ease; 
   -o-transition: opacity 0.5s ease; 
   transition: opacity 0.5s ease; 
-  border-radius: 15px; 
+  border-radius: 16px; 
   color: #fff; 
   background: #2b4261; 
-  padding: 0 8px; 
+  padding: 0 9px; 
   opacity: 0.7
 }
 .reveal a:hover {
@@ -1363,7 +1363,7 @@ margin: 0;}
 .bg-lang {display: block;}
 .gentext{ text-align: left; font-size: 17px!important; }
 
-.arrow{line-height:32px!important; font-size:28px!important;}
+.arrow{line-height:32px!important; font-size:29px!important;}
 .gentext img{
 margin: 0 3px 3px 0!important; 
 border: 0!important; 
