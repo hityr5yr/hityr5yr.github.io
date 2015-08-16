@@ -4127,6 +4127,7 @@ case 40: navigateDown(); break; //
 	    switch(window.orientation){  
 	      case -90:
 	      case 90:
+	      alert(document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length);
 	        document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[0].style.display = "none";
 	        break; 
 	      default:
