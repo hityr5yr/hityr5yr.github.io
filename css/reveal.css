@@ -1360,7 +1360,7 @@ margin: 0;}
   .note{font-size: 10px!important; text-align: left!important; margin: 0!important; float: left;}
   
 .en-lang {display: none;}
-.bg-lang {display: block;}
+.bg-lang {display: inline-block;}
 .gentext{ text-align: left; font-size: 17px!important; }
 
 .arrow{line-height:32px!important; font-size:29px!important;}
