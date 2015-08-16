@@ -220,8 +220,11 @@ body {
   width: 106px;
   height: 106px;
   z-index: 30;
-  right: 0;
+  right: 50%;
   bottom: 0px;
+  -webkit-transform: translate(50%, 0%);
+  -ms-transform: translate(50%, 0%);
+  transform: translate(50%, 0%);
 }
 
 .reveal .controls div {
@@ -371,12 +374,15 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
 .reveal .slide-number {
   position: absolute;
   display: block;
-  right: 37px;
+  right: 50%;
   bottom: 38px;
   width: 30px;
   height: 30px;
+  -webkit-transform: translate(50%, 0%);
+  -ms-transform: translate(50%, 0%);
+  transform: translate(50%, 0);
   text-align: center; 
-  line-height: 31px;
+  line-height: 30px;
   font-size: 24px;
   font-weight: bold;
   z-index: 30;

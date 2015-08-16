@@ -487,12 +487,14 @@
 
 		dom.statusDiv = createStatusDiv();
 		if(isMobileDevice){																							 // Changed by Peter Petrov: Can be used as well c.search('mobile')!=-1
-			document.getElementById('menuicon').style.display='none'; 												 // Added by Peter Petrov																		 	 // 
+			document.getElementById('menuicon').style.display='none'; 												 // Added by Peter Petrov	
 			document.getElementsByClassName('slide-number')[0].style.color='#506786';								 //	
-			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //	
-			document.getElementsByClassName('controls')[0].style.right = dom.wrapper.offsetWidth/2 - 53 + 'px';		 //	
-			document.getElementsByClassName('slide-number')[0].style.left =	dom.wrapper.offsetWidth/2 - 15 + 'px';	 //				
+			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //				
 		}																											 //
+		else{																										 //
+			document.getElementsByClassName('controls')[0].style.right = '53px';									 //	
+			document.getElementsByClassName('slide-number')[0].style.right = '52px';								 //
+		}				 																							 //
 	}
 
 	/**
@@ -4120,11 +4122,9 @@ case 40: navigateDown(); break; //
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {							// 
-			document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
-alert("?");
-			document.getElementsByClassName('controls')[0].style.right = dom.wrapper.offsetWidth/2 - 53 + 'px';		 //	
-			document.getElementsByClassName('slide-number')[0].style.left =	dom.wrapper.offsetWidth/2 - 15 + 'px';	 //	
+	function onOrientationChange( event ) {		
+	alert("?");					// 
+//			document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
 	}																// 
 
 	/**
