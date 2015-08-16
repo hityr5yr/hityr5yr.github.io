@@ -1356,7 +1356,7 @@ margin: 0;}
   font-size: 14px!important;
   width: 48%!important;
   }
-  .pronote{float: left; border-top: 1px solid #fff;}
+  .pronote{float: left; border-top: 1px solid #fff; margin-left: 12px!important;}
   .note{font-size: 10px!important; text-align: left!important; margin: 0!important; float: left;}
   
 .en-lang {display: none;}
