@@ -4135,7 +4135,7 @@ case 40: navigateDown(); break; //
 	        break; 																												// 
 	      default:																												// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){// 
-	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "inline";	// 
+	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "initial";// 
 	   		 }																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
