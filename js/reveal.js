@@ -4122,30 +4122,28 @@ case 40: navigateDown(); break; //
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {	
-
-	    switch(window.orientation){  
-	      case -90:
-	      case 90:
-	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
-	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "none";
-	   		 }
-	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){
-	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";
-	   		 }
-	        break; 
-	      default:
-	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
-	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "inline";
-	   		 }
-	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){
-	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";
-	   		 }
-	        break; 
-	    }
-						// 
-			document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
-	}																// 
+	function onOrientationChange( event ) {							// 
+	    switch(window.orientation){  								// 
+	      case -90:													// 
+	      case 90:													// 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){// 
+	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "none";	// 
+	   		 }																													// 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
+	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
+	   		 }																													// 
+	        break; 																												// 
+	      default:																												// 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){// 
+	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "inline";	// 
+	   		 }																													// 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
+	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
+	   		 }																													// 
+	        break; 																												// 
+	    }																														// 
+		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
+	}																															// 
 
 	/**
 	 * Handle for the window level 'visibilitychange' event.
