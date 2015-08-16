@@ -4130,10 +4130,16 @@ case 40: navigateDown(); break; //
 	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
 	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "none";
 	   		 }
+	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){
+	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";
+	   		 }
 	        break; 
 	      default:
 	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
 	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "inline";
+	   		 }
+	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){
+	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";
 	   		 }
 	        break; 
 	    }
