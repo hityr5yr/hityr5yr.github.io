@@ -263,6 +263,9 @@
 		// Force a layout when the whole page, incl fonts, has loaded
 		window.addEventListener( 'load', layout, false );
 
+		// Force change og layout at change of orientation
+//  		window.addEventListener('orientationchange', doOnOrientationChange);
+
 		var query = Reveal.getQueryHash();
 
 		// Do not accept new dependencies via query config to avoid
@@ -4118,7 +4121,9 @@ case 40: navigateDown(); break; //
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {							// 
-			document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
+			document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 20 + "px"; // Added by Peter Petrov
+			document.getElementsByClassName('controls')[0].style.right = dom.wrapper.offsetWidth/2 - 53 + 'px';		 //	
+			document.getElementsByClassName('slide-number')[0].style.left =	dom.wrapper.offsetWidth/2 - 15 + 'px';	 //	
 	}																// 
 
 	/**
