@@ -42,7 +42,6 @@ body {
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
-  color: #b82025;
   font-family: 'ModeratoG7LRegular', Helvetica, sans-serif !important;
   font-weight: normal;
   line-height: 1.2;
@@ -50,6 +49,8 @@ body {
   text-transform: uppercase;
   text-shadow: none;
   word-wrap: break-word; }
+.reveal h1, .reveal h2, .reveal h3{
+  color: #b82025;}
 
 .reveal h1 {
   font-size: 40px; }
