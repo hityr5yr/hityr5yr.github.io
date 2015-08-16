@@ -226,6 +226,7 @@ body {
   -webkit-transform: translate(50%, 0%);
   -ms-transform: translate(50%, 0%);
   transform: translate(50%, 0%);
+  background: fixed url('../../images/pattern-front.gif') repeat 0 0;
 }
 
 .reveal .controls div {
