@@ -4129,11 +4129,11 @@ case 40: navigateDown(); break; //
 	      case 90:
 	        document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[0].style.display = "none";
 	        alert(document.querySelectorAll(".reveal section.present center.quest")[0].style.width);
-	        document.querySelectorAll(".reveal section.present center.quest")[0].style.textAlign = "right";
+//	        document.querySelectorAll(".reveal section.present center.quest")[0].style.textAlign = "right";
 	        break; 
 	      default:
 	        document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[0].style.display = "inline";
-	        document.querySelectorAll(".reveal section.present center.quest")[0].style.textAlign = "center";
+//	        document.querySelectorAll(".reveal section.present center.quest")[0].style.textAlign = "center";
 	        break; 
 	    }
 						// 
