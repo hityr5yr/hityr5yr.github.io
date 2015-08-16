@@ -4122,7 +4122,20 @@ case 40: navigateDown(); break; //
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {						// 
+	function onOrientationChange( event ) {	
+
+	    switch(window.orientation){  
+	      case -90:
+	      case 90:
+	        document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[0].style.display = "none";
+	        document.querySelectorAll(".reveal section.present .quest")[0].style.float = "right";
+	        break; 
+	      default:
+	        document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[0].style.display = "inline";
+	        document.querySelectorAll(".reveal section.present .quest")[0].style.float = "none";
+	        break; 
+	    }
+						// 
 			document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
 	}																// 
 
