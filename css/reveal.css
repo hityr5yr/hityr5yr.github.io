@@ -183,6 +183,9 @@ body {
   color: #b7c8e0;
 }
 .reveal a.navigate-down.arrow.enabled{
+  display: none;
+}
+html:not(.mobile) .reveal a.navigate-down.arrow.enabled{
   display: inline; text-decoration: none; 
   -webkit-transition: opacity 0.5s ease; 
   -moz-transition: opacity 0.5s ease; 
