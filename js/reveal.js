@@ -4128,10 +4128,14 @@ case 40: navigateDown(); break; //
 	      case -90:
 	      case 90:
 	      alert(document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length);
-	        document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[0].style.display = "none";
+	      	for(i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
+	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "none";
+	   		 }
 	        break; 
 	      default:
-	        document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[0].style.display = "inline";
+	      	for(i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
+	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "inline";
+	   		 }
 	        break; 
 	    }
 						// 
