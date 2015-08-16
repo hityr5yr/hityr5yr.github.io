@@ -184,7 +184,7 @@ body {
 }
 
 .reveal a.navigate-down.arrow.enabled{
-  display: inline; text-decoration: none; 
+  display: initial; text-decoration: none; 
   -webkit-transition: opacity 0.5s ease; 
   -moz-transition: opacity 0.5s ease; 
   -ms-transition: opacity 0.5s ease; 
