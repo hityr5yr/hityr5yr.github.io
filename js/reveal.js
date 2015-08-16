@@ -4127,12 +4127,12 @@ case 40: navigateDown(); break; //
 	    switch(window.orientation){  
 	      case -90:
 	      case 90:
-	      	for(i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
+	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
 	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "none";
 	   		 }
 	        break; 
 	      default:
-	      	for(i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
+	      	for(var i=0; i<=document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled").length - 1; i++){
 	        	document.querySelectorAll(".reveal section.present a.navigate-down.arrow.enabled")[i].style.display = "inline";
 	   		 }
 	        break; 
