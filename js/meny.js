@@ -467,7 +467,7 @@ var Meny = {
 			function onMouseMove( event ) {
 				// Prevent opening/closing when mouse is down since
 				// the user may be selecting text
-				document.getElementsByClassName('reveal')[0].style.display = 'inline-block';
+				document.getElementsByClassName('reveal')[0].style.display = 'inline-block'; // Added by Peter Petrov
 				if( !isMouseDown ) {
 					var x = event.clientX - indentX,
 						y = event.clientY - indentY;
@@ -484,6 +484,9 @@ var Meny = {
 
 						case POSITION_R:
 							var w = dom.wrapper.offsetWidth;
+							console.log(w);
+							console.log(config.width);
+							console.log(x);
 							if( x < w - config.width + 20) { // Changed by Peter Petrov
 								close();
 							}
