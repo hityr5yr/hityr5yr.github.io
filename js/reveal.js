@@ -4162,7 +4162,7 @@ case 40: navigateDown(); break; //
 	        break; 																												// 
 	    }																														// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//
-		if(document.getElementsByClassName("meny-arrow")[0].style.right !== 0){document.getElementsByClassName("meny-arrow")[0].style.right = 0};														//
+		if(document.getElementsByClassName("meny-arrow")[0].style.right != 0){onMouseMove()};														//
 		secalc_plus();																											//
 	}																															// 
 
