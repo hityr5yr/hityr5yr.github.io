@@ -565,7 +565,7 @@
 				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseout', 'document.getElementById("menuicon").style.opacity=0.7');
-				if(screen.width<screen.height){var screenrate = screen.height/screen.width;  alert("h: "+screen.height+"; w: "+screen.width)}
+				if(screen.width<screen.height){var screenrate = screen.height/screen.width;}
 				else{var screenrate = screen.width/screen.height;}
 				if(screenrate<1.775){
 					if(screen.width<screen.height){
@@ -583,7 +583,8 @@
 
 
 				}
-				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
+  alert(document.getElementsByTagName('BODY')[0].style.backgroundSize);			
+//				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
 			}
 		</script>
 
