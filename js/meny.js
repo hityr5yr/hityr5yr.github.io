@@ -487,7 +487,7 @@ var Meny = {
 							if( x < w - config.width + 20) { // Changed by Peter Petrov
 								close();
 							}
-							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 150 && y > dom.wrapper.offsetHeight/2 - 150) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 110
+							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 120 && y > dom.wrapper.offsetHeight/2 - 120) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 110
 							open();
 							}
 							break;
