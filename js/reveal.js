@@ -4135,7 +4135,6 @@ case 40: navigateDown(); break; //
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
 	   		 };
-	   		alert("1?");
 			secalc_plus();																													// 
 	        break; 																												// 
 	      default:																												// 
@@ -4145,11 +4144,11 @@ case 40: navigateDown(); break; //
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
 	   		 };
-	   		alert("2?");
 			secalc_plus();																													// 
 	        break; 																												// 
 	    }																														// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//
+		secalc_plus();	
 	}																															// 
 
 	/**
