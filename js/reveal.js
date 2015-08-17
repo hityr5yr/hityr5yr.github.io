@@ -4139,7 +4139,8 @@ case 40: navigateDown(); break; //
 			case 1024: deg = 64.5; break; // Apple iPad
 			case 1280: deg = 43.5; break; // Google Nexus 10
 			default: deg = 0; break									//
-		}															// 
+		};															//
+		meny = Meny.create({angle: deg});							// 
 	    switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
