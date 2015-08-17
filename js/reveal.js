@@ -4146,6 +4146,7 @@ case 40: navigateDown(); break; //
 	        break; 																												// 
 	    }																														// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
+		secalc_plus();
 	}																															// 
 
 	/**

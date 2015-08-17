@@ -561,6 +561,7 @@
 			});
 			document.onload = secalc_plus();
 			function secalc_plus(){
+				alert("!");
 				var secnum = 100/(Reveal.getTotalSlides());
 				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
