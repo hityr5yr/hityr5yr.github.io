@@ -565,15 +565,15 @@
 				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseout', 'document.getElementById("menuicon").style.opacity=0.7');
-				if(window.outerWidth<window.outerHeight){var screenrate = window.outerHeight/window.outerWidth;  alert("h: "+window.outerHeight+"; w: "+window.outerWidth)}
-				else{var screenrate = window.outerWidth/window.outerHeight;}
+				if(screen.width<screen.height){var screenrate = screen.height/screen.width;  alert("h: "+screen.height+"; w: "+screen.width)}
+				else{var screenrate = screen.width/screen.height;}
 				if(screenrate<1.775){
-					if(window.outerWidth<window.outerHeight){
-						document.getElementsByTagName('BODY')[0].style.backgroundSize = window.outerWidth*1.775 + 'px ' + window.outerWidth + 'px';
+					if(screen.width<screen.height){
+						document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.width*1.775 + 'px ' + screen.width + 'px';
 					}
-					else{document.getElementsByTagName('BODY')[0].style.backgroundSize = window.outerHeight*1.775 + 'px ' + window.outerHeight + 'px'}
+					else{document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.height*1.775 + 'px ' + screen.height + 'px'}
 				}	
-				else{document.getElementsByTagName('BODY')[0].style.backgroundSize = window.outerWidth + 'px ' + window.outerHeight + 'px';}
+				else{document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.width + 'px ' + screen.height + 'px';}
 				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
 			}
 		</script>
