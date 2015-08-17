@@ -4125,8 +4125,7 @@ case 40: navigateDown(); break; //
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {		
-	alert("?");					//
+	function onOrientationChange( event ) {					//
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.onMouseMove();};	
 		plus = 0;													//
 		switch(document.body.clientWidth){							//
@@ -4150,8 +4149,7 @@ case 40: navigateDown(); break; //
 	   		 };																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
-	   		 };																													//
-//			secalc_plus();																										// 
+	   		 };																													//																										// 
 	        break; 																												// 
 	      default:																												// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){						// 
@@ -4159,8 +4157,7 @@ case 40: navigateDown(); break; //
 	   		 };																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
-	   		 };																													//
-//			secalc_plus();																										// 
+	   		 };																													//																									// 
 	        break; 																												// 
 	    }																														// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//													//
