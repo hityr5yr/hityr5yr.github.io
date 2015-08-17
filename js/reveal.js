@@ -4131,23 +4131,25 @@ case 40: navigateDown(); break; //
 	      case 90:													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){						// 
 	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "none";							// 
-	   		 }																													// 
+	   		 };																												// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
-	   		 }																													// 
+	   		 };
+	   		alert("1?");
+			secalc_plus();																													// 
 	        break; 																												// 
 	      default:																												// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){						// 
 	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "inline-block";					// 
-	   		 }																													// 
+	   		 };																												// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
-	   		 }																													// 
+	   		 };
+	   		alert("2?");
+			secalc_plus();																													// 
 	        break; 																												// 
 	    }																														// 
-		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
-		alert("?");
-		secalc_plus();																											//
+		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//
 	}																															// 
 
 	/**
