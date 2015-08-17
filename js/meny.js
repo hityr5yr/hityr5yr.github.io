@@ -484,9 +484,6 @@ var Meny = {
 
 						case POSITION_R:
 							var w = dom.wrapper.offsetWidth;
-							console.log(w);
-							console.log(config.width);
-							console.log(x);
 							if( x < w - config.width + 20) { // Changed by Peter Petrov
 								close();
 							}
