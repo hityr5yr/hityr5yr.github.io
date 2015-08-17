@@ -447,7 +447,7 @@
 		<script>
 			var deg, plus = 0;
 			if(c.search('mobile')!=-1){
-
+				console.log(document.body.clientWidth);
 				switch(document.body.clientWidth){
 					case 568: deg = 90; plus = 13; break; // Apple iPhone 5
 					case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
@@ -567,7 +567,7 @@
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseout', 'document.getElementById("menuicon").style.opacity=0.7');
 				if(window.screen.availWidth/window.screen.availHeight<1.775){document.getElementsByTagName('BODY')[0].style.backgroundSize = window.screen.availHeight*1.775 + 'px ' + window.screen.availHeight + 'px';}	
-				else{document.getElementsByTagName('BODY')[0].style.backgroundSize = window.screen.availWidth + 'px ' + window.screen.availHeight + 'px';}
+				else{document.getElementsByTagName('BODY')[0].style.backgroundSize = window.screen.availWidth + 'px ' + window.screen.availHeight + 'px'; alert(document.getElementsByTagName('BODY')[0].style.backgroundSize); }
 				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
 			}
 		</script>
