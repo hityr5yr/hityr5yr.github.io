@@ -4125,7 +4125,8 @@ case 40: navigateDown(); break; //
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {							//
+	function onOrientationChange( event ) {		
+	alert("?");					//
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.onMouseMove();};	
 		plus = 0;													//
 		switch(document.body.clientWidth){							//
