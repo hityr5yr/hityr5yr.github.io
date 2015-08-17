@@ -4126,7 +4126,7 @@ case 40: navigateDown(); break; //
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {							//
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){alert("?"); document.getElementsByClassName("meny-arrow")[0].click();};	
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){document.getElementsByClassName("meny-arrow")[0].click();};	
 		plus = 0;													//
 		switch(document.body.clientWidth){							//
 			case 568: deg = 90; plus = 13; break; // Apple iPhone 5
