@@ -86,7 +86,7 @@
 	<body>
 		<script src="js/reveal.js"></script>
 		<script src="js/meny.js"></script>
-		<p style="border-radius: 5ypx; font-size: 14px; position: absolute; left: 0; bottom: 2px; color: #fff; text-align: center; margin: 0 165px; background: #2b4261;">© 2015 VIEWCONT Ltd.</p>
+		<p style="border-radius: 5px; font-size: 14px; position: absolute; left: 50%; bottom: 2px; color: #fff; text-align: center; margin: 0 0 0 -62px; background: #2b4261;">© 2015 VIEWCONT Ltd.</p>
 		<div class="meny">
 			<div id="jointm">
 				<div id="sharethis">
@@ -574,17 +574,12 @@
 					else{document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.height*1.775 + 'px ' + screen.height + 'px';}
 				}	
 				else{
-
-
 					if(screen.width<screen.height){
 						document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.width*1.775 + 'px ' + screen.width + 'px';
 					}
 					else{document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.height*1.775 + 'px ' + screen.height + 'px';}
-
-
 				}
-  alert(document.getElementsByTagName('BODY')[0].style.backgroundSize);			
-//				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
+				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
 			}
 		</script>
 
