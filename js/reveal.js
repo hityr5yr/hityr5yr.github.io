@@ -3929,7 +3929,7 @@ case 40: navigateDown(); break; //
 
 			// If the touch started with two points and still has
 			// two active touches; test for the pinch gesture
-			if( event.touches.length === 2 && touch.startCount === 2  ) {
+			if( event.touches.length === 2 && touch.startCount === 2 && config.overview ) {
 
 				// The current distance in pixels between the two touch points
 				var currentSpan = distanceBetween( {
