@@ -465,6 +465,9 @@
 		// Slide number
 		dom.slideNumber = createSingletonNode( dom.wrapper, 'div', 'slide-number', '' );
 
+		//Menu arrow
+		dom.slideNumber = createSingletonNode( dom.wrapper, 'div', 'meny-arrow', '' );
+
 		// Overlay graphic which is displayed during the paused mode
 		createSingletonNode( dom.wrapper, 'div', 'pause-overlay', null );
 
