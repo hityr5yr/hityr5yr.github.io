@@ -4129,16 +4129,16 @@ case 40: navigateDown(); break; //
 	    switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
-	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow.enabled").length - 1; i++){// 
-	        	document.querySelectorAll(".reveal a.navigate-down.arrow.enabled")[i].style.display = "none";	// 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){// 
+	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "none";	// 
 	   		 }																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
 	   		 }																													// 
 	        break; 																												// 
 	      default:																												// 
-	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow.enabled").length - 1; i++){// 
-	        	document.querySelectorAll(".reveal a.navigate-down.arrow.enabled")[i].style.display = "inline-block";// 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){// 
+	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "inline-block";// 
 	   		 }																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
