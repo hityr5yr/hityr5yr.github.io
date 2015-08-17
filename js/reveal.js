@@ -482,14 +482,17 @@
 		dom.controlsPrev = toArray( document.querySelectorAll( '.navigate-prev' ) );
 		dom.controlsNext = toArray( document.querySelectorAll( '.navigate-next' ) );
 		dom.controlsMenu = toArray( document.querySelectorAll( '.slide-number' ) ); // Added by Peter Petrov
-		dom.controlsLang = toArray( document.querySelectorAll( '.en-lang' ) ); // Added by Peter Petrov
-		dom.controlsLang = toArray( document.querySelectorAll( '.bg-lang' ) ); // Added by Peter Petrov
+		dom.controlsLang = toArray( document.querySelectorAll( '.en-lang' ) ); 		// Added by Peter Petrov
+		dom.controlsLang = toArray( document.querySelectorAll( '.bg-lang' ) ); 		// Added by Peter Petrov
 
 		dom.statusDiv = createStatusDiv();
 		if(isMobileDevice){																							 // Changed by Peter Petrov: Can be used as well c.search('mobile')!=-1
 			document.getElementById('menuicon').style.display='none'; 												 // Added by Peter Petrov	
 			document.getElementsByClassName('slide-number')[0].style.color='#506786';								 //	
-			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //				
+			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //
+			document.getElementById('rights').style.margin = '0';													 //
+			document.getElementById('rights').style.left = '6px';													 //
+			document.getElementById('rights').style.fontSize = '12px';												 //				
 		}																											 //
 		else{																										 //
 			document.getElementsByClassName('controls')[0].style.right = '53px';									 //	
