@@ -4127,7 +4127,7 @@ case 40: navigateDown(); break; //
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {							//
 		plus = 0;													//
-		alert(plus);
+		alert(document.body.clientWidth);
 		switch(document.body.clientWidth){							//
 			case 568: deg = 90; plus = 13; break; // Apple iPhone 5
 			case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
