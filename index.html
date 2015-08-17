@@ -579,7 +579,11 @@
 					}
 					else{document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.height*1.775 + 'px ' + screen.height + 'px';}
 				}
-				document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';//-130px
+
+				if(screen.width<screen.height){
+					document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availWidth-document.body.clientWidth)+'px';//
+				}
+				else{document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';}//
 			}
 		</script>
 
