@@ -467,7 +467,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
 .reveal.center, .reveal.center .slides, .reveal.center .slides section {
   min-height: 0 !important; }
   
-.sectiondiv { background:#2b4261; padding: 20px 20px 6px!important; display: inline-block; vertical-align: middle!important; color: #FFF}
+.sectiondiv { background:#2b4261; padding: 20px!important; display: inline-block; vertical-align: middle!important; color: #FFF}
 
 /* Don't allow interaction with invisible slides */
 .reveal .slides > section.future, .reveal .slides > section > section.future, .reveal .slides > section.past, .reveal .slides > section > section.past {
@@ -1378,3 +1378,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;
 #socialicons img{border:0; margin: 0 5px 3px 0!important; border-radius: 4px;}
 .reveal ul li{height: 20px;}
 .quest{margin: 0 auto!important;}
+#socialicons img.soic {margin: 0!important;}
+#socialicons div a {padding: 0 15px; display: inline-block;}
+.gentext img.founderimg{width: 64px; height: 64px; margin: 0 10px 0 0!important; float: left;}
+.founder{height: 64px; vertical-align: middle!important; display: table-cell!important;}
