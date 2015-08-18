@@ -4126,8 +4126,9 @@ case 40: navigateDown(); break; //
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {					//
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.onMouseMove();};	
-		plus = 0;													//
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){		alert("1: "+window.orientation);	Meny.onMouseMove(); 		alert("2: "+window.orientation);	};	
+		plus = 0;	
+				alert("3: "+window.orientation);													//
 		switch(document.body.clientWidth){							//
 			case 568: deg = 90; plus = 13; break; // Apple iPhone 5
 			case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
@@ -4141,7 +4142,7 @@ case 40: navigateDown(); break; //
 			default: deg = 0; break									//
 		};															//
 		meny.configure({ angle: deg });	
-		alert(window.orientation);							// 
+		alert("4: "+window.orientation);							// 
 	    switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
