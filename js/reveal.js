@@ -4126,7 +4126,6 @@ case 40: navigateDown(); break; //
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {					//
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){		alert("1: "+window.orientation);	Meny.onMouseMove(); 		alert("2: "+window.orientation);	};	
 		plus = 0;	
 				alert("3: "+window.orientation);													//
 		switch(document.body.clientWidth){							//
@@ -4163,7 +4162,8 @@ case 40: navigateDown(); break; //
 	        break; 																												// 
 	    }																														// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//													//
-		secalc_plus();																											//
+		secalc_plus();	
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){		alert("1: "+window.orientation);	Meny.onMouseMove(); };																											//
 	}																															// 
 
 	/**
