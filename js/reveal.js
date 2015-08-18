@@ -4126,8 +4126,8 @@ case 40: navigateDown(); break; //
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {					//
-		plus = 0;	
-				alert("3: "+window.orientation);													//
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.onMouseMove(); };	
+		plus = 0;													//
 		switch(document.body.clientWidth){							//
 			case 568: deg = 90; plus = 13; break; // Apple iPhone 5
 			case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
@@ -4162,8 +4162,7 @@ case 40: navigateDown(); break; //
 	        break; 																												// 
 	    }																														// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//													//
-		secalc_plus();	
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){		alert("1: "+window.orientation);	Meny.onMouseMove(); };																											//
+		secalc_plus();																											//
 	}																															// 
 
 	/**
