@@ -41,7 +41,7 @@ body {
  * HEADERS
  *********************************************/
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  margin: 0 0 20px 0;
+  margin: 0 0 20px 0 ;
   font-family: 'ModeratoA5L', Helvetica, sans-serif !important;
   font-weight: normal;
   line-height: 1.2;
@@ -49,10 +49,10 @@ body {
   text-shadow: none;
   word-wrap: break-word; }
 .reveal h1, .reveal h2{
+  margin: 0 auto 20px ;
   font-family: 'ModeratoG7LRegular', Helvetica, sans-serif !important;
   color: #b82025;
   text-transform: uppercase;
-  margin:0;
 }
 
 .reveal h1 {

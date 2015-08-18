@@ -4134,6 +4134,9 @@ case 40: navigateDown(); break; //
 	   		 };																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
+	   		 };	
+	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){										// 
+	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "right";										// 
 	   		 };																													//																										// 
 	        break; 																												// 
 	      default:																												// 
@@ -4142,7 +4145,10 @@ case 40: navigateDown(); break; //
 	   		 };																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
-	   		 };																													//																									// 
+	   		 };	
+	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){										// 
+	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "center";										// 
+	   		 };																														//																									// 
 	        break; 																												// 
 	    }		
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.onMouseMove(); };	
