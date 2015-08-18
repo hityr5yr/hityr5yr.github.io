@@ -52,6 +52,7 @@ body {
   font-family: 'ModeratoG7LRegular', Helvetica, sans-serif !important;
   color: #b82025;
   text-transform: uppercase;
+  margin:0;
 }
 
 .reveal h1 {
