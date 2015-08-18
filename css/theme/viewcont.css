@@ -49,7 +49,7 @@ body {
   text-shadow: none;
   word-wrap: break-word; }
 .reveal h1, .reveal h2{
-  margin: 0 auto 20px ;
+  margin: 0 auto 10px ;
   font-family: 'ModeratoG7LRegular', Helvetica, sans-serif !important;
   color: #b82025;
   text-transform: uppercase;

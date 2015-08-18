@@ -79,7 +79,7 @@ html:not(.mobile) .meny { width: 320px !important;}
 			}
 
 .meny ul {
-	margin-top: 20px;
+	margin-top: 10px;
 }
 /**
  * Hint graphic that appears while menu is inactive
