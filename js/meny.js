@@ -391,7 +391,6 @@ var Meny = {
 			 * Collapses the menu.
 			 */
 			function close() {
-				alert("2");
 				if( isOpen ) {
 					isOpen = false;
 					
