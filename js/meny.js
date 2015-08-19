@@ -436,7 +436,7 @@ var Meny = {
 					setTimeout("document.getElementsByClassName('slide-number')[0].click(); document.getElementsByClassName('maplink')[0].innerHTML='Зареди слайда';", 100);
 				}
 				else{setTimeout("document.getElementsByClassName('slide-number')[0].click(); document.getElementsByClassName('maplink')[0].innerHTML='Карта на сайта';", 100);
-		}
+				}
 			}//Added By Peter Petrov
 			else{;}
 			}
