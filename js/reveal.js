@@ -4184,7 +4184,6 @@
 	 * Invoked when a slide is and we're in the overview.
 	 */
 	function onOverviewSlideClicked( event ) {
-		document.getElementsByClassName('maplink')[0].innerHTML = 'Карта на сайта'; //Added by Peter Petrov
 		// TODO There's a bug here where the event listeners are not
 		// removed after deactivating the overview.
 		if( eventsAreBound && isOverview() ) {
