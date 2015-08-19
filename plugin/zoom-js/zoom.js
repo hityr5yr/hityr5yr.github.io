@@ -176,14 +176,21 @@ var zoom = (function(){
 			if( level !== 1 ) {																				//
 				document.documentElement.classList.add( 'zoomed' );											//
 				zoomflag = 1;																				//
-				if(c.search('chrome')!=-1){																	//																	//
+				if(c.search('chrome')!=-1){																	//		
+					if(document.body.clientWidth<screen.width){												//
+						var titletext = 'Ако увеличеното изображение е неясно,\rмаксимизирайте прозреца и увеличете пак.';//
+						if(document.getElementsByClassName('bg-lang')[0].style.display=='none'){			//
+						titletext='If zoomed image is blur, maximize\rthe window and zoom in again.';		//
+						}																					//
+						event.target.title=titletext;														//
+					}																						//
 				    var text = document.getElementById('autosel');    										//
 					if (window.getSelection) { 																//
 				        var selection = window.getSelection();            									//
 				        var range = document.createRange();													//
 				        range.selectNodeContents(text);														//
 				        selection.removeAllRanges();														//
-				        selection.addRange(range);														//
+				        selection.addRange(range);															//
 				    }																						//
 				}																							//
 			}																								//

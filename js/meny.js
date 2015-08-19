@@ -349,8 +349,10 @@ var Meny = {
 						}
 					Meny.addClass( dom.wrapper, 'meny-active' );
 					var arrowpos;
-					if(document.getElementsByClassName("meny")[0].clientWidth == 10){arrowpos = document.getElementsByClassName("meny")[0].style.pixelWidth-30;} // Added by Peter Petrov
-					else {arrowpos = document.getElementsByClassName("meny")[0].clientWidth;} // Added by Peter Petrov
+					if(document.getElementsByClassName("meny")[0].clientWidth == 10){
+						arrowpos = document.getElementsByClassName("meny")[0].style.pixelWidth-30;	// Added by Peter Petrov
+					} 																				// Added by Peter Petrov
+					else {arrowpos = document.getElementsByClassName("meny")[0].clientWidth;} 		// Added by Peter Petrov
 					document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = arrowpos + 10 + "px"; // Added by Peter Petrov
 					dom.cover.style.height = dom.contents.scrollHeight - 3 +'px'; // Changed by Peter Petrov (added -3)
 					dom.cover.style.visibility = 'visible';
@@ -364,8 +366,8 @@ var Meny = {
 						} );
 
 						dom.cover.style.opacity = 1;
-						if(c.substring(0,5)=="gecko"){ // Added by Peter Petrov
-							document.getElementsByClassName("meny")[0].style.transform=menuTransformOpened; // Added by Peter Petrov?
+						if(c.substring(0,5)=="gecko"){ 																// Added by Peter Petrov
+							document.getElementsByClassName("meny")[0].style.transform=menuTransformOpened; 		// Added by Peter Petrov?
 							document.getElementsByClassName("contents")[0].style.transform=contentsTransformOpened; // Added by Peter Petrov?
 						}
 						else{
@@ -487,7 +489,8 @@ var Meny = {
 							if( x < w - config.width + 20) { // Changed by Peter Petrov
 								close();
 							}
-							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 100 && y > dom.wrapper.offsetHeight/2 - 100) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 100
+							else if( x > w - config.threshold && zoomflag === 0 && y < dom.wrapper.offsetHeight/2 + 100 
+							&& y > dom.wrapper.offsetHeight/2 - 100) { // Changed by Peter Petrov && zoomflag === 0 && y < dom.wrapper.offsetHeight - 100
 							open();
 							}
 							break;

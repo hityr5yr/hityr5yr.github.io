@@ -3835,16 +3835,16 @@
 //				case 78: case 34: navigateNext(); break;
 				// h, left
 //				case 72: 
-case 37: navigateLeft(); break; //
+				case 37: navigateLeft(); break; //
 				// l, right
 //				case 76: 
-case 39: navigateRight(); break;// All changed by Peter Petrov
+				case 39: navigateRight(); break;// All changed by Peter Petrov
 				// k, up
 //				case 75: 
-case 38: navigateUp(); break;	//
+				case 38: navigateUp(); break;	//
 				// j, down
 //				case 74: 
-case 40: navigateDown(); break; //
+				case 40: navigateDown(); break; //
 				// home
 				case 36: slide( 0 ); break;
 				// c
@@ -4125,7 +4125,7 @@ case 40: navigateDown(); break; //
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {					//
+	function onOrientationChange( event ) {							//
 		switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
@@ -4134,10 +4134,10 @@ case 40: navigateDown(); break; //
 	   		 };																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
-	   		 };	
-	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){										// 
-	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "right";										// 
-	   		 };																													//																										// 
+	   		 };																													//
+	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){											// 
+	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "right";											// 
+	   		 };																													//
 	        break; 																												// 
 	      default:																												// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){						// 
@@ -4145,17 +4145,17 @@ case 40: navigateDown(); break; //
 	   		 };																													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
 	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
-	   		 };	
-	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){										// 
-	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "center";										// 
-	   		 };																														//																									// 
+	   		 };																													//
+	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){											// 
+	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "center";											// 
+	   		 };																													//
 	        break; 																												// 
-	    }
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
-		plus = 0;													//
-		mobilesizes();														//
-		meny.configure({ angle: deg });							// 
-		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//													//
+	    }																														//
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
+		plus = 0;																												//
+		mobilesizes();																											//
+		meny.configure({ angle: deg });																							// 
+		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
 	}																															// 
 
