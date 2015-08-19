@@ -4151,7 +4151,7 @@ case 40: navigateDown(); break; //
 	   		 };																														//																									// 
 	        break; 																												// 
 	    }		
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.initialize(); };	
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.close(); };	
 		plus = 0;													//
 		mobilesizes();														//
 		meny.configure({ angle: deg });							// 
