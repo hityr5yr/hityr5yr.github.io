@@ -4153,20 +4153,8 @@ case 40: navigateDown(); break; //
 	    }		
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.onMouseMove(); };	
 		plus = 0;													//
-		switch(document.body.clientWidth){							//
-			case 568: deg = 90; plus = 13; break; // Apple iPhone 5
-			case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
-			case 667: deg = 87; break; // Apple iPhone 6
-			case 732: deg = 78.7; break; // Google Nexus 6
-			case 736: deg = 78.3; break; // Apple iPhone 6 plus
-			case 768: deg = 90; plus = 40; break; // Apple iPad
-			case 960: deg = 61.5; break; // Google Nexus 7
-			case 1024: deg = 64.5; break; // Apple iPad
-			case 1280: deg = 43.5; break; // Google Nexus 10
-			default: deg = 0; break									//
-		};															//
+		mobilesizes();														//
 		meny.configure({ angle: deg });							// 
-																												// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov																										//													//
 		secalc_plus();																											//
 	}																															// 

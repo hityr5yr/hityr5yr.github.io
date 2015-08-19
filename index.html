@@ -83,7 +83,7 @@
 			}	
 		</script>
 	</head>
-	<body>
+	<body onresize="plus = 0; pcandlaptopsizes(); meny.configure({ angle: deg }); secalc_plus()">
 		<script src="js/reveal.js"></script>
 		<script src="js/meny.js"></script>
 		<p id="rights" style="border-radius: 5px; font-size: 14px; position: absolute; left: 50%; bottom: 2px; color: #fff; text-align: center; margin: 0 0 0 -62px; background: #2b4261;">© 2015 VIEWCONT Ltd.</p>
@@ -99,7 +99,7 @@
 				</div>
 				<ul class="bg-lang">
 					<li><a href="#/0" onclick="meny.close()">Начало</a></li>
-					<li><a href="#/1" onclick="meny.close()">Проекти</a></li>
+					<li><a href="#/1" onclick="meny.close()">Примери</a></li>
 					<li><a href="#/2" onclick="meny.close()">Технологията</a></li>
 					<li><a href="#/3" onclick="meny.close()">За клиенти</a></li>
 					<li><a href="#/4/0" onclick="meny.close()">Ние</a></li>
@@ -107,7 +107,7 @@
 				</ul>
 				<ul class="en-lang">
 					<li><a href="#/0" onclick="meny.close()">Home</a></li>
-					<li><a href="#/1" onclick="meny.close()">Projects</a></li>
+					<li><a href="#/1" onclick="meny.close()">Examples</a></li>
 					<li><a href="#/2" onclick="meny.close()">The Technology</a></li>
 					<li><a href="#/3" onclick="meny.close()">Customers only</a></li>
 					<li><a href="#/4/0" onclick="meny.close()">About us</a></li>
@@ -454,7 +454,7 @@
 		</div>
 		<script>
 			var deg, plus = 0;
-			if(c.search('mobile')!=-1){
+			function mobilesizes(){
 				switch(document.body.clientWidth){
 					case 568: deg = 90; plus = 13; break; // Apple iPhone 5
 					case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
@@ -468,34 +468,36 @@
 					default: deg = 0; break
 				}
 			}
-		else{
-			switch(document.body.clientWidth){
-				case 533: deg = 90; plus = 18; break; // Nokia Lumia 520
-				case 640: deg = 90; plus = 13.5; break; // BlackBerry Z30, Nokia N9, FF
-				case 768: deg = 75; break;
-				case 800: deg = 83.6; break;
-				case 819: deg = 81.6; break; // FF
-				case 922: deg = 72; break; // FF
-				case 1024: deg = 64.5; break;
-				case 1088: deg = 49.5; break; // FF
-				case 1093: deg = 49.2; break; // FF
-				case 1120: deg = 58.5; break; // FF
-				case 1152: deg = 49.5; break; // FF
-				case 1200: deg = 90; plus = 31; break; // Amazon Kindle Fire HDX 7"
-				case 1280: deg = 40.5; break; 
-				case 1344: deg = 40; break; // FF
-				case 1360: deg = 37.4; break;
-				case 1366: deg = 37.2; break;
-				case 1400: deg = 45.1; break;
-				case 1440: deg = 37.8; break;
-				case 1536: deg = 32; break;
-				case 1600: deg = 90; plus = 9.5; break; // Amazon Kindle Fire HDX 8.9"
-				case 1680: deg = 31; break;
-				case 1920: deg = 24; break;
-				case 2560: deg = 18; break; // Amazon Kindle Fire HDX 8.9"
-				default: deg = 0; break
-			}		
-		};
+			function pcandlaptopsizes(){
+				switch(document.body.clientWidth){
+					case 533: deg = 90; plus = 18; break; // Nokia Lumia 520
+					case 640: deg = 90; plus = 13.5; break; // BlackBerry Z30, Nokia N9, FF
+					case 768: deg = 75; break;
+					case 800: deg = 83.6; break;
+					case 819: deg = 81.6; break; // FF
+					case 922: deg = 72; break; // FF
+					case 1024: deg = 64.5; break;
+					case 1088: deg = 49.5; break; // FF
+					case 1093: deg = 49.2; break; // FF
+					case 1120: deg = 58.5; break; // FF
+					case 1152: deg = 49.5; break; // FF
+					case 1200: deg = 90; plus = 31; break; // Amazon Kindle Fire HDX 7"
+					case 1280: deg = 40.5; break; 
+					case 1344: deg = 40; break; // FF
+					case 1360: deg = 37.4; break;
+					case 1366: deg = 37.2; break;
+					case 1400: deg = 45.1; break;
+					case 1440: deg = 37.8; break;
+					case 1536: deg = 32; break;
+					case 1600: deg = 90; plus = 9.5; break; // Amazon Kindle Fire HDX 8.9"
+					case 1680: deg = 31; break;
+					case 1920: deg = 24; break;
+					case 2560: deg = 18; break; // Amazon Kindle Fire HDX 8.9"
+					default: deg = 0; break
+				}					
+			}
+			if(c.search('mobile')!=-1){mobilesizes();}
+			else{pcandlaptopsizes();};
 			// Create an instance of Meny
 			var meny = Meny.create({
 				// The element that will be animated in from off screen
