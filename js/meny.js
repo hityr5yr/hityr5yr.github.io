@@ -431,6 +431,14 @@ var Meny = {
 					}
 					Meny.dispatchEvent( dom.menu, 'close' );
 				}
+			if(event.target.className=="maplink"){
+				if(event.target.innerHTML=="Карта на сайта"){
+					setTimeout("document.getElementsByClassName('slide-number')[0].click(); document.getElementsByClassName('maplink')[0].innerHTML='Зареди слайда';", 100);
+				}
+				else{setTimeout("document.getElementsByClassName('slide-number')[0].click(); document.getElementsByClassName('maplink')[0].innerHTML='Карта на сайта';", 100);
+		}
+			}//Added By Peter Petrov
+			else{;}
 			}
 
 			/**

@@ -1382,3 +1382,4 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;
 #socialicons div a {padding: 0 15px; display: inline-block;}
 .gentext img.founderimg{width: 64px; height: 64px; margin: 0 10px 0 0!important; float: left;}
 .founder{height: 64px; vertical-align: middle!important; display: table-cell!important;}
+.maplink{cursor: pointer;}
