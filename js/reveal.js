@@ -4150,8 +4150,9 @@ case 40: navigateDown(); break; //
 	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "center";										// 
 	   		 };																														//																									// 
 	        break; 																												// 
-	    }		
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){Meny.close(); };	
+	    }
+	    alert(document.getElementsByClassName("meny-arrow")[0].style.right);
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){alert("1"); Meny.close(); };	
 		plus = 0;													//
 		mobilesizes();														//
 		meny.configure({ angle: deg });							// 
