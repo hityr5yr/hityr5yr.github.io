@@ -17,7 +17,7 @@ var zoomflag = 0; // Added by Peter Petrov
 			var zoomPadding = 25; 																// Changed from 20 to 25 by Peter Petrov
 			var revealScale = Reveal.getScale();												//
 			event.preventDefault();																//
-			if( modifier == "mozoom" || modifier == "zoomel mozoom") { 							//	
+			if( modifier == "mozoom" || modifier == "zoomel") { 							//	
 				if(c.search('chrome')==-1){	zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
 				else{ 																			//
 					var bounds = event.target.getBoundingClientRect();							//
@@ -43,7 +43,7 @@ var zoomflag = 0; // Added by Peter Petrov
 			var modifier = event.target.className; 													// Changed by Peter Petrov
 			var zoomPadding = 25;																	// Changed from 20 to 25 by Peter Petrov
 			var revealScale = Reveal.getScale();													//
-			if( modifier == "zoomel mozoom" ) { 													//
+			if( modifier == "zoomel" ) { 													//
 				event.preventDefault(); 															// 
 				if(c.search('chrome')==-1){zoom.to({element: event.target, pan: false});} 			// Added by Peter Petrov
 				else{ 																				//
