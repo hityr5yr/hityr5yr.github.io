@@ -17,7 +17,7 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 		var zoomPadding = 25; // Changed from 20 to 25 by Peter Petrov
 		var revealScale = Reveal.getScale();
 		if( modifier == "mozoom" ) { 													// 
-			if(c.search('chrome')==-1){		alert(modifier); 	zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
+			if(c.search('chrome')==-1){		alert(); 	zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
 			else{ 																			//
 				event.preventDefault();
 				
