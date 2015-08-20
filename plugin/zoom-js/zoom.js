@@ -95,23 +95,27 @@ var zoom = (function(){
 	 */
 	function magnify( rect, scale ) {
 	
-		var setsections = document.querySelectorAll("section.stack.present section:not(.present)"); 						//
-		if(scale!=1){																										//
-			for(i=0; i<setsections.length; i++){																			//
-				setsections[i].style.display = "none"; 																		//
-			}																												//
-			document.querySelector("section.stack.present section.present").style.display = "block";						// Added by Peter Petrov
-		}																													//
-		else{																												//
-			if(document.querySelector("section.stack.present section.future")){												//
-				document.querySelector("section.stack.present section.future").style.display = "block"						//
-			}; 																												//
-			var lastpastsection = document.querySelectorAll("section.stack.present section.past").length;					//
-			if(document.querySelectorAll("section.stack.present section.past")[lastpastsection-1]){							//
-				document.querySelectorAll("section.stack.present section.past")[lastpastsection-1].style.display = "block";	//
-			}																												//
-		}																													//
-		
+		var setsections = document.querySelectorAll("section.stack.present section:not(.present)"); 
+		var presentsec = document.querySelector("section.stack.present section.present");									//
+		var futuresec = document.querySelector("section.stack.present section.future");										//
+		var pastsec = document.querySelector("section.stack.present section.past");	
+		if(presentsec){										//
+			if(scale!=1){																										//
+				for(i=0; i<setsections.length; i++){																			//
+					setsections[i].style.display = "none"; 																		//
+				}																												//
+				presentsec.style.display = "block";																				// Added by Peter Petrov
+			}																													//
+			else{																												//
+				if(futuresec){																									//
+					futuresec.style.display = "block"																			//
+				}; 																												//
+				var lastpastsection = document.querySelectorAll("section.stack.present section.past").length;					//
+				if(document.querySelectorAll("section.stack.present section.past")[lastpastsection-1]){							//
+					document.querySelectorAll("section.stack.present section.past")[lastpastsection-1].style.display = "block";	//
+				}																												//
+			}																													//
+		}
 		var scrollOffset = getScrollOffset();
 
 		// Ensure a width/height is set
