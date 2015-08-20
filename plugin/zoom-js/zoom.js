@@ -13,7 +13,28 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
     var tapLength = currentTime - lastTap;
     clearTimeout(timeout);
     if (tapLength < 500 && tapLength > 0) {
-        alert('Double Tap');
+		var modifier = event.target.className; // Changed by Peter Petrov
+		
+		var zoomPadding = 25; // Changed from 20 to 25 by Peter Petrov
+		var revealScale = Reveal.getScale();
+
+		if( modifier == "mozoomel" ) { 														// 
+			if(c.search('chrome')==-1){zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
+			else{ 																			//
+				event.preventDefault();
+				
+				var bounds = event.target.getBoundingClientRect();
+				var u = navigator.userAgent, ua = u.toLowerCase();
+				
+				zoom.to({
+					x: ( bounds.left * revealScale ) - zoomPadding,
+					y: ( bounds.top * revealScale ) - zoomPadding,
+					width: ( bounds.width * revealScale ) + ( zoomPadding * 2 ),
+					height: ( bounds.height * revealScale ) + ( zoomPadding * 2 ),
+					pan: false
+					});	
+				}																//	Added by Peter Petrov
+			} 
         event.preventDefault();
     } else {
         alert('Single Tap');
