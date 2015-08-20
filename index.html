@@ -85,6 +85,22 @@
 				var str = document.getElementsByTagName("html")[0].className;
 				if(str.substr(str.length-6,6)=="zoomed"){zoom.out()}
 			}
+var clickTimer = null;
+
+function taps() {
+    if (clickTimer == null) {
+        clickTimer = setTimeout(function () {
+            clickTimer = null;
+            alert("single");
+
+        }, 500)
+    } else {
+        clearTimeout(clickTimer);
+        clickTimer = null;
+        alert("double");
+
+    }
+}
 		</script>
 	</head>
 	<body onresize="plus = 0; pcandlaptopsizes(); meny.configure({ angle: deg }); secalc_plus(); var str = document.getElementsByTagName('html')[0].className; if(str.substr(str.length-6,6)=='zoomed'){zoom.out()}">
@@ -131,7 +147,7 @@
 						<center>
 							<div class="sectiondiv" style="width: 910px; padding: 20px!important;">
 								<div class="bg-lang gentext" style="width: 250px; float: left; margin: 0 20px 0 0;">
-								<img id="pr_1_1" class="zoomel" data-src="examples/1surface1.png">
+								<img id="pr_1_1" class="" data-src="examples/1surface1.png" onclick="taps()";>
 									<div class="mozoomel">
 									Въздействието на добавената реалност е поразително. Илюзорните образи, наблюдавани от определени места, карат човек да се потапя с удоволствие в измисления им свят или да ги съзерцава упорито, в опит да открие границата между действителност и фикция. Даже в простичък пример, като този.
 									<div class="divider"></div>
