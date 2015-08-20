@@ -18,12 +18,11 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 		var revealScale = Reveal.getScale();
 		if( modifier == "mozoom" ) { 													// 
 			if(c.search('chrome')==-1){	event.preventDefault();	zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
-			else{ 																			//
+			else{ 
+			alert(c); 																//
 				event.preventDefault();
-				
 				var bounds = event.target.getBoundingClientRect();
 				var u = navigator.userAgent, ua = u.toLowerCase();
-
 				zoom.to({
 					x: ( bounds.left * revealScale ) - zoomPadding,
 					y: ( bounds.top * revealScale ) - zoomPadding,
