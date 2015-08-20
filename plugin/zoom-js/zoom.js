@@ -39,7 +39,7 @@ var zoomflag = 0; // Added by Peter Petrov
 		    }																					//
 		    lastTap = currentTime;																//
 	};																							//
-	if(c.search('mobile')==-1){
+	if(c.search('mobile')==-1){																	//
 		document.querySelector( '.reveal .slides' ).addEventListener( 'click', function( event ) { 
 			var modifier = event.target.className; 													// Changed by Peter Petrov
 			var zoomPadding = 25;																	// Changed from 20 to 25 by Peter Petrov
