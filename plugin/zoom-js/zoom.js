@@ -22,7 +22,8 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 		if( modifier == "mozoomel" ) { 	
 		    	alert(222);													// 
 			if(c.search('chrome')==-1){zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
-			else{ 																			//
+			else{ 		
+					    	alert(2222);																		//
 				event.preventDefault();
 				
 				var bounds = event.target.getBoundingClientRect();
