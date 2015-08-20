@@ -18,6 +18,7 @@ var zoomflag = 0; // Added by Peter Petrov
 
         }, 500)
     } else {
+    				event.preventDefault();
         clearTimeout(clickTimer);
         clickTimer = null;
  //       alert("double");
