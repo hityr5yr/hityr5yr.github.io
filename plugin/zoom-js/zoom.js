@@ -8,7 +8,7 @@ var zoomflag = 0; // Added by Peter Petrov
 
 	var timeout;																				//
 	var lastTap = 0;																			//
-	document.querySelector( '.reveal .slides .sectiondiv p' ).addEventListener('touchend', function(event) {	//
+	document.querySelector( '.reveal .slides .sectiondiv p, .reveal .slides .sectiondiv p img' ).addEventListener('touchend', function(event) {	//
 	    var currentTime = new Date().getTime();													//
 	    var tapLength = currentTime - lastTap;													//
 	    clearTimeout(timeout);																	//
