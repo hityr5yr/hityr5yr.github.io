@@ -38,8 +38,7 @@ var zoomflag = 0; // Added by Peter Petrov
 		            clearTimeout(timeout);														//
 		        }, 500);																		//
 		    }																					//
-		    lastTap = currentTime;		
- Reveal.removeEventListeners();														//
+		    lastTap = currentTime;														//
 	};																							//
 	if(c.search('mobile')==-1){
 		document.querySelector( '.reveal .slides' ).addEventListener( 'click', function( event ) { 
