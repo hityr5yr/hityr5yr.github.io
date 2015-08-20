@@ -85,21 +85,22 @@
 				var str = document.getElementsByTagName("html")[0].className;
 				if(str.substr(str.length-6,6)=="zoomed"){zoom.out()}
 			}
-var clickTimer = null;
+var mylatesttap;
+function taps(){
 
-function taps() {
-    if (clickTimer == null) {
-        clickTimer = setTimeout(function () {
-            clickTimer = null;
-            alert("single");
+   var now = new Date().getTime();
+   var timesince = now - mylatesttap;
+   console.log(timesince);
+   if((timesince < 2000) && (timesince > 0)){
 
-        }, 500)
-    } else {
-        clearTimeout(clickTimer);
-        clickTimer = null;
-        alert("double");
+   alert(2); // double tap   
 
-    }
+   }else{
+         alert(1);   // too much time to be a doubletap
+         }
+
+   mylatesttap = new Date().getTime();
+
 }
 		</script>
 	</head>
