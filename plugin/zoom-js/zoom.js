@@ -21,10 +21,10 @@ var zoomflag = 0; // Added by Peter Petrov
 
         clearTimeout(clickTimer);
         clickTimer = null;
- //       alert("double");
+        alert("double");
+}
 
-
-    				event.preventDefault();
+ //   				event.preventDefault();
 
 
 	
@@ -50,7 +50,7 @@ var zoomflag = 0; // Added by Peter Petrov
 					});	
 				}																//	Added by Peter Petrov
 			} 
-    } //
+//    } //
 
 	} );
 
