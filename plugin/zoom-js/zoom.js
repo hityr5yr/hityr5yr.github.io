@@ -15,7 +15,7 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
     if (tapLength < 500 && tapLength > 0) {
 
 		var modifier = event.target.className; // Changed by Peter Petrov
-		
+		alert(modifier);
 		var zoomPadding = 25; // Changed from 20 to 25 by Peter Petrov
 		var revealScale = Reveal.getScale();
 
