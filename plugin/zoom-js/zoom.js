@@ -37,9 +37,9 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 			} 
         event.preventDefault();
     } else {
-        alert('Single Tap');
+ //       alert('Single Tap');
         timeout = setTimeout(function() {
-            alert('Single Tap (timeout)');
+ //           alert('Single Tap (timeout)');
             clearTimeout(timeout);
         }, 500);
     }
