@@ -8,9 +8,9 @@ var zoomflag = 0; // Added by Peter Petrov
 
 	var timeout;																				//
 	var lastTap = 0;																			//
-	document.querySelector( '.reveal .slides .sectiondiv p.gentext' ).addEventListener('touchend', doubletap); 
-
-	function doubletap(){	//
+	document.querySelector( '.reveal .slides .sectiondiv p.gentext' ).addEventListener('touchend', doubletap); //
+	document.querySelector( '.reveal .slides .sectiondiv p.parentzoomel' ).addEventListener('touchend', doubletap); //
+	function doubletap(){																		//
 	    var currentTime = new Date().getTime();													//
 	    var tapLength = currentTime - lastTap;													//
 	    clearTimeout(timeout);																	//
@@ -38,7 +38,7 @@ var zoomflag = 0; // Added by Peter Petrov
 		            clearTimeout(timeout);														//
 		        }, 500);																		//
 		    }																					//
-		    lastTap = currentTime;														//
+		    lastTap = currentTime;																//
 	};																							//
 	if(c.search('mobile')==-1){
 		document.querySelector( '.reveal .slides' ).addEventListener( 'click', function( event ) { 
