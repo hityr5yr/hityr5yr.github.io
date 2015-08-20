@@ -13,17 +13,12 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
     var tapLength = currentTime - lastTap;
     clearTimeout(timeout);
     if (tapLength < 500 && tapLength > 0) {
-
 		var modifier = event.target.className; // Changed by Peter Petrov
-		alert(modifier);
 		var zoomPadding = 25; // Changed from 20 to 25 by Peter Petrov
 		var revealScale = Reveal.getScale();
-
-		if( modifier == "mozoom" ) { 	
-		    	alert(222);													// 
+		if( modifier == "zoomel" ) { 													// 
 			if(c.search('chrome')==-1){zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
-			else{ 		
-					    	alert(2222);																		//
+			else{ 																			//
 				event.preventDefault();
 				
 				var bounds = event.target.getBoundingClientRect();
