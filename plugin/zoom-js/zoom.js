@@ -8,7 +8,7 @@ var zoomflag = 0; // Added by Peter Petrov
 
 	var timeout;																				//
 	var lastTap = 0;																			//
-	document.querySelector( '.mozoom, .zoomel' ).addEventListener('touchend', function(event) {	//
+	document.querySelector( '.reveal .slides .sectiondiv p' ).addEventListener('touchend', function(event) {	//
 	    var currentTime = new Date().getTime();													//
 	    var tapLength = currentTime - lastTap;													//
 	    clearTimeout(timeout);																	//
@@ -39,7 +39,7 @@ var zoomflag = 0; // Added by Peter Petrov
 		    lastTap = currentTime;																	//
 	});																							//
 	if(c.search('mobile')==-1){
-		document.querySelector( '.reveal .slides' ).addEventListener( 'click', function( event ) { 
+		document.querySelector( '.reveal' ).addEventListener( 'click', function( event ) { 
 			var modifier = event.target.className; 													// Changed by Peter Petrov
 			var zoomPadding = 25;																	// Changed from 20 to 25 by Peter Petrov
 			var revealScale = Reveal.getScale();													//
