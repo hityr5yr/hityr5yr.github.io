@@ -497,13 +497,6 @@
 					default: deg = 0; break
 				}					
 			}
-			function changeclass(){
-				if(c.search('mobile')!=-1){
-					for(i=0; i<=document.getElementsByClassName("mozoomel").length; i++){
-						document.getElementsByClassName("mozoomel")[i].className = "zoomel";
-					}
-				}
-			}
 			if(c.search('mobile')!=-1){mobilesizes();}
 			else{pcandlaptopsizes();};
 			// Create an instance of Meny
@@ -554,7 +547,6 @@
 
 		<script src="lib/js/head.min.js"></script>
 
-
 		<script>
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
@@ -577,9 +569,16 @@
 //					{ src: 'plugin/wave/client.js'}  // Added by Peter Petrov
 				]
 			});
+			function changeclass(){
+				if(c.search('mobile')!=-1){
+					for(i=0; i<=document.getElementsByClassName("mozoomel").length; i++){
+						document.getElementsByClassName("mozoomel")[i].className = "zoomel";
+					}
+				}
+			}
 			document.onload = secalc_plus();
 			function secalc_plus(){
-				changeclass();
+				// changeclass();
 				var secnum = 100/(Reveal.getTotalSlides());
 				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
