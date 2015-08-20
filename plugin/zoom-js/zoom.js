@@ -23,7 +23,7 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 				
 				var bounds = event.target.getBoundingClientRect();
 				var u = navigator.userAgent, ua = u.toLowerCase();
-				
+				alert(modifier);
 				zoom.to({
 					x: ( bounds.left * revealScale ) - zoomPadding,
 					y: ( bounds.top * revealScale ) - zoomPadding,
@@ -33,7 +33,7 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 					});	
 				}																//	Added by Peter Petrov
 			} 
-        event.preventDefault();
+//        event.preventDefault();
     } else {
  //       alert('Single Tap');
         timeout = setTimeout(function() {
