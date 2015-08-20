@@ -96,10 +96,10 @@ var zoom = (function(){
 	function magnify( rect, scale ) {
 	
 		var setsections = document.querySelectorAll("section.stack.present section:not(.present)"); 
-		var presentsec = document.querySelector("section.stack.present section.present");									//
-		var futuresec = document.querySelector("section.stack.present section.future");										//
-		var pastsec = document.querySelector("section.stack.present section.past");	
-		if(presentsec){										//
+		var presentsec = document.querySelector("section.stack.present section.present");										//
+		var futuresec = document.querySelector("section.stack.present section.future");											//
+		var pastsec = document.querySelector("section.stack.present section.past");												//
+		if(presentsec){																											//
 			if(scale!=1){																										//
 				for(i=0; i<setsections.length; i++){																			//
 					setsections[i].style.display = "none"; 																		//
