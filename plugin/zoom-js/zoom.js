@@ -31,7 +31,7 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 					});	
 				}																//	Added by Peter Petrov
 			} 
-        event.preventDefault();
+//        event.preventDefault();
     } else {
  //       alert('Single Tap');
         timeout = setTimeout(function() {
