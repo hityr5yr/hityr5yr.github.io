@@ -17,13 +17,13 @@ document.querySelector( '.reveal .slides' ).addEventListener('touchend', functio
 		var zoomPadding = 25; // Changed from 20 to 25 by Peter Petrov
 		var revealScale = Reveal.getScale();
 		if( modifier == "mozoomel" ) { 													// 
-			if(c.search('chrome')==-1){zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
+			if(c.search('chrome')==-1){				alert(modifier); zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
 			else{ 																			//
 				event.preventDefault();
 				
 				var bounds = event.target.getBoundingClientRect();
 				var u = navigator.userAgent, ua = u.toLowerCase();
-				alert(modifier);
+
 				zoom.to({
 					x: ( bounds.left * revealScale ) - zoomPadding,
 					y: ( bounds.top * revealScale ) - zoomPadding,
