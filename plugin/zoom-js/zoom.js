@@ -20,7 +20,7 @@ var zoomflag = 0; // Added by Peter Petrov
 			var revealScale = Reveal.getScale();												//
 			event.preventDefault();																//
 			if( modifier == "mozoom" || modifier == "zoomel") { 								//	
-				if(c.search('chrome')==-1){	zoom.to({element: event.target, pan: false}); Reveal.removeEventListeners()} 		// Added by Peter Petrov
+				if(c.search('chrome')==-1){	zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
 				else{ 																			//
 					var bounds = event.target.getBoundingClientRect();							//
 					var u = navigator.userAgent, ua = u.toLowerCase();							//
