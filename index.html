@@ -571,14 +571,20 @@
 			});
 			function changeclass(){
 				if(c.search('mobile')!=-1){
-					for(i=0; i<=document.getElementsByClassName("mozoomel").length; i++){
-						document.getElementsByClassName("mozoomel")[i].className = "zoomel";
+					var mozoomel = document.querySelectorAll('.mozoomel');
+					for(var i=0; i<mozoomel.length; i++){
+						mozoomel[i].className = "zoomel";
 					}
 				}
 			}
-			document.onload = secalc_plus();
-			function secalc_plus(){
+
+			document.onload = onloadfunc();
+			function onloadfunc(){
 				changeclass();
+				secalc_plus();
+			}
+
+			function secalc_plus(){
 				var secnum = 100/(Reveal.getTotalSlides());
 				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
 				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
