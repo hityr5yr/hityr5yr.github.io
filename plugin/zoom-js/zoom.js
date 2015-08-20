@@ -16,7 +16,7 @@ var zoomflag = 0; // Added by Peter Petrov
 			var modifier = event.target.className; 												// Changed by Peter Petrov
 			var zoomPadding = 25; 																// Changed from 20 to 25 by Peter Petrov
 			var revealScale = Reveal.getScale();												//
-			if( modifier == "mozoom" ) { 														//
+			if( modifier == "mozoom" || modifier == "zoomel mozoom") { 							//
 			event.preventDefault();																//	
 				if(c.search('chrome')==-1){	zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
 				else{ 																			//
@@ -38,27 +38,28 @@ var zoomflag = 0; // Added by Peter Petrov
 	    }																						//
 	    lastTap = currentTime;																	//
 	});																							//
-
-	document.querySelector( '.reveal .slides' ).addEventListener( 'click', function( event ) { 
-		var modifier = event.target.className; 													// Changed by Peter Petrov
-		var zoomPadding = 25;																	// Changed from 20 to 25 by Peter Petrov
-		var revealScale = Reveal.getScale();													//
-		if( modifier == "zoomel mozoom" ) { 															//
-			event.preventDefault(); 															// 
-			if(c.search('chrome')==-1){zoom.to({element: event.target, pan: false});} 			// Added by Peter Petrov
-			else{ 																				//
-				var bounds = event.target.getBoundingClientRect();
-				var u = navigator.userAgent, ua = u.toLowerCase();
-				zoom.to({
-					x: ( bounds.left * revealScale ) - zoomPadding,
-					y: ( bounds.top * revealScale ) - zoomPadding,
-					width: ( bounds.width * revealScale ) + ( zoomPadding * 2 ),
-					height: ( bounds.height * revealScale ) + ( zoomPadding * 2 ),
-					pan: false
-					});	
-				}																				//	Added by Peter Petrov
-			} 
-	} );
+	if(c.search('mobile')==-1){
+		document.querySelector( '.reveal .slides' ).addEventListener( 'click', function( event ) { 
+			var modifier = event.target.className; 													// Changed by Peter Petrov
+			var zoomPadding = 25;																	// Changed from 20 to 25 by Peter Petrov
+			var revealScale = Reveal.getScale();													//
+			if( modifier == "zoomel" ) { 															//
+				event.preventDefault(); 															// 
+				if(c.search('chrome')==-1){zoom.to({element: event.target, pan: false});} 			// Added by Peter Petrov
+				else{ 																				//
+					var bounds = event.target.getBoundingClientRect();
+					var u = navigator.userAgent, ua = u.toLowerCase();
+					zoom.to({
+						x: ( bounds.left * revealScale ) - zoomPadding,
+						y: ( bounds.top * revealScale ) - zoomPadding,
+						width: ( bounds.width * revealScale ) + ( zoomPadding * 2 ),
+						height: ( bounds.height * revealScale ) + ( zoomPadding * 2 ),
+						pan: false
+						});	
+					}																				//	Added by Peter Petrov
+				} 
+		} );
+	}
 
 	Reveal.addEventListener( 'overviewshown', function() { isEnabled = false; } );
 	Reveal.addEventListener( 'overviewhidden', function() { isEnabled = true; } );
