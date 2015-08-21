@@ -231,12 +231,10 @@ var zoom = (function(){
 			}																								//
 			else {																							//
 				document.documentElement.classList.remove( 'zoomed' );										//
-				zoomflag = 0;																				//
-				Reveal.removeEventListeners()																//
+				zoomflag = 0;																				//															//
 				if(c.search('chrome')!=-1){event.target.title="";}											//
 			}																								//
 		}
-//		setTimeoot(	"Reveal.addEventListeners()",500);																		//
 	}
 
 	/**
