@@ -13,8 +13,7 @@ var zoomflag = 0; // Added by Peter Petrov
 	    var currentTime = new Date().getTime();													//
 	    var tapLength = currentTime - lastTap;													//
 	    clearTimeout(timeout);																	//
-	    if (tapLength < 500 && tapLength > 0) {	
-	    alert();												//
+	    if (tapLength < 500 && tapLength > 0) {													//
 			var modifier = event.target.className; 												// Changed by Peter Petrov
 			var zoomPadding = 25; 																// Changed from 20 to 25 by Peter Petrov
 			var revealScale = Reveal.getScale();												//
