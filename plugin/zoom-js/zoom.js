@@ -9,7 +9,8 @@ var zoomflag = 0; // Added by Peter Petrov
 	var timeout;																				//
 	var lastTap = 0;																			//
 	document.querySelector( '.reveal .slides' ).addEventListener('touchend', doubletap);		 //
-	function doubletap(){																		//
+	function doubletap(){		
+	alert("?");																//
 	    var currentTime = new Date().getTime();													//
 	    var tapLength = currentTime - lastTap;													//
 	    clearTimeout(timeout);																	//
