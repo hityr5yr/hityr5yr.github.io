@@ -237,8 +237,7 @@ var zoom = (function(){
 				if(c.search('chrome')!=-1){event.target.title="";}											//
 			}																								//
 		}
-		alert('start');
-		setTimeoot(	"document.querySelector( '.reveal .slides' ).addEventListener('touchend', doubletap););",500);																		//
+//		setTimeoot(	"document.querySelector( '.reveal .slides' ).addEventListener('touchend', doubletap););",500);																		//
 	}
 
 	/**
