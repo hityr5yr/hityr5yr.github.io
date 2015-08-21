@@ -236,7 +236,7 @@ var zoom = (function(){
 				if(c.search('chrome')!=-1){event.target.title="";}											//
 			}																								//
 		}
-		setTimeoot(	"Reveal.addEventListeners()",500);																		//
+//		setTimeoot(	"Reveal.addEventListeners()",500);																		//
 	}
 
 	/**
