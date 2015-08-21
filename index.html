@@ -443,33 +443,33 @@
 			function mobilesizes(){
 				switch(document.body.clientWidth){
 					case 568: deg = 90; plus = 13; break; // Apple iPhone 5
-					case 640: deg = 90; plus = 1; break; // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
-					case 667: deg = 87; break; // Apple iPhone 6
-					case 732: deg = 78.7; break; // Google Nexus 6
-					case 736: deg = 78.3; break; // Apple iPhone 6 plus
+					case 640: deg = 90; plus = 1; break;  // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
+					case 667: deg = 87; break; 			  // Apple iPhone 6
+					case 732: deg = 78.7; break; 		  // Google Nexus 6
+					case 736: deg = 78.3; break; 		  // Apple iPhone 6 plus
 					case 768: deg = 90; plus = 40; break; // Apple iPad
-					case 960: deg = 61.5; break; // Google Nexus 7
-					case 1024: deg = 64.5; break; // Apple iPad
-					case 1280: deg = 43.5; break; // Google Nexus 10
+					case 960: deg = 61.5; break; 		  // Google Nexus 7
+					case 1024: deg = 64.5; break;		  // Apple iPad
+					case 1280: deg = 43.5; break;		  // Google Nexus 10
 					default: deg = 0; break
 				}
 			}
 			function pcandlaptopsizes(){
 				switch(document.body.clientWidth){
-					case 533: deg = 90; plus = 18; break; // Nokia Lumia 520
+					case 533: deg = 90; plus = 18; break;	// Nokia Lumia 520
 					case 640: deg = 90; plus = 13.5; break; // BlackBerry Z30, Nokia N9, FF
 					case 768: deg = 75; break;
 					case 800: deg = 83.6; break;
-					case 819: deg = 81.6; break; // FF
-					case 922: deg = 72; break; // FF
+					case 819: deg = 81.6; break;			// FF
+					case 922: deg = 72; break;				// FF
 					case 1024: deg = 64.5; break;
-					case 1088: deg = 49.5; break; // FF
-					case 1093: deg = 49.2; break; // FF
-					case 1120: deg = 58.5; break; // FF
-					case 1152: deg = 49.5; break; // FF
-					case 1200: deg = 90; plus = 31; break; // Amazon Kindle Fire HDX 7"
+					case 1088: deg = 49.5; break; 			// FF
+					case 1093: deg = 49.2; break; 			// FF
+					case 1120: deg = 58.5; break; 			// FF
+					case 1152: deg = 49.5; break; 			// FF
+					case 1200: deg = 90; plus = 31; break;  // Amazon Kindle Fire HDX 7"
 					case 1280: deg = 40.5; break; 
-					case 1344: deg = 40; break; // FF
+					case 1344: deg = 40; break; 			// FF
 					case 1360: deg = 37.4; break;
 					case 1366: deg = 37.2; break;
 					case 1400: deg = 45.1; break;
@@ -478,7 +478,7 @@
 					case 1600: deg = 90; plus = 9.5; break; // Amazon Kindle Fire HDX 8.9"
 					case 1680: deg = 31; break;
 					case 1920: deg = 24; break;
-					case 2560: deg = 18; break; // Amazon Kindle Fire HDX 8.9"
+					case 2560: deg = 18; break; 			// Amazon Kindle Fire HDX 8.9"
 					default: deg = 0; break
 				}					
 			}
@@ -598,9 +598,9 @@
 				}
 
 				if(screen.width<screen.height){
-					document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availWidth-document.body.clientWidth)+'px';//
+					document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availWidth-document.body.clientWidth)+'px';
 				}
-				else{document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';}//
+				else{document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';}
 			}
 		</script>
 

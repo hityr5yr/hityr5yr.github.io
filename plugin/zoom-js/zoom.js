@@ -30,7 +30,7 @@ var zoomflag = 0; // Added by Peter Petrov
 						height: ( bounds.height * revealScale ) + ( zoomPadding * 2 ),			//
 						pan: false																//
 						});																		//
-					}																			//	Added by Peter Petrov
+					}																			// 
 				} 																				//
 		    } else {																			//
 		        timeout = setTimeout(function() {												//
