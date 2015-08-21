@@ -232,8 +232,7 @@ var zoom = (function(){
 			else {																							//
 				document.documentElement.classList.remove( 'zoomed' );										//
 				zoomflag = 0;	
-				alert(zoomflag );																			//
-				Reveal.layout();																			//
+				document.querySelector( '.reveal .slides' ).removeEventListener('touchend', doubletap);																	//
 				if(c.search('chrome')!=-1){event.target.title="";}											//
 			}																								//
 		}																									//
