@@ -3667,7 +3667,7 @@
 		// Prioritize revealing fragments
 		if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
 			slide( indexh, indexv + 1 );
-			setTimeout("zoomout()",0);
+			setTimeout("zoomout()",500);
 		}
 	}
 
@@ -4126,7 +4126,7 @@
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {							//
 		switch(window.orientation){  								// 
-	      case -90:													//
+	      case -90:													// 
 	      case 90:													// 
 	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){						// 
 	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "none";							// 
