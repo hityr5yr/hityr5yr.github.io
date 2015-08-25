@@ -3667,7 +3667,7 @@
 		// Prioritize revealing fragments
 		if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
 			slide( indexh, indexv + 1 );
-			setTimeout("zoomout()",500);
+			setTimeout("alert(); zoomout()",1000);
 		}
 	}
 
