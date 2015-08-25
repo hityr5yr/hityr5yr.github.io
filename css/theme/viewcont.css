@@ -59,7 +59,9 @@ body {
   font-size: 40px; }
 
 .reveal h2 {
-  font-size: 34px; }
+  font-size: 26px;
+  font-family: Helvetica!important;
+  }
 
 .reveal h3 {
   font-size: 28px; }

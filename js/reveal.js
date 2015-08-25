@@ -495,8 +495,8 @@
 			document.getElementById('rights').style.fontSize = '12px';												 //				
 		}																											 //
 		else{																										 //
-			document.getElementsByClassName('controls')[0].style.right = '53px';									 //	
-			document.getElementsByClassName('slide-number')[0].style.right = '52px';								 //
+//			document.getElementsByClassName('controls')[0].style.right = '53px';									 //	
+//			document.getElementsByClassName('slide-number')[0].style.right = '52px';								 //
 		}				 																							 //
 	}
 
@@ -2512,7 +2512,7 @@
 		}//
 		var sections = document.querySelectorAll(".reveal .slides section").length;//
 		if(document.querySelectorAll(".reveal .slides section")[sections-1].className == "present"){ // Added by Peter Petrov
-			document.getElementById('mapsec').innerHTML+='<iframe id="bgmap" class="bg-map" style="position: absolute; top: 90px; left: 342px; z-index: '+zi+';" src="https://www.google.com/maps/d/embed?mid=zFDFuEjbw6J0.ks3wVDYjA7Uw" width="560" height="420"></iframe><iframe id="enmap" class="en-map" style="position: absolute; top: 90px; left: 342px; z-index: 1;" src="https://www.google.com/maps/d/embed?mid=zFDFuEjbw6J0.ke1TNTelLCJA" width="560" height="420"></iframe>'}; // Added by Peter Petrov
+			document.getElementById('mapsec').innerHTML+='<iframe id="bgmap" class="bg-map" style="position: absolute; top: 80px; left: 342px; z-index: '+zi+';" src="https://www.google.com/maps/d/embed?mid=zFDFuEjbw6J0.ks3wVDYjA7Uw" width="560" height="420"></iframe><iframe id="enmap" class="en-map" style="position: absolute; top: 80px; left: 342px; z-index: 1;" src="https://www.google.com/maps/d/embed?mid=zFDFuEjbw6J0.ke1TNTelLCJA" width="560" height="420"></iframe>'}; // Added by Peter Petrov
 		}  // Added by Peter Petrov
 
 	/**
