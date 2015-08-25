@@ -3665,16 +3665,11 @@
 
 	function navigateDown() {
 		// Prioritize revealing fragments
-		var str = document.getElementsByTagName("html")[0].className;
-		if(str.substr(str.length-6,6)=="zoomed"){
-			zoom.out(); 
-			if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {slide( indexh, indexv + 1 );}
+		zoomout(); // Added by Peter Petrov
+		if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
+			slide( indexh, indexv + 1 );
 		}
-		else{
-			if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
-				slide( indexh, indexv + 1 );
-			}
-		}
+
 	}
 
 	/**
