@@ -3664,7 +3664,7 @@
 	}
 
 	function navigateDown() {
-
+		if(str.substr(str.length-6,6)=="zoomed")){zoom.out()} // Changed by Peter Petrov
 		// Prioritize revealing fragments
 		if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
 			slide( indexh, indexv + 1 );
