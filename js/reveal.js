@@ -3664,11 +3664,12 @@
 	}
 
 	function navigateDown() {
+		zoomout(); // Added by Peter Petrov
 		// Prioritize revealing fragments
 		if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
 			slide( indexh, indexv + 1 );
-			setTimeout("zoomout()",0);
 		}
+
 	}
 
 	/**
