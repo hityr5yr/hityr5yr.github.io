@@ -3668,7 +3668,7 @@
 		var str = document.getElementsByTagName("html")[0].className;
 		if(str.substr(str.length-6,6)=="zoomed"){
 			zoom.out(); 
-			setTimeout("if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {slide( indexh, indexv + 1 );",500)
+			if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {setTimeout("slide( indexh, indexv + 1 )",500);}
 		}
 		else{
 			if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
