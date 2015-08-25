@@ -291,10 +291,10 @@ body {
   opacity: 0.7;
   width: 30px;
   height: 30px;
-  display: inline-block;
+  display: none; /* Changed from inline-block */
   position: absolute;
 
-  cursor: pointer;
+ /* cursor: pointer; */
  	-webkit-transition: 0.4s opacity ease;
 	-moz-transition: 0.4s opacity ease;
 	-ms-transition: 0.4s opacity ease;
@@ -391,7 +391,8 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   font-weight: bold;
   z-index: 30;
   font-family: sans-serif !important;
-  cursor: pointer;}
+/*  cursor: pointer; */
+}
 
 /*********************************************
  * SLIDES
