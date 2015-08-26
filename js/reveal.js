@@ -4152,7 +4152,7 @@
 	        break; 																												// 
 	    }																														//
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
-		if(zoomflag==1){zoom.out();}							//
+//		if(zoomflag==1){zoom.out();}							//
 		plus = 0;																												//
 		mobilesizes();																											//
 		meny.configure({ angle: deg });																							// 
