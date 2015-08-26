@@ -231,10 +231,11 @@ var zoom = (function(){
 				}																							//
 			}																								//
 			else {					
-			alert(event.type);																		//
-				document.documentElement.classList.remove( 'zoomed' );										//
-				zoomflag = 0;																				//															//
-				if(c.search('chrome')!=-1){event.target.title="";}											//
+				if(event.type!="resize"){																		//
+					document.documentElement.classList.remove( 'zoomed' );										//
+					zoomflag = 0;																				//															//
+					if(c.search('chrome')!=-1){event.target.title="";}	
+				}										//
 			}																								//
 		}
 	}
