@@ -4157,8 +4157,9 @@
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
 		plus = 0;																												//
 		mobilesizes();	
-			    		alert(str.search('zoomed'));																										//
-		meny.configure({ angle: deg });																							// 
+																									//
+		meny.configure({ angle: deg });	
+			    		alert(str.search('zoomed'));																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
 //		alert(str.search('zoomed'));														//
