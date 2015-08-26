@@ -4118,7 +4118,7 @@
 	 */
 	function onWindowResize( event ) {
 
-		if(!isMobileDevice){layout()};
+		if(!isMobileDevice){alert(); layout()};
 
 	}
 	
