@@ -4127,9 +4127,9 @@
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */			
-	 var couner = 1;													// Added by Peter Petrov
-	function onOrientationChange( event ) {					//
-		var str = document.getElementsByTagName("html")[0].className; 		
+	 var counter = 1;													// Added by Peter Petrov
+	function onOrientationChange( event ) {					//		
+		alert("1");
 		switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
@@ -4155,14 +4155,17 @@
 	   		 };																													//
 	        break; 																												// 
 	    }																														//
-
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
+		alert("2");
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
+				alert("3");							//
 		plus = 0;																												//
 		mobilesizes();	
-																									//
+				alert("4");																							//
 		meny.configure({ angle: deg });	
-		secalc_plus();			
- alert(counter);
+				alert("5");
+		secalc_plus();	
+
+ alert("6");
 			if(counter == 1){counter = 2; alert();} 	
 			else{counter = 1;}																	// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
