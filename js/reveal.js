@@ -4157,14 +4157,10 @@
 		mobilesizes();	
 																					//
 		meny.configure({ angle: deg });	
-
-		secalc_plus();	
-
-
-															// 
+													// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
-
- 												// Added by Peter Petrov																										//																											//
+		secalc_plus();																											//
+		layout();												// Added by Peter Petrov																										//																											//
 	}																															// 
 
 	/**
