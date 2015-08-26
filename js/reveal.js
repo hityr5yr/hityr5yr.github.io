@@ -4117,7 +4117,7 @@
 	 * Handler for the window level 'resize' event.
 	 */
 	function onWindowResize( event ) {
-alert();
+
 		layout();
 
 	}
@@ -4152,13 +4152,13 @@ alert();
 	        break; 																												// 
 	    }																														//
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
-		layout();	
+//		layout();	
 //		if(zoomflag==1){zoom.out();}							//
 		plus = 0;																												//
-		mobilesizes();																											//
-		meny.configure({ angle: deg });																							// 
+//		mobilesizes();																											//
+//		meny.configure({ angle: deg });																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
-		secalc_plus();																											//
+//		secalc_plus();																											//
 //		layout();																												//
 	}																															// 
 
