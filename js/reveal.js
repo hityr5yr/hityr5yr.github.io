@@ -4126,8 +4126,7 @@
 	
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
-	 */			
-	 var counter = 1;													// Added by Peter Petrov
+	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {					//		
 
 		switch(window.orientation){  								// 
@@ -4166,7 +4165,7 @@
 		secalc_plus();	
 
 
-setTimeout("alert()",1000);															// 
+setTimeout("zoom.out()",1500);															// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
  												// Added by Peter Petrov																										//																											//
