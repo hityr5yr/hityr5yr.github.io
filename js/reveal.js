@@ -4152,14 +4152,13 @@
 	        break; 																												// 
 	    }																														//
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
-		alert(zoomflag);
 		if(zoomflag==1){zoom.out();}							//
 		plus = 0;																												//
 		mobilesizes();																											//
 		meny.configure({ angle: deg });																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
-		layout();																												//
+//		layout();																												//
 	}																															// 
 
 	/**
