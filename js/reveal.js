@@ -4118,9 +4118,6 @@
 	 */
 	function onWindowResize( event ) {
 		layout();
-		setTimeout('document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px";',1000)
-// Changed by Peter Petrov
-
 	}
 	
 	/**																// 
