@@ -223,7 +223,7 @@ body {
   height: 90px;
   z-index: 30;
   right: 50%;
-  bottom: 0px;
+  bottom: 10px;
   -webkit-transform: translate(50%, 0%);
   -ms-transform: translate(50%, 0%);
   transform: translate(50%, 0%);
@@ -322,12 +322,12 @@ body {
 
   .reveal .controls span.menu-icon{
   left: 30px;
-  top: 30px;
+  top: 40px;
 
   }
  .reveal .controls span.info-icon {
-  left: 76px;
-  top: 38px;
+  left: 75px;
+  bottom: 40px;
   display: none;
   }
  .reveal .controls span.en-lang,
@@ -380,7 +380,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   position: absolute;
   display: block;
   right: 50%;
-  bottom: 30px;
+  bottom: 40px;
   width: 30px;
   height: 30px;
   -webkit-transform: translate(50%, 0%);
