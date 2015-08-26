@@ -230,7 +230,8 @@ var zoom = (function(){
 				    }																						//
 				}																							//
 			}																								//
-			else {																							//
+			else {					
+			alert("???");																		//
 				document.documentElement.classList.remove( 'zoomed' );										//
 				zoomflag = 0;																				//															//
 				if(c.search('chrome')!=-1){event.target.title="";}											//
