@@ -4126,7 +4126,7 @@
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {	
-	alert(document.getElementsByTagName('html')[0].className);						//
+	alert(level);						//
 		if(zoomflag==1){alert(zoomflag);}
 		switch(window.orientation){  								// 
 	      case -90:													// 
