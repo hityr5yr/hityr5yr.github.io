@@ -4161,6 +4161,7 @@
 		secalc_plus();			
 		if(str.search('zoomed')!=-1){zoom.out(); 
 			document.documentElement.classList.remove( 'zoomed' );	
+						alert(str.search('zoomed'));
 			zoomflag = 0;																				//															//
 			if(c.search('chrome')!=-1){event.target.title="";}	;
 			layout(); 
