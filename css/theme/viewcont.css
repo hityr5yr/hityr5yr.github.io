@@ -16,10 +16,8 @@ section.has-light-background, section.has-light-background h1, section.has-light
 body {
 /*  background: url("../../images/viewcont.png") no-repeat 5px 5px fixed; 
   background-size: 260px auto; */
-  background: fixed url('../../images/sitebg.png') no-repeat;
+/*  background: fixed url('../../images/sitebg.png') no-repeat; */
 } 
-
-  }
 
 ::selection {
   color: #fff;
@@ -31,8 +29,7 @@ body {
   font-weight: inherit; 
   }
 .reveal {
-  font-family: 'Source Sans Pro', Helvetica, sans-serif;
-  font-size: 38px;
+  font-family: 'ModeratoA5L', Helvetica, sans-serif;
   font-weight: normal;
   color: #2b4261;
   background: fixed url('../../images/pattern-front.gif') repeat 0 0;
