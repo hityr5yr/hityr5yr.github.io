@@ -73,6 +73,7 @@ var zoomflag = 0; // Added by Peter Petrov
  *
  * Copyright (C) 2011-2014 Hakim El Hattab, http://hakim.se
  */
+ var zoom2;
 var zoom = (function(){
 
 	// The current zoom level (scale)
@@ -206,6 +207,7 @@ var zoom = (function(){
 		}
 
 		level = scale;
+		zoom2 = level;
 
 		if( document.documentElement.classList ) {															// Added by Peter Petrov
 			if( level !== 1 ) {																				//

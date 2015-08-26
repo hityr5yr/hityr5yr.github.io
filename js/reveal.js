@@ -4126,7 +4126,7 @@
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {	
-	alert(zoom.options.scale);						//
+	alert(zoom2);						//
 		if(zoomflag==1){alert(zoomflag);}
 		switch(window.orientation){  								// 
 	      case -90:													// 
