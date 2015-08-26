@@ -4166,8 +4166,8 @@
 		secalc_plus();	
 
 
-			if(counter == 1){counter = 2; alert("1");} 	
-			else{counter = 1; alert("2");}																	// 
+			if(counter == 1){counter = 2; onWindowResize();} 	
+			else{counter = 1;}																	// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
  												// Added by Peter Petrov																										//																											//
