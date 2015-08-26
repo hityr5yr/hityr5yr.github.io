@@ -4126,7 +4126,8 @@
 	
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
-	 */																// Added by Peter Petrov
+	 */			
+	 var couner = 1;													// Added by Peter Petrov
 	function onOrientationChange( event ) {					//
 		var str = document.getElementsByTagName("html")[0].className; 		
 		switch(window.orientation){  								// 
@@ -4161,14 +4162,9 @@
 																									//
 		meny.configure({ angle: deg });	
 		secalc_plus();			
-		if(str.search('zoomed')!=-1){
-			document.documentElement.classList.remove( 'zoomed' );	
-						alert(str.search('zoomed'));
-			zoomflag = 0;																				//															//
-			if(c.search('chrome')!=-1){event.target.title="";}	;
-			layout(); 
-			alert(str.search('zoomed'));
-			}; 																				// 
+
+			if(counter == 1){counter = 2; onOrientationChange(event);}	
+			else{counter = 1;}																	// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
  												// Added by Peter Petrov																										//																											//
