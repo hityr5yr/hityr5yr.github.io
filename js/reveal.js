@@ -4117,7 +4117,7 @@
 	 * Handler for the window level 'resize' event.
 	 */
 	function onWindowResize( event ) {
-alert(event);
+alert(event.type);
 		layout();
 
 	}
