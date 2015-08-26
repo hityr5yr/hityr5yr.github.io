@@ -4129,7 +4129,7 @@
 		var str = document.getElementsByTagName("html")[0].className; // Added by Peter Petrov
 
 //		setTimeout("layout(); alert()",1000);	
-		if(str.search('zoomed')!=-1&&event.type=="orientationchange"){}; // Added by Peter Petrov
+		if(str.search('zoomed')!=-1&&event.type=="orientationchange"){alert();}; // Added by Peter Petrov
 		switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
