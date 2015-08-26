@@ -1,4 +1,5 @@
 var zoomflag = 0; // Added by Peter Petrov
+ var zoom2;
 // Custom reveal.js integration
 (function(){
 	var isEnabled = true;
@@ -73,7 +74,7 @@ var zoomflag = 0; // Added by Peter Petrov
  *
  * Copyright (C) 2011-2014 Hakim El Hattab, http://hakim.se
  */
- var zoom2;
+
 var zoom = (function(){
 
 	// The current zoom level (scale)
