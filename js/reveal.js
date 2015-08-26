@@ -4159,7 +4159,7 @@
 																									//
 		meny.configure({ angle: deg });	
 		secalc_plus();			
-		if(str.search('zoomed')!=-1){zoom.out();}; 																				// 
+		if(str.search('zoomed')!=-1){zoom.out(); layout(); alert();}; 																				// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
 																											//
