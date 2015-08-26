@@ -4159,7 +4159,7 @@
 																									//
 		meny.configure({ angle: deg });	
 		secalc_plus();			
-		if(str.search('zoomed')!=-1){zoom.out(); 
+		if(str.search('zoomed')!=-1){
 			document.documentElement.classList.remove( 'zoomed' );	
 						alert(str.search('zoomed'));
 			zoomflag = 0;																				//															//
