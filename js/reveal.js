@@ -4161,7 +4161,7 @@
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
 														//
-		if(str.search('zoomed')!=-1){alert();}; 												// Added by Peter Petrov																										//																											//
+		if(str.search('zoomed')!=-1){alert();} 												// Added by Peter Petrov																										//																											//
 	}																															// 
 
 	/**
