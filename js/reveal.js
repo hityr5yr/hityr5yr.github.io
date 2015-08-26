@@ -4160,7 +4160,7 @@
 																									//
 		meny.configure({ angle: deg });	
 		secalc_plus();			
-		if(str.search('zoomed')!=-1){setTimeout("alert('?')",500);}; 																				// 
+		if(str.search('zoomed')!=-1){setTimeout("layout()",500);}; 																				// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
 																											//
