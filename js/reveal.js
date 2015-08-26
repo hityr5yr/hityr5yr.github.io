@@ -4127,6 +4127,7 @@
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {					//
 		var str = document.getElementsByTagName("html")[0].className; // Added by Peter Petrov
+		alert(str.search('zoomed');
 		if(str.search('zoomed')!=-1&&event.type=="orientationchange"){zoom.out()}; // Added by Peter Petrov
 		switch(window.orientation){  								// 
 	      case -90:													// 
