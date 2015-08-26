@@ -4159,12 +4159,10 @@
 																									//
 		meny.configure({ angle: deg });	
 		secalc_plus();			
-		if(str.search('zoomed')!=-1){zoom.out(); layout(); alert();}; 																				// 
+		if(str.search('zoomed')!=-1){zoom.out(); layout(); alert(str.search('zoomed'));}; 																				// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
-																											//
-//		alert(str.search('zoomed'));														//
-//		if(str.search('zoomed')!=-1){setTimeout("alert()",500);}; 												// Added by Peter Petrov																										//																											//
+ 												// Added by Peter Petrov																										//																											//
 	}																															// 
 
 	/**
