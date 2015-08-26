@@ -3919,7 +3919,7 @@
 
 	function onTouchMove( event ) {
 		var str = document.getElementsByTagName("html")[0].className; // Added by Peter Petrov
-		if(str.substr(str.length-6,6)=="zoomed"&&event.type=="touchmove"){zoom.out()} // Added by Peter Petrov
+		if(str.substr(str.length-6,6)=="zoomed"&&event.type=="touchmove"){alert(str.substr(str.length-6,6)); zoom.out()} // Added by Peter Petrov
 		// Each touch should only trigger one action
 		if( !touch.captured ) {
 			onUserInput( event );
