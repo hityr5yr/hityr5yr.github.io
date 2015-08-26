@@ -3919,8 +3919,7 @@
 
 	function onTouchMove( event ) {
 		var str = document.getElementsByTagName("html")[0].className; // Added by Peter Petrov
-
-		if(str.search('zoomed')!=-1)&&event.type=="touchmove"){alert("!"); zoom.out()} // Added by Peter Petrov
+		if(str.search('zoomed')!=-1&&event.type=="touchmove"){zoom.out()} // Added by Peter Petrov
 		// Each touch should only trigger one action
 		if( !touch.captured ) {
 			onUserInput( event );
@@ -4054,7 +4053,7 @@
 	 */
 	function onDocumentMouseScroll( event ) {
 		var str = document.getElementsByTagName("html")[0].className; // Added by Peter Petrov
-		if(str.substr(str.length-6,6)=="zoomed"&&(event.type=="mousewheel"||event.type=="DOMMouseScroll")){zoom.out()} // Changed by Peter Petrov
+		if(str.search('zoomed')!=-1&&(event.type=="mousewheel"||event.type=="DOMMouseScroll")){zoom.out()} // Changed by Peter Petrov
 			if( Date.now() - lastMouseWheelStep > 600 ) {
 
 				lastMouseWheelStep = Date.now();
@@ -4127,8 +4126,8 @@
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {	
-	alert(document.getElementsByTagName('HTML')[0].className);						//
-		if(zoomflag==1){alert();}
+	alert(document.getElementsByTagName('html')[0].className);						//
+		if(zoomflag==1){alert(zoomflag);}
 		switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
@@ -4154,15 +4153,13 @@
 	   		 };																													//
 	        break; 																												// 
 	    }																														//
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
-		setTimeout("layout()", 500);	
-							//
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
 		plus = 0;																												//
-//		mobilesizes();																											//
-//		meny.configure({ angle: deg });																							// 
+		mobilesizes();																											//
+		meny.configure({ angle: deg });																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
-//		secalc_plus();																											//
-//		layout();																												//
+		secalc_plus();																											//
+		layout();																												//
 	}																															// 
 
 	/**
