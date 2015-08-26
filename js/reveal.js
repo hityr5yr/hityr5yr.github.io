@@ -4119,7 +4119,7 @@
 	function onWindowResize( event ) {
 		layout();
 		if(isMobileDevice){
-		layout();
+		setTimeout("layout()",1500);
 		};// Changed by Peter Petrov
 
 	}
@@ -4166,7 +4166,7 @@
 
 
 															// 
-//		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
+		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
  												// Added by Peter Petrov																										//																											//
 	}																															// 
