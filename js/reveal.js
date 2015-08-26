@@ -4166,8 +4166,7 @@
 		secalc_plus();	
 
 
-			if(counter == 1){counter = 2; onOrientationChange();} 	
-			else{counter = 1;}																	// 
+setTimeout("alert()",1000);															// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
  												// Added by Peter Petrov																										//																											//
