@@ -4118,7 +4118,9 @@
 	 */
 	function onWindowResize( event ) {
 
-		if(!isMobileDevice){layout()};// Changed by Peter Petrov
+//		if(!isMobileDevice){
+		layout()
+//		};// Changed by Peter Petrov
 
 	}
 	
