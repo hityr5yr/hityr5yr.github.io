@@ -4126,7 +4126,9 @@
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {					//
-//		setTimeout("layout(); alert()",1000);	
+//		setTimeout("layout(); alert()",1000);
+		var str = document.getElementsByTagName("html")[0].className; 
+		alert(str.search('zoomed'));		
 		switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
@@ -4158,8 +4160,7 @@
 		meny.configure({ angle: deg });																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
-		var str = document.getElementsByTagName("html")[0].className; 
-		alert(str.search('zoomed'));															//
+		alert(str.search('zoomed'));														//
 		if(str.search('zoomed')!=-1){setTimeout("alert()",500);}; 												// Added by Peter Petrov																										//																											//
 	}																															// 
 

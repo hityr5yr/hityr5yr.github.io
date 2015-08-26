@@ -231,7 +231,6 @@ var zoom = (function(){
 				}																							//
 			}																								//
 			else {					
-				alert(event.type);
 				if(event.type!="resize"){																		//
 					document.documentElement.classList.remove( 'zoomed' );										//
 					zoomflag = 0;																				//															//
