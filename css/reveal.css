@@ -1389,6 +1389,6 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;
 .maplink{cursor: pointer;}
  @media screen and (max-width: 600px) {
     html {
-        font-size: 150%;
+        font-size: 140%;
     }
 }
