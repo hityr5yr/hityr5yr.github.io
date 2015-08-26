@@ -4158,7 +4158,8 @@
 		meny.configure({ angle: deg });																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
-		var str = document.getElementsByTagName("html")[0].className; 															//
+		var str = document.getElementsByTagName("html")[0].className; 
+		alert(str.search('zoomed'));															//
 		if(str.search('zoomed')!=-1){setTimeout("alert()",500);}; 												// Added by Peter Petrov																										//																											//
 	}																															// 
 
