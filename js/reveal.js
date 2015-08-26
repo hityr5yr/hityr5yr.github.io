@@ -4117,7 +4117,8 @@
 	 * Handler for the window level 'resize' event.
 	 */
 	function onWindowResize( event ) {
-
+		zoom.out();
+setTimeout("alert()",1500);	
 //		if(!isMobileDevice){
 		layout()
 //		};// Changed by Peter Petrov
@@ -4165,7 +4166,7 @@
 		secalc_plus();	
 
 
-setTimeout("zoom.out()",1500);															// 
+														// 
 //		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
  												// Added by Peter Petrov																										//																											//
