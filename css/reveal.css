@@ -219,16 +219,16 @@ body {
 .reveal .controls {
   display: none;
   position: absolute;
-  width: 106px;
-  height: 106px;
+  width: 118px;
+  height: 118px;
   z-index: 30;
   right: 50%;
   bottom: 0px;
   -webkit-transform: translate(50%, 0%);
   -ms-transform: translate(50%, 0%);
   transform: translate(50%, 0%);
-  background: fixed url('../../images/pattern-front.gif') repeat 0 0;
-  border-radius: 53px;
+  background: fixed url('../../images/pattern-front.gif') repeat 3px 0;
+  border-radius: 59px;
 }
 
 .reveal .controls div {
@@ -236,7 +236,7 @@ body {
   opacity: 0.2;
   width: 0;
   height: 0;
-  border: 12px solid transparent;
+  border: 15px solid transparent;
   -webkit-transform: scale(0.9999);
       -ms-transform: scale(0.9999);
           transform: scale(0.9999);
@@ -252,35 +252,35 @@ body {
   margin-top: 1px; }
 
 .reveal .controls div.navigate-left {
-  top: 41px;
-  border-right-width: 22px;
+  top: 44px;
+  border-right-width: 25px;
   border-right-color: #000; }
 
 .reveal .controls div.navigate-left.fragmented {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-right {
-  left: 74px;
-  top: 41px;
-  border-left-width: 22px;
+  left: 79px;
+  top: 44px;
+  border-left-width: 25px;
   border-left-color: #000; }
 
 .reveal .controls div.navigate-right.fragmented {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-up {
-  left: 42px;
+  left: 44px;
   top: -1px;
-  border-bottom-width: 22px;
+  border-bottom-width: 25px;
   border-bottom-color: #000; }
 
 .reveal .controls div.navigate-up.fragmented {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-down {
-  left: 42px;
-  top: 73px;
-  border-top-width: 22px;
+  left: 44px;
+  top: 79px;
+  border-top-width: 25px;
   border-top-color: #000; }
 
 .reveal .controls div.navigate-down.fragmented {
@@ -321,7 +321,7 @@ body {
 
   .reveal .controls span.menu-icon{
   left: 39px;
-  top: 38px;
+  top: 47px;
 
   }
  .reveal .controls span.info-icon {
@@ -379,7 +379,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   position: absolute;
   display: block;
   right: 50%;
-  bottom: 38px;
+  bottom: 44px;
   width: 30px;
   height: 30px;
   -webkit-transform: translate(50%, 0%);
@@ -387,7 +387,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   transform: translate(50%, 0);
   text-align: center; 
   line-height: 30px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   z-index: 30;
   font-family: sans-serif !important;

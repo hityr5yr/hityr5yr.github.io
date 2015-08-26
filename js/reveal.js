@@ -487,16 +487,16 @@
 
 		dom.statusDiv = createStatusDiv();
 		if(isMobileDevice){																							 // Changed by Peter Petrov: Can be used as well c.search('mobile')!=-1
-			document.getElementById('menuicon').style.display='none'; 												 // Added by Peter Petrov	
-			document.getElementsByClassName('slide-number')[0].style.color='#506786';								 //	
-			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //
+//			document.getElementById('menuicon').style.display='none'; 												 // Added by Peter Petrov	
+//			document.getElementsByClassName('slide-number')[0].style.color='#506786';								 //	
+//			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //
 			document.getElementById('rights').style.margin = '0';													 //
 			document.getElementById('rights').style.left = '6px';													 //
 			document.getElementById('rights').style.fontSize = '12px';												 //				
 		}																											 //
 		else{																										 //
-//			document.getElementsByClassName('controls')[0].style.right = '53px';									 //	
-//			document.getElementsByClassName('slide-number')[0].style.right = '52px';								 //
+//			document.getElementsByClassName('controls')[0].style.right = '59px';									 //	
+//			document.getElementsByClassName('slide-number')[0].style.right = '59px';								 //
 		}				 																							 //
 	}
 
@@ -2485,7 +2485,7 @@
 
 		// Update slide number if enabled
 		if( config.slideNumber && dom.slideNumber) {
-
+			var totalSlides = getTotalSlides(); // Added by Peter Petrov
 			// Default to only showing the current slide number
 			var format = 'c';
 
@@ -2497,7 +2497,7 @@
 			dom.slideNumber.innerHTML = format.replace( /h/g, indexh )
 												.replace( /v/g, indexv )
 												.replace( /c/g, getSlidePastCount() ) // Changed by Peter Petrov
-												.replace( /t/g, getTotalSlides() );
+												.replace( /t/g, getTotalSlides() ) + "/" + totalSlides;
 		}
 		var zi = document.getElementsByClassName('bg-lang')[0].style.display=='none'?0:2; //Added by Peter Petrov
 		var verpos = document.body.clientHeight/2; // Added by Peter Petrov
@@ -2510,7 +2510,7 @@
 		} //
 		else{document.getElementById('lastpro').style.display = 'none';  document.getElementById("a"+language).style.opacity = 0//
 		}//
-		var sections = document.querySelectorAll(".reveal .slides section").length;//
+		var sections = document.querySelectorAll(".reveal .slides section").length; // Added by Peter Petrov
 		if(document.querySelectorAll(".reveal .slides section")[sections-1].className == "present"){ // Added by Peter Petrov
 			document.getElementById('mapsec').innerHTML+='<iframe id="bgmap" class="bg-map" style="position: absolute; top: 80px; left: 342px; z-index: '+zi+';" src="https://www.google.com/maps/d/embed?mid=zFDFuEjbw6J0.ks3wVDYjA7Uw" width="560" height="420"></iframe><iframe id="enmap" class="en-map" style="position: absolute; top: 80px; left: 342px; z-index: 1;" src="https://www.google.com/maps/d/embed?mid=zFDFuEjbw6J0.ke1TNTelLCJA" width="560" height="420"></iframe>'}; // Added by Peter Petrov
 		}  // Added by Peter Petrov
@@ -2575,7 +2575,6 @@
 	function updateBackground( includeAll ) {
 
 		var currentBackground = null;
-
 		// Reverse past/future classes when in RTL mode
 		var horizontalPast = config.rtl ? 'future' : 'past',
 			horizontalFuture = config.rtl ? 'past' : 'future';
@@ -3070,6 +3069,7 @@
 	 * Returns a value ranging from 0-1 that represents
 	 * how far into the presentation we have navigated.
 	 */
+
 	function getProgress() {
 
 		// The number of past and total slides
