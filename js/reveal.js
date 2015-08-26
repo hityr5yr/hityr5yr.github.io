@@ -4125,9 +4125,7 @@
 	/**																// 
 	 * Handler for the window level 'orientationchange' event.		// 
 	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {	
-	alert(zoom2);						//
-		if(zoomflag==1){alert(zoomflag);}
+	function onOrientationChange( event ) {					//
 		switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
@@ -4159,7 +4157,7 @@
 		meny.configure({ angle: deg });																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
-		layout();																												//
+		setTimeout("layout()",1000);																												//
 	}																															// 
 
 	/**
