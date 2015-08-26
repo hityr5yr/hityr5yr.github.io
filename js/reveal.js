@@ -4118,9 +4118,8 @@
 	 */
 	function onWindowResize( event ) {
 		layout();
-		if(isMobileDevice){
-		setTimeout("layout()",1500);
-		};// Changed by Peter Petrov
+		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px";
+// Changed by Peter Petrov
 
 	}
 	
