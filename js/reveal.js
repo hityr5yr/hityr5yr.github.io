@@ -4127,8 +4127,7 @@
 	 */																// Added by Peter Petrov
 	function onOrientationChange( event ) {					//
 //		setTimeout("layout(); alert()",1000);
-		var str = document.getElementsByTagName("html")[0].className; 
-		alert(str.search('zoomed'));		
+		var str = document.getElementsByTagName("html")[0].className; 		
 		switch(window.orientation){  								// 
 	      case -90:													// 
 	      case 90:													// 
@@ -4154,14 +4153,15 @@
 	   		 };																													//
 	        break; 																												// 
 	    }																														//
+	    		alert(str.search('zoomed'));
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
 		plus = 0;																												//
 		mobilesizes();																											//
 		meny.configure({ angle: deg });																							// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
-		alert(str.search('zoomed'));														//
-		if(str.search('zoomed')!=-1){setTimeout("alert()",500);}; 												// Added by Peter Petrov																										//																											//
+//		alert(str.search('zoomed'));														//
+//		if(str.search('zoomed')!=-1){setTimeout("alert()",500);}; 												// Added by Peter Petrov																										//																											//
 	}																															// 
 
 	/**
