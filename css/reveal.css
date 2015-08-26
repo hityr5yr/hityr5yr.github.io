@@ -219,8 +219,8 @@ body {
 .reveal .controls {
   display: none;
   position: absolute;
-  width: 118px;
-  height: 118px;
+  width: 90px;
+  height: 90px;
   z-index: 30;
   right: 50%;
   bottom: 0px;
@@ -228,7 +228,7 @@ body {
   -ms-transform: translate(50%, 0%);
   transform: translate(50%, 0%);
   background: fixed url('../../images/pattern-front.gif') repeat 3px 0;
-  border-radius: 59px;
+  border-radius: 45px;
 }
 
 .reveal .controls div {
@@ -252,7 +252,8 @@ body {
   margin-top: 1px; }
 
 .reveal .controls div.navigate-left {
-  top: 44px;
+  top: 30px;
+  left: -14px;
   border-right-width: 25px;
   border-right-color: #000; }
 
@@ -260,8 +261,8 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-right {
-  left: 79px;
-  top: 44px;
+  left: 65px;
+  top: 30px;
   border-left-width: 25px;
   border-left-color: #000; }
 
@@ -269,8 +270,8 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-up {
-  left: 44px;
-  top: -1px;
+  left: 30px;
+  top: -15px;
   border-bottom-width: 25px;
   border-bottom-color: #000; }
 
@@ -278,8 +279,8 @@ body {
   opacity: 0.3; }
 
 .reveal .controls div.navigate-down {
-  left: 44px;
-  top: 79px;
+  left: 30px;
+  top: 65px;
   border-top-width: 25px;
   border-top-color: #000; }
 
@@ -320,8 +321,8 @@ body {
   }
 
   .reveal .controls span.menu-icon{
-  left: 39px;
-  top: 47px;
+  left: 30px;
+  top: 30px;
 
   }
  .reveal .controls span.info-icon {
@@ -379,7 +380,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
   position: absolute;
   display: block;
   right: 50%;
-  bottom: 44px;
+  bottom: 30px;
   width: 30px;
   height: 30px;
   -webkit-transform: translate(50%, 0%);
