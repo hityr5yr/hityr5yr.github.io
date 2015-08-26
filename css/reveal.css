@@ -228,7 +228,7 @@ body {
   -ms-transform: translate(50%, 0%);
   transform: translate(50%, 0%);
   background: fixed url('../../images/pattern-front.gif') repeat 3px 0;
-  border-radius: 45px;
+  border-radius: 46px;
 }
 
 .reveal .controls div {
