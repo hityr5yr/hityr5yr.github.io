@@ -4151,7 +4151,9 @@
 	   		 };																													//
 	        break; 																												// 
 	    }																														//
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
+		alert(zoomflag);
+		if(zoomflag==1){zoom.out();}							//
 		plus = 0;																												//
 		mobilesizes();																											//
 		meny.configure({ angle: deg });																							// 
