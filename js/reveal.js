@@ -4118,7 +4118,6 @@
 	 */
 	function onWindowResize( event ) {
 		layout();
-console.log(document.getElementsByClassName("meny-arrow")[0].style.right);
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };
 	}
 	
@@ -4156,11 +4155,8 @@ console.log(document.getElementsByClassName("meny-arrow")[0].style.right);
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
 						//
 		plus = 0;																												//
-		mobilesizes();	
-																					//
-
+		mobilesizes();																					//
 		meny.configure({ angle: deg });	
-
 		secalc_plus();	
 
 
