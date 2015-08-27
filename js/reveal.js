@@ -4118,6 +4118,8 @@
 	 */
 	function onWindowResize( event ) {
 		layout();
+console.log(document.getElementsByClassName("meny-arrow")[0].style.right);
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };
 	}
 	
 	/**																// 
@@ -4156,16 +4158,13 @@
 		plus = 0;																												//
 		mobilesizes();	
 																					//
-<<<<<<< HEAD
-		meny.configure({ angle: deg });														// 
-=======
+
 		meny.configure({ angle: deg });	
 
 		secalc_plus();	
 
 
 															// 
->>>>>>> parent of 66f7d6a... Update reveal.js
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 
  												// Added by Peter Petrov																										//																											//
