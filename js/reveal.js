@@ -4150,18 +4150,13 @@
 	   		 };																													//
 	        break; 																												// 
 	    }																														//
-<<<<<<< HEAD
 
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
 						//
-=======
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
->>>>>>> parent of 393138e... test
 		plus = 0;																												//
 		mobilesizes();	
 																					//
-		meny.configure({ angle: deg });	
-													// 
+		meny.configure({ angle: deg });														// 
 		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
 		secalc_plus();																											//
 		layout();												// Added by Peter Petrov																										//																											//
