@@ -492,7 +492,8 @@
 //			document.getElementsByClassName('slide-number')[0].style.textShadow='none';								 //
 			document.getElementById('rights').style.margin = '0';													 //
 			document.getElementById('rights').style.left = '6px';													 //
-			document.getElementById('rights').style.fontSize = '12px';												 //				
+			document.getElementById('rights').style.fontSize = '12px';												 //	
+			document.getElementsByClassName('slide-number')[0].style.fontSize = "14px";								 //
 		}																											 //
 		else{																										 //
 //			document.getElementsByClassName('controls')[0].style.right = '59px';									 //	
