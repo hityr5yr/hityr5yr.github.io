@@ -471,7 +471,7 @@ p.titlesc{position: absolute; left: 0; bottom: 239px; font-size: 12px; width: 27
 .reveal.center, .reveal.center .slides, .reveal.center .slides section {
   min-height: 0 !important; }
   
-.sectiondiv { padding: 20px!important; display: inline-block; vertical-align: middle!important; color: #FFF}
+.sectiondiv { background:#2b4261; padding: 20px!important; display: inline-block; vertical-align: middle!important; color: #FFF}
 
 /* Don't allow interaction with invisible slides */
 .reveal .slides > section.future, .reveal .slides > section > section.future, .reveal .slides > section.past, .reveal .slides > section > section.past {
