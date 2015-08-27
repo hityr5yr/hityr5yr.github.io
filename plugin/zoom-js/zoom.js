@@ -1,45 +1,44 @@
-var zoomflag = 0; // Added by Peter Petrov
+var zoomflag = 0; 																					// Added by Peter Petrov
 // Custom reveal.js integration
 (function(){
 	var isEnabled = true;
 
 	function css_browser_selector(u){var ua=u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1},g='gecko',w='webkit',s='safari',o='opera',m='mobile',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3.6')?g+' ff3 ff3_6':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('blackberry')?m+' blackberry':is('android')?m+' android':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?m+' j2me':is('iphone')?m+' iphone':is('ipod')?m+' ipod':is('ipad')?m+' ipad':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win'+(is('windows nt 6.0')?' vista':''):is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; // Added by Peter Petrov
-	css_browser_selector(navigator.userAgent); 													//
-
-	var timeout;																				//
-	var lastTap = 0;																			//
-	document.querySelector( '.reveal .slides' ).addEventListener('touchend', doubletap);		 //
-	function doubletap(){																		//
-	    var currentTime = new Date().getTime();													//
-	    var tapLength = currentTime - lastTap;													//
-	    clearTimeout(timeout);																	//
-	    if (tapLength < 500 && tapLength > 0) {													//
-			var modifier = event.target.className; 												// Changed by Peter Petrov
-			var zoomPadding = 25; 																// Changed from 20 to 25 by Peter Petrov
-			var revealScale = Reveal.getScale();												//
-			event.preventDefault();																//
-			if( modifier == "mozoom" || modifier == "zoomel") { 								//	
-				if(c.search('chrome')==-1){	zoom.to({element: event.target, pan: false});} 		// Added by Peter Petrov
-				else{ 																			//
-					var bounds = event.target.getBoundingClientRect();							//
-					var u = navigator.userAgent, ua = u.toLowerCase();							//
-					zoom.to({																	//
-						x: ( bounds.left * revealScale ) - zoomPadding,							//
-						y: ( bounds.top * revealScale ) - zoomPadding,							//
-						width: ( bounds.width * revealScale ) + ( zoomPadding * 2 ),			//
-						height: ( bounds.height * revealScale ) + ( zoomPadding * 2 ),			//
-						pan: false																//
-						});																		//
-					}																			// 
-				} 																				//
-		    } else {																			//
-		        timeout = setTimeout(function() {												//
-		            clearTimeout(timeout);														//
-		        }, 500);																		//
-		    }																					//
-		    lastTap = currentTime;																//
-	};																							//
-	if(c.search('mobile')==-1){																	//
+	css_browser_selector(navigator.userAgent); 														//
+	var timeout;																					//
+	var lastTap = 0;																				//
+	document.querySelector( '.reveal .slides' ).addEventListener('touchend', doubletap);			//
+	function doubletap(){																			//
+	    var currentTime = new Date().getTime();														//
+	    var tapLength = currentTime - lastTap;														//
+	    clearTimeout(timeout);																		//
+	    if (tapLength < 500 && tapLength > 0) {														//
+			var modifier = event.target.className; 													// Changed by Peter Petrov
+			var zoomPadding = 25; 																	// Changed from 20 to 25 by Peter Petrov
+			var revealScale = Reveal.getScale();													//
+			event.preventDefault();																	//
+			if( modifier == "mozoom" || modifier == "zoomel") { 									//	
+				if(c.search('chrome')==-1){	zoom.to({element: event.target, pan: false});} 			// Added by Peter Petrov
+				else{ 																				//
+					var bounds = event.target.getBoundingClientRect();								//
+					var u = navigator.userAgent, ua = u.toLowerCase();								//
+					zoom.to({																		//
+						x: ( bounds.left * revealScale ) - zoomPadding,								//
+						y: ( bounds.top * revealScale ) - zoomPadding,								//
+						width: ( bounds.width * revealScale ) + ( zoomPadding * 2 ),				//
+						height: ( bounds.height * revealScale ) + ( zoomPadding * 2 ),				//
+						pan: false																	//
+						});																			//
+					}																				// 
+				} 																					//
+		    } else {																				//
+		        timeout = setTimeout(function() {													//
+		            clearTimeout(timeout);															//
+		        }, 500);																			//
+		    }																						//
+		    lastTap = currentTime;																	//
+	};																								//
+	if(c.search('mobile')==-1){																		//
 		document.querySelector( '.reveal .slides' ).addEventListener( 'click', function( event ) { 
 			var modifier = event.target.className; 													// Changed by Peter Petrov
 			var zoomPadding = 25;																	// Changed from 20 to 25 by Peter Petrov
@@ -208,36 +207,34 @@ var zoom = (function(){
 
 		level = scale;
 
-		if( document.documentElement.classList ) {															// Added by Peter Petrov
-			if( level !== 1 ) {																				//
-				document.documentElement.classList.add( 'zoomed' );											//
-				zoomflag = 1;																				//
-				if(c.search('chrome')!=-1){																	//		
-					if(document.body.clientWidth<screen.width){												//
+		if( document.documentElement.classList ) {																		  // Added by Peter Petrov
+			if( level !== 1 ) {																							  //
+				document.documentElement.classList.add( 'zoomed' );														  //
+				zoomflag = 1;																							  //
+				if(c.search('chrome')!=-1){																				  //		
+					if(document.body.clientWidth<screen.width){															  //
 						var titletext = 'Ако увеличеното изображение е неясно,\rмаксимизирайте прозреца и увеличете пак.';//
-						if(document.getElementsByClassName('bg-lang')[0].style.display=='none'){			//
-						titletext='If zoomed image is blur, maximize\rthe window and zoom in again.';		//
-						}																					//
-						event.target.title=titletext;														//
-					}																						//
-				    var text = document.getElementById('autosel');    										//
-					if (window.getSelection) { 																//
-				        var selection = window.getSelection();            									//
-				        var range = document.createRange();													//
-				        range.selectNodeContents(text);														//
-				        selection.removeAllRanges();														//
-				        selection.addRange(range);															//
-				    }																						//
-				}																							//
-			}																								//
-			else {					
-				// if(event.type!="resize"){																		//
-					document.documentElement.classList.remove( 'zoomed' );										//
-					zoomflag = 0;																				//															//
-					if(c.search('chrome')!=-1){event.target.title="";}	
-			//	}										//
-			}																								//
-		}
+						if(document.getElementsByClassName('bg-lang')[0].style.display=='none'){						  //
+						titletext='If zoomed image is blur, maximize\rthe window and zoom in again.';					  //
+						}																								  //
+						event.target.title=titletext;																	  //
+					}																									  //
+				    var text = document.getElementById('autosel');    													  //
+					if (window.getSelection) { 																			  //
+				        var selection = window.getSelection();            												  //
+				        var range = document.createRange();																  //
+				        range.selectNodeContents(text);																	  //
+				        selection.removeAllRanges();																	  //
+				        selection.addRange(range);																		  //
+				    }																									  //
+				}																										  //
+			}																											  //
+			else {																										  //
+					document.documentElement.classList.remove( 'zoomed' );												  //
+					zoomflag = 0;																						  //
+					if(c.search('chrome')!=-1){event.target.title="";}													  //
+			}																											  //
+		}																												  //
 	}
 
 	/**

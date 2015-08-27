@@ -4102,15 +4102,13 @@
 	function onNavigatePrevClicked( event ) { event.preventDefault(); onUserInput(); navigatePrev(); }
 	function onNavigateNextClicked( event ) { event.preventDefault(); onUserInput(); navigateNext(); }
 	function onMenuClicked( event ) { onDocumentKeyDown({ keyCode: 27 } )}; // Added by Peter Petrov: Can be used as well c.search('mobile')!=-1
-	function onHelpClicked( event ) {onDocumentKeyPress({ keyCode: 63 } ); } // Added by Peter Petrov
+	function onHelpClicked( event ) {onDocumentKeyPress({ keyCode: 63 } ); }// Added by Peter Petrov
 	/**
 	 * Handler for the window level 'hashchange' event.
 	 */
 	 
 	function onWindowHashChange( event ) {
-
 		readURL();
-
 	}
 
 	/**
@@ -4118,53 +4116,45 @@
 	 */
 	function onWindowResize( event ) {
 		layout();
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };			 // Added by Peter Petrov
 	}
 	
-	/**																// 
-	 * Handler for the window level 'orientationchange' event.		// 
-	 */																// Added by Peter Petrov
-	function onOrientationChange( event ) {					//		
-
-		switch(window.orientation){  								// 
-	      case -90:													// 
-	      case 90:													// 
-	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){						// 
-	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "none";							// 
-	   		 };																													// 
-	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
-	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";										// 
-	   		 };																													//
-	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){											// 
-	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "right";											// 
-	   		 };																													//
-	        break; 																												// 
-	      default:																												// 
-	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){						// 
-	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "inline-block";					// 
-	   		 };																													// 
-	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){										// 
-	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";										// 
-	   		 };																													//
-	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){											// 
-	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "center";											// 
-	   		 };																													//
-	        break; 																												// 
-	    }																														//
-
-		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
-						//
-		plus = 0;																												//
-		mobilesizes();																					//
-		meny.configure({ angle: deg });	
-		secalc_plus();	
-
-
-															// 
-		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov	
-
- 												// Added by Peter Petrov																										//																											//
-	}																															// 
+	/**																										 // 
+	 * Handler for the window level 'orientationchange' event.												 // 
+	 */																										 // Added by Peter Petrov
+	function onOrientationChange( event ) {																	 //		
+		switch(window.orientation){  																		 // 
+	      case -90:																							 // 
+	      case 90:																							 // 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){	 // 
+	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "none";		 // 
+	   		 };																								 // 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){					 // 
+	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";					 // 
+	   		 };																								 //
+	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){						 // 
+	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "right";						 // 
+	   		 };																								 //
+	        break; 																						 	 // 
+	      default:																							 // 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){	 // 
+	        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "inline-block";// 
+	   		 };																								 // 
+	      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){					 // 
+	        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "center";					 // 
+	   		 };																								 //
+	      	for(var i=0; i<=document.querySelectorAll(".reveal h2").length - 1; i++){						 // 
+	        	document.querySelectorAll(".reveal h2")[i].style.textAlign = "center";						 // 
+	   		 };																								 //
+	        break; 																							 // 
+	    }																						 		 	 //
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };			 //
+		plus = 0;																							 //
+		mobilesizes();																						 //
+		meny.configure({ angle: deg });																		 //
+		secalc_plus();																						 //
+		document.querySelectorAll(".meny-active .meny-arrow")[0].style.right = document.getElementsByClassName("meny")[0].clientWidth + 10 + "px"; // Added by Peter Petrov
+	}																										 // 
 
 	/**
 	 * Handle for the window level 'visibilitychange' event.
