@@ -4150,9 +4150,13 @@
 	   		 };																													//
 	        break; 																												// 
 	    }																														//
+<<<<<<< HEAD
 
 		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };	
 						//
+=======
+		if(document.getElementsByClassName("meny-arrow")[0].style.right=="300px"){meny.close(); };								//
+>>>>>>> parent of 393138e... test
 		plus = 0;																												//
 		mobilesizes();	
 																					//
