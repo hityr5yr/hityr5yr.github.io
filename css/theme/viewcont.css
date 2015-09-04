@@ -325,3 +325,7 @@ body {
   background-image: url(../../images/EN.png);
   background-size: 30px auto;
   }
+  .st_sharethis_custom{
+  background-image: url(../../images/ST.png);
+  background-size: 30px auto;
+}
