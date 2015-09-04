@@ -1,17 +1,629 @@
 <!doctype html>
 
-<html>
+<html lang="en">
 	<head>
+		<title>View Control by ViewCont</title>
+
+		<meta charset="utf-8">
+
+		<meta name="description" content="We make 3D illusions.">
+		<meta name="author" content="ViewCont Ltd.">
+
+		<meta name="keywords" content="3D illusions, street art, augmented reality, interior design, architecture design, outdoor advertising, улично изкуство, интериорен дизайн, добавена реалност, 3D илюзии, външна реклама, архитектурен дизайн">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/viewcont.css" id="theme">
+		<link rel="stylesheet" href="css/menu.css">
+		<link rel="stylesheet" href="css/fonts.css">
+
+		<link rel="shortcut icon" href="images/viewcont.ico">
+		
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
 		<script type="text/javascript">var switchTo5x=true;</script>
 		<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 		<script type="text/javascript">stLight.options({publisher: "76930973-14cc-4f8d-8968-6057b7c619dd", doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+		<!-- Browser Recognition -->
+		<script>
+			function css_browser_selector(u){var ua=u.toLowerCase(),is=function(t){return ua.indexOf(t)>-1},g='gecko',w='webkit',s='safari',o='opera',m='mobile',h=document.documentElement,b=[(!(/opera|webtv/i.test(ua))&&/msie\s(\d)/.test(ua))?('ie ie'+RegExp.$1):is('firefox/2')?g+' ff2':is('firefox/3.5')?g+' ff3 ff3_5':is('firefox/3.6')?g+' ff3 ff3_6':is('firefox/3')?g+' ff3':is('gecko/')?g:is('opera')?o+(/version\/(\d+)/.test(ua)?' '+o+RegExp.$1:(/opera(\s|\/)(\d+)/.test(ua)?' '+o+RegExp.$2:'')):is('konqueror')?'konqueror':is('blackberry')?m+' blackberry':is('android')?m+' android':is('chrome')?w+' chrome':is('iron')?w+' iron':is('applewebkit/')?w+' '+s+(/version\/(\d+)/.test(ua)?' '+s+RegExp.$1:''):is('mozilla/')?g:'',is('j2me')?m+' j2me':is('iphone')?m+' iphone':is('ipod')?m+' ipod':is('ipad')?m+' ipad':is('mac')?'mac':is('darwin')?'mac':is('webtv')?'webtv':is('win')?'win'+(is('windows nt 6.0')?' vista':''):is('freebsd')?'freebsd':(is('x11')||is('linux'))?'linux':'','js']; c = b.join(' '); h.className += ' '+c; return c;}; 
+			css_browser_selector(navigator.userAgent);
+			var ismac;
+			if(c.search('mac')!=-1){ismac = false;}
+			else{ismac = true;}
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<!--[if lt IE 9]>
+			<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<script>
+			function change_language(lang1, lang2){
+
+				var i, lng1 = lang1+"-lang", lng2 = lang2+"-lang", textelements1 = document.getElementsByClassName(lng1), textelements2 = document.getElementsByClassName(lng2);		
+				for(i = 0; i < textelements2.length; i++){
+					textelements2[i].style.display="none"; 
+				}
+				for(i = 0; i < textelements1.length; i++){
+					textelements1[i].style.display="block"; 
+				}
+				if(document.getElementsByClassName('bg-map')[0]){
+					if(lang1=='bg'){document.getElementsByClassName('bg-map')[0].style.zIndex = 2;}
+					else{document.getElementsByClassName('bg-map')[0].style.zIndex = 0;};
+				}
+				if(document.querySelectorAll(".reveal #lastpro center span a")){
+					if(lang1=='bg'){
+						document.getElementById("s1").style.display="block";					
+						document.getElementById("a1").style.display="inline-block";
+						document.getElementById("a1").style.opacity=1;
+						document.getElementById("s2").style.display="none";
+						document.getElementById("a2").style.display="none";						
+						}
+					else{
+						document.getElementById("s1").style.display="none";
+						document.getElementById("a1").style.display="none";
+						document.getElementById("s2").style.display="block";
+						document.getElementById("a2").style.display="inline-block";
+						document.getElementById("a2").style.opacity=1;
+						}
+					}
+			}
+			function hideunnecessary(){
+				document.getElementById('shortcuts').style.visibility='visible';	
+				document.getElementsByClassName('reveal')[0].style.display='none';
+				meny.close(); 
+			}	
+			function zoomout(){
+				var str = document.getElementsByTagName("html")[0].className;
+				if(str.search('zoomed')!=-1){zoom.out()}
+			}
+
+		</script>
 	</head>
-	<body>
+	<body onresize="plus = 0; pcandlaptopsizes(); meny.configure({ angle: deg }); secalc_plus(); var str = document.getElementsByTagName('html')[0].className; if(str.search('zoomed')!=-1){zoom.out()}">
+		<script src="js/reveal.js"></script>
+		<script src="js/meny.js"></script>
+		<p id="rights" style="border-radius: 5px; font-size: 14px; position: absolute; left: 50%; bottom: 2px; color: #fff; text-align: center; margin: 0 0 0 -62px; background: #2b4261;">© 2015 VIEWCONT Ltd.</p>
+		<div class="meny">
+			<div id="jointm">
+				<div id="sharethis">
 					<span class='st_sharethis_large' displayText='ShareThis'></span>
 					<span class='st_facebook_large' displayText='Facebook'></span>
 					<span class='st_twitter_large' displayText='Tweet'></span>
 					<span class='st_linkedin_large' displayText='LinkedIn'></span>
 					<span class='st_googleplus_large' displayText='Google +'></span>
 					<span class='st_email_large' displayText='Email'></span>
+				</div>
+				<ul class="bg-lang">
+					<li><a href="#/0" onclick="meny.close()">Начало</a></li>
+					<li><a href="#/1" onclick="meny.close()">Примери</a></li>
+					<li><a href="#/2" onclick="meny.close()">Технологията</a></li>
+					<li><a href="#/3" onclick="meny.close()">За клиенти</a></li>
+					<li><a href="#/4/0" onclick="meny.close()">Ние</a></li>
+					<li><a href="#/4/1" onclick="meny.close()">Контакти</a></li>	
+				</ul>
+				<ul class="en-lang">
+					<li><a href="#/1" onclick="meny.close()">Examples</a></li>
+					<li><a href="#/2" onclick="meny.close()">The Technology</a></li>
+					<li><a href="#/3" onclick="meny.close()">Customers only</a></li>
+					<li><a href="#/4/0" onclick="meny.close()">About us</a></li>
+					<li><a href="#/4/1" onclick="meny.close()">Contacts</a></li>
+				</ul>
+				<div class="en-lang" style="display: none;" onclick="change_language('bg', 'en')"></div>
+				<div class="bg-lang" onclick="change_language('en', 'bg')"></div>
+			</div>	
+		</div>
+		<div class="meny-arrow" onclick=""></div>
+		<div class="contents">
+			<div class="reveal">
+				<span class="st_sharethis_custom"></span>
+				<span id="lan1" class="en-lang" style="display: none; z-index: 1;" onclick="change_language('bg', 'en')"></span>
+				<span id="lan2" class="bg-lang" style="z-index: 1;" onclick="change_language('en', 'bg')"></span>
+				<div style="width: 270px; height: 67px; display: block; position: absolute; left: 0; top: 0; cursor: pointer; z-index: 1;" onclick="window.location.href='#/0'"></div>
+				<!-- Any section element inside of this container is displayed as a slide -->
+				<div class="slides">
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<center>
+							<div class="sectiondiv" style="width: 910px; padding: 20px!important;">
+								<div class="bg-lang gentext" style="height: 366px; width: 250px; float: left; margin: 0 20px 0 0;">
+									<span class="mozoom">
+									Въздействието на добавената реалност е поразително. Илюзорните образи, наблюдавани от определени места, карат човек да се потапя с удоволствие в измисления им свят или да ги съзерцава упорито, в опит да открие границата между действителност и фикция. Даже в простичък пример, като този.
+									<div class="divider"></div>
+									С помощта на създадения от нас софтуер ние постигаме неочакван оптичен ефект, както в рекламни решения и арт творби, така и в интериорен и дори екстериорен дизайн.</span> <a href="#/1/0" onclick="zoomout()">Няколко примера.</a>
+								</div>
+								<div class="en-lang gentext" style="height: 366px; width: 250px; float: left; margin: 0 20px 0 0;">
+									<span class="mozoom">
+									The impact of augmented reality is striking. Illusionary images seen from certain places make one immerse with a pleasure in their fictional world or to contemplate them hard, attempting to find the boundary between reality and fiction. Even in a simple example like this.
+									<div class="divider2"></div>							
+									We created software tools that allow us achieving unexpected optical effect in advertising solutions, art works, interior and even exterior design.</span>
+									<div class="divider2"></div>	
+									<a href="#/1/0" onclick="zoomout()">A Few Examples.</a>
+								</div>
+								<img src="examples/sticker-1.jpg" width="640" height="360" style="border: 0; margin: 0; display: block;"></img>
+								<div style="position: absolute; right: 29px; bottom: 24px;">
+									<span class="bg-lang note">В сътрудничество с <a href="https://www.facebook.com/rooster.design" target="_blank">Rooster Advertising</a> и магазин <a href="http://ardes.bg/magazini/pernik/pernik" target="_blank">Systems.bg</a></span>
+									<span class="en-lang note">In cooperation with <a href="https://www.facebook.com/rooster.design" target="_blank">Rooster Advertising</a> & <a href="http://ardes.bg/magazini/pernik/pernik" target="_blank">Systems.bg</a> Store</span>
+								</div>
+
+							</div>
+						</center>
+					</section>
+					<section id="prosection" data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<span id="autosel" style="position: absolute; top: -1000px; left: -1000px;">&nbsp;</span>
+						<section>
+							<h2 class="bg-lang" style="width: 564px">Примери</h2>
+							<h2 class="en-lang" style="width: 564px">Examples</h2>
+							<center>
+								<div class="sectiondiv" style="padding: 6px 0!important; width: 559px;">
+									<h3 class="bg-lang protitle">
+										Една повърхнина*
+									</h3>
+									<h3 class="en-lang protitle">
+										One surface*
+									</h3>
+									<p class="parentzoomel">
+										<img id="pr_1_1" class="zoomel" data-src="examples/1surface1.png">
+										<br>	
+										<span class="bg-lang">Поглед от зоната на илюзия</span>
+										<span class="en-lang">View from the illusion area</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_1_2" class="zoomel" data-src="examples/1surface2.png">
+										<br>	
+										<span class="bg-lang">Поглед отсреща</span>
+										<span class="en-lang">View from the opposite side</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация (метростанция "Дружба")</span>
+										<span class="en-lang note">*Simulation (Metro station "Fellowship")</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang" style="width: 564px">Примери</h2><h2 class="en-lang" style="width: 564px">Examples</h2>
+							<center>
+								<div class="sectiondiv" style="padding: 6px 0!important; width: 559px;">
+									<p class="bg-lang protitle">
+										Две повърхнини*
+									</p>
+									<p class="en-lang protitle">
+										Two surfaces*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_2_1" class="zoomel" data-src="examples/2surfaces1.png">
+										<br>	
+										<span class="bg-lang">Поглед от зоната на илюзия</span>
+										<span class="en-lang">View from the illusion area</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_2_2" class="zoomel" data-src="examples/2surfaces2.png">
+										<br>	
+										<span class="bg-lang">Поглед отстрани</span>
+										<span class="en-lang">Side view</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация (Петте кьошета)</span>
+										<span class="en-lang note">*Simulation (The five corners)</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="roll navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang" style="width: 564px">Примери</h2>
+							<h2 class="en-lang" style="width: 564px">Examples</h2>
+							<center>
+								<div class="sectiondiv" style="padding: 6px 0!important; width: 559px;">
+									<p class="bg-lang protitle">
+										Три повърхнини*
+									</p>
+									<p class="en-lang protitle">
+										Three surfaces*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_3_1" class="zoomel" data-src="examples/3surfaces1.png">
+										<br>	
+										<span class="bg-lang">Поглед от зоната на илюзия</span>
+										<span class="en-lang">View from the illusion area</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_3_2" class="zoomel" data-src="examples/3surfaces2.png">
+										<br>	
+										<span class="bg-lang">Поглед отстрани</span>
+										<span class="en-lang">Side view</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация (офис FIPRA)</span>
+										<span class="en-lang note">*Simulation (FIPRA Office)</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<a class="roll navigate-down enabled arrow" href="">↓</a>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang" style="width: 564px">Примери</h2>
+							<h2 class="en-lang" style="width: 564px">Examples</h2>
+							<center>
+								<div class="sectiondiv" style="padding: 6px 0!important; width: 559px;">
+									<p class="bg-lang protitle">
+										15 повърхнини*
+									</p>
+									<p class="en-lang protitle">
+										15 surfaces*
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_4_2" class="zoomel" data-src="examples/15surfaces2.jpg">
+										<br>	
+										<span class="bg-lang">3D модел, поглед отстрани<br>(междинен вариант)</span>
+										<span class="en-lang">3D model, side view<br>(an intermediate variant)</span>
+									</p>
+									<p class="parentzoomel">
+										<img id="pr_4_1" class="zoomel" data-src="examples/15surfaces1.jpg">
+										<br>	
+										<span class="bg-lang">Обект, поглед от зоната на илюзия<br>(oкончателен вариант)</span>
+										<span class="en-lang">Site, view from the illusion area<br>(the final variant)</span>
+									</p>
+									<div class="pronote">
+										<span class="bg-lang note">*Симулация (мост на бул. "Брюксел")</span>
+										<span class="en-lang note">*Simulation (Brussels Blvd. bridge)</span>
+									</div>
+								</div>
+								<div class="divider"></div>
+								<div id="lastpro">
+									<center class="quest" style="width: 564px;">
+										<span id="s1" class="bg-lang" style="line-height: 20px; font-size: 20px;"><a id="a1" href="#/2" onclick="zoomout()">Как го правим?</a></span>
+										<span id="s2" class="en-lang" style="line-height: 20px; font-size: 20px;"><a id="a2" href="#/2" onclick="zoomout()">How do we do it?</a></span>
+									</center>					
+								</div>
+							</center>
+						</section>
+					</section>
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<h2 class="bg-lang" style="width: 910px;">Технологията</h2>
+						<h2 class="en-lang" style="width: 910px;">The Technology</h2>
+						<div class="sectiondiv" style="width: 910px; padding: 0!important;">
+							<table style="font-size: 16px; border-bottom: 1px solid #fff; margin-bottom: 5px;">
+								<tbody>
+									<tr style="height: 225px;">
+										<td class="mozoom" width = "25%" style="vertical-align: bottom; background: url(images/camera.png) no-repeat center 15px">
+											<div class="bg-lang"><p style="height: 55px;" class="mozoom">1. Заснема се мястото и се намират визуалните му параметри.</p></div>
+											<div class="en-lang"><p style="height: 55px;" class="mozoom">1. Taking pictures of the place and calculating its visual parameters.</p></div>
+										</td>
+										<td class="mozoom" width = "25%" style="vertical-align: bottom; background: url(images/laptop1.png) no-repeat center 15px">
+											<div class="bg-lang"><p style="height: 55px;" class="mozoom">2. Построява се 3D модел за предварителна оценка на добавената реалност.</p></div>
+											<div class="en-lang"><p style="height: 55px;" class="mozoom">2. Building a 3D model for preliminary assessment of augmented reality.</p></div>
+										</td>
+										<td class="mozoom" width = "25%" style="vertical-align: bottom; background: url(images/laptop2.png) no-repeat center 15px">
+											<div class="bg-lang"><p style="height: 55px;" class="mozoom">3. Съвместяват се визуалните параметри на добавеното изображение и мястото.</p></div>
+											<div class="en-lang"><p style="height: 55px;" class="mozoom">3. Image and place visual parameters accordance.</p></div>
+										</td>
+										<td class="mozoom" width = "25%" style="vertical-align: bottom; background: url(images/stencils4.png) no-repeat center 15px">
+											<div class="bg-lang"><p style="height: 55px;" class="mozoom">4. Изготвят се шаблони, цветови палитри и маркери за полагане.</p></div>
+											<div class="en-lang"><p style="height: 55px;" class="mozoom">4. Preparing of templates, color palettes and markers.</p></div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="bg-lang" style="font-size: 16px; text-align: center;">
+								<span class="mozoom">За потребителя това означава:</span><br>
+								<ul style="width: auto; margin: 5px 0 10px">
+									<li class="mozoom">Възможност за реализация на проекти върху големи обекти със сложна форма;</li>
+									<li class="mozoom">Възможност за оценка и корекция на изображенията преди полагането им;</li>
+									<li class="mozoom">Многократно съкратено време за дизайн и полагане;</li>
+									<li class="mozoom">Гарантирана висока точност на положените изображения.</li>
+								</ul>
+							</div>
+							<div class="en-lang" style="font-size: 16px; text-align: center;">
+								<span class="mozoom">For the client that means:</span><br>
+								<ul style="width: auto; margin: 5px 0 10px">
+									<li class="mozoom">Opportunity for realization of projects on big and complex objects.</li>
+									<li class="mozoom">Possibility to estimate the image and correct it before applying on the object.</li>
+									<li class="mozoom">Dramatically shortened time of design and application.</li>
+									<li class="mozoom">Guaranteed high accuracy of applied images.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="divider2"></div>
+						<center class="quest" style="width: 910px;">
+							<div class="bg-lang" style="font-size: 18px;">Всъщност <a href="#/3" style="color: #2b4261;" onclick="zoomout()">какво получава потребителят?</a></div>
+							<div class="en-lang" style="font-size: 18px;">In fact, <a href="#/3" style="color: #2b4261;" onclick="zoomout()">the user gets what?</a></div>
+						</center>
+					</section>
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<center>
+							<h2 class="bg-lang" style="width: 645px;">За клиенти</h2>
+							<h2 class="en-lang" style="width: 645px;">For customers</h2>
+							<div class="sectiondiv">
+								<table style="width: 605px; height: 175px;">
+									<tbody>
+										<tr style="height: 75px">
+											<td class="mozoom" style="padding: 0!important; width: 210px; border-right: 1px solid #fff; border-bottom: 1px solid #fff; vertical-align: middle;">	
+												<div class="bg-lang"><div style="height: 75px; vertical-align: middle; display: table-cell;" class="mozoom">АРХИТЕКТИ, ДИЗАЙНЕРИ, РЕКЛАМНИ АГЕНЦИИ, ХУДОЖНИЦИ</div></div>
+												<div class="en-lang"><div style="height: 75px; vertical-align: middle; display: table-cell;" class="mozoom">ARCHITECTS, DESIGNERS, ADVERTISING AGENCIES, ARTISTS</div></div>
+											</td>
+											<td style="padding: 0 10px 10px!important; border-bottom: 1px solid #fff;">
+												<div class="bg-lang"><div class="mozoom" style="height: 75px; vertical-align: middle; display: table-cell;">Можем да ви консултираме при създаването на вашата творба, ще обработим вашето готово изображение, ще ви предоставим шаблоните и ако искате, ще ви дадем съвети при полагането.</div></div>
+												<div class="en-lang"><div class="mozoom" style="height: 75px; vertical-align: middle; display: table-cell;">We can advise you while you create your work. We will process your image and give you its templates. And if you want we will consult you on application of the image.</div></div>
+											</td>
+										</tr>
+										<tr style="height: 99px;">
+											<td style="padding: 10px 0 0!important; border-right: 1px solid #fff; vertical-align: middle;">
+												<div class="bg-lang" style="height: auto;"><div style="height: 99px; vertical-align: middle; display: table-cell;" class="mozoom">СОБСТВЕНИЦИ НА НЕДВИЖИМИ ИМОТИ</div></div>
+												<div class="en-lang" style="height: auto;"><div style="height: 99px; vertical-align: middle; display: table-cell;" class="mozoom">REAL ESTATE OWNERS</div></div>
+											</td>
+											<td class="mozoom" style="padding: 10px 10px 0;">
+												<div class="bg-lang"><div class="mozoom" style="height: 99px; vertical-align: middle; display: table-cell;">Ще се погрижим да създадем подходящо изображение, да го обработим за предвижданото място, да изготвим шаблоните и да го положим.</div></div>
+												<div class="en-lang"><div class="mozoom" style="height: 99px; vertical-align: middle; display: table-cell;">Complete solution: We will take care for creating a suitable image, we will process it for the envisaged place, we will make the templates and finally we will lay it there.</div></div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</center>
+						<div class="divider2"></div>
+						<center class="quest" style="width: 605px;">
+							<div class="bg-lang" style="font-size: 18px;"><a href="#/4/1" style="color: #2b4261;" onclick="zoomout()">Как да се свържете с нас?</a></div>
+							<div class="en-lang" style="font-size: 18px;"><a href="#/4/1" style="color: #2b4261;" onclick="zoomout()">How to contact us?</a></div>
+						</center>
+					</section>
+					<section data-background="images/viewcont.png" data-background-size="260px" data-background-repeat="no-repeat" data-background-position="5px 5px" data-transition="convex">
+						<section>
+							<h2 class="bg-lang" style="width: 635px;">Ние</h2>
+							<h2 class="en-lang" style="width: 635px;">About us</h2>
+							<center>
+								<div class="sectiondiv">
+									<table style="position: relative; z-index: 1; width: 635px; height: 295px;">
+										<tbody>
+											<tr>
+												<td class="mozoom">
+													<div id="webg" class="bg-lang gentext" style="height: 295px;"><span class="mozoom">
+														Ние сме българска високо-технологична компания, основана през пролетта на 2015 г. Развиваме научно-изследователска дейност в областта на приложната математика и информационните технологии.<br><br>
+														Oткрити от нас математически зависимости в епиполярната геометрия разкриват възможности за технологичен пробив в сфери като добавена реалност, машинно зрение, гейм индустрия и др. Целта ни е създаване на софтуерни средства, които ги прилагат.<br><br> 
+														Освен математически открития нашето ноу-хау включва собствени иновативни алгоритми и решения, а така също резултати от собствени научни изследвания. Притежаваме две патентни заявки, свързани с предмета ни на дейност.<br><br></span>
+														<img class="founderimg" src="images/ez.png"><div class="founder">Д-р Емил Зарков</div>
+													</div>
+													<div id="ween" class="en-lang gentext" style="height: 295px;"><span class="mozoom">
+														We are a Bulgarian hi-tech company, established at the beginning of 2015 for scientific research in the field of Applied Mathematics and 
+														Information Technologies.<br><br>
+														Discovered by us mathematical dependencies in epipolar geometry reveal great opportunities for technological breakthrough in areas like augmented reality, computer vision, game industry etc. We aim to develop software instruments that implement them.<br><br>
+														Besides the mathematical discoveries our know-how includes innovative algorithms and solutions, as well as results from scientific studies we have conducted. As a result of this work two applications for inventions have been submitted to the Bulgarian Patent Office.<br><br></span>
+														<img class="founderimg" src="images/ez.png"><div class="founder">Dr. Emil Zarkov</div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</center>
+							<div class="divider2"></div>
+							<center class="quest" style="width: 635px;">
+								<div class="bg-lang" style="font-size: 18px;"><a href="#/4/1" style="color: #2b4261;">Къде да ни намерите?</a></div>
+								<div class="en-lang" style="font-size: 18px;"><a href="#/4/1" style="color: #2b4261;">How to find us?</a></div>
+							</center>
+						</section>
+						<section>
+							<h2 class="bg-lang" style="width: 865px;">Контакти</h2>
+							<h2 class="en-lang" style="width: 865px;">Contacts</h2>
+							<center>
+								<div id="mapsec" style="display: table-cell; vertical-align: middle; background: #2b4261; height: 430px; width: 860px;">
+								<div class="mozoom">
+									<div class="sectiondiv" style="width: 245px; padding: 20px!important; float: left; height: 420px; margin-left: 0!important;">
+										<div class="bg-lang gentext" style="height: 44px;">
+											<img style="float: left;" src="images/home.png"><span class="mozoom" style="margin: 0 0 0 5px!important; float: left; ">гр. София, ул. Хубча №2,<br>офис 11</span>
+										</div>
+										<div class="en-lang gentext" style="height: 44px;">
+											<img style="float: left;" src="images/home.png"><span class="mozoom" style="margin: 0 0 0 5px!important; float: left;">1618 Sofia, 2 Hubcha str.,<br>Office 11</span>					
+										</div>
+										<div class="divider2"></div>
+										<div id="socialicons" style="height: 365px; width: 100%; display: inline-block; font-size: 16px!important;">
+											<img style="background: rgba(255, 255, 255, 0)!important; box-shadow: 0 0 10px rgba(0, 0, 0, 0)!important;float: left;" src="images/email.png"><div class="mozoom" style="text-align: left; display: block;">office<img src="images/@.png" style="vertical-align: text-bottom; float: none; margin: 0!important; box-shadow:none; webkit-box-shadow: none;">viewcont.com</div>
+											<div class="mozoom" style="width: 100%; height: 278px; display: block; clear: both; border-bottom: 1px solid #FFF; margin-bottom: 10px;"></div>
+											<div style="width: 100%; text-align: center;">
+												<a style="padding: 0 5px;" href="https://facebook.com/viewcont" target="_blank"><img class="soic" src="images/facebook.png"></a>
+												<a style="padding: 0 5px;" href="https://twitter.com/viewcont" target="_blank"><img class="soic"  style="margin: 0" src="images/twitter.png"></a>
+												<a style="padding: 0 5px;" href="https://linkedin.com/company/viewcont-ltd-" target="_blank"><img class="soic" style="margin: 0" src="images/linkedin.png"></a>
+												<a style="padding: 0 5px;" href="https://plus.google.com/108811430949420575742" target="_blank"><img class="soic" src="images/googleplus.png" style="margin: 0"></a>
+												<a style="padding: 0 5px;" href="https://youtube.com/channel/UCLlmHu1ukSE-5hzMr26uxIA" target="_blank"><img class="soic" style="margin: 0" src="images/youtube.png"></a>
+											</div>
+										</div>
+									</div>
+								</div>
+								</div>
+							</center>
+						</section>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script>
+			var deg, plus = 0;
+			function mobilesizes(){
+				switch(document.body.clientWidth){
+					case 568: deg = 90; plus = 13; break; // Apple iPhone 5
+					case 640: deg = 90; plus = 1; break;  // Google Nexus 4 & 5, LG Optimus L70, Samsung Galaxy
+					case 667: deg = 87; break; 			  // Apple iPhone 6
+					case 732: deg = 78.7; break; 		  // Google Nexus 6
+					case 736: deg = 78.3; break; 		  // Apple iPhone 6 plus
+					case 768: deg = 90; plus = 40; break; // Apple iPad
+					case 960: deg = 61.5; break; 		  // Google Nexus 7
+					case 1024: deg = 64.5; break;		  // Apple iPad
+					case 1280: deg = 43.5; break;		  // Google Nexus 10
+					default: deg = 0; break
+				}
+			}
+			function pcandlaptopsizes(){
+				switch(document.body.clientWidth){
+					case 533: deg = 90; plus = 18; break;	// Nokia Lumia 520
+					case 640: deg = 90; plus = 13.5; break; // BlackBerry Z30, Nokia N9, FF
+					case 768: deg = 75; break;
+					case 800: deg = 83.6; break;
+					case 819: deg = 81.6; break;			// FF
+					case 922: deg = 72; break;				// FF
+					case 1024: deg = 64.5; break;
+					case 1088: deg = 49.5; break; 			// FF
+					case 1093: deg = 49.2; break; 			// FF
+					case 1120: deg = 58.5; break; 			// FF
+					case 1152: deg = 49.5; break; 			// FF
+					case 1200: deg = 90; plus = 31; break;  // Amazon Kindle Fire HDX 7"
+					case 1280: deg = 40.5; break; 
+					case 1344: deg = 40; break; 			// FF
+					case 1360: deg = 37.4; break;
+					case 1366: deg = 37.2; break;
+					case 1400: deg = 45.1; break;
+					case 1440: deg = 37.8; break;
+					case 1536: deg = 32; break;
+					case 1600: deg = 90; plus = 9.5; break; // Amazon Kindle Fire HDX 8.9"
+					case 1680: deg = 31; break;
+					case 1920: deg = 24; break;
+					case 2560: deg = 18; break; 			// Amazon Kindle Fire HDX 8.9"
+					default: deg = 0; break
+				}					
+			}
+			if(c.search('mobile')!=-1){mobilesizes();}
+			else{pcandlaptopsizes();};
+			// Create an instance of Meny
+			var meny = Meny.create({
+				// The element that will be animated in from off screen
+				menuElement: document.querySelector( '.meny' ),
+
+				// The contents that gets pushed aside while Meny is active
+				contentsElement: document.querySelector( '.contents' ),
+
+				// [optional] The alignment of the menu (top/right/bottom/left)
+				position: Meny.getQuery().p || 'right',
+
+				// [optional] The height of the menu (when using top/bottom position)
+				height: 200,
+
+				// [optional] The width of the menu (when using left/right position)
+				width: 320,
+
+				// [optional] Distance from mouse (in pixels) when menu should open
+				threshold: 20,
+
+				// [optional] Use mouse movement to automatically open/close
+				mouse: true,
+
+				// [optional] Use touch swipe events to open/close
+				touch: false,
+				// Rotation around Y
+				angle: deg
+			});
+
+			// API Methods:
+			// meny.open();
+			// meny.close();
+			// meny.isOpen();
+
+			// Events:
+			// meny.addEventListener( 'open', function(){ console.log( 'open' ); } );
+			// meny.addEventListener( 'close', function(){ console.log( 'close' ); } );
+
+			// Embed an iframe if a URL is passed in
+			if( Meny.getQuery().u && Meny.getQuery().u.match( /^http/gi ) ) {
+				var contents = document.querySelector( '.contents' );
+				contents.style.padding = '0px';
+				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
+			}
+		</script>
+
+		<script src="lib/js/head.min.js"></script>
+
+		<script>
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: false,
+				history: true,
+				center: true,
+				transition: 'concave', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+//					{ src: 'plugin/wave/webcam-swiper-0.1.js'}, // Added by Peter Petrov
+//					{ src: 'plugin/wave/client.js'}  // Added by Peter Petrov
+				]
+			});
+			function changeclass(){
+				if(c.search('mobile')!=-1){
+					var mozoomel = document.querySelectorAll('.mozoomel');
+					for(var i=0; i<mozoomel.length; i++){
+						mozoomel[i].className = "zoomel";
+					}
+				}
+			}
+
+			document.onload = onloadfunc();
+			function onloadfunc(){
+				changeclass();
+				secalc_plus();
+			}
+
+			function secalc_plus(){
+//				var secnum = 100/(Reveal.getTotalSlides());
+//				document.getElementsByClassName('progress')[0].style.backgroundSize = secnum + '% 100%';
+//				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseover', 'document.getElementById("menuicon").style.opacity=1');
+//				document.getElementsByClassName('slide-number')[0].setAttribute('onmouseout', 'document.getElementById("menuicon").style.opacity=0.7');
+				document.getElementsByTagName('BODY')[0].style.background =   "fixed url('images/sitebg.png') no-repeat";
+				if(c.search('mobile')!=-1&&document.body.clientWidth>document.body.clientHeight){
+			      	for(var i=0; i<=document.querySelectorAll(".reveal a.navigate-down.arrow").length - 1; i++){
+			        	document.querySelectorAll(".reveal a.navigate-down.arrow")[i].style.display = "none";
+			   		 };	
+			      	for(var i=0; i<=document.querySelectorAll(".reveal .quest").length - 1; i++){
+			        	document.querySelectorAll(".reveal .quest")[i].style.textAlign = "right";
+			   		 };	
+				}
+				if(screen.width<screen.height){var screenrate = screen.height/screen.width;}
+				else{var screenrate = screen.width/screen.height;}
+				if(screenrate<1.775){
+					if(screen.width<screen.height){
+						document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.width*1.775 + 'px ' + screen.width + 'px';
+					}
+					else{document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.height*1.775 + 'px ' + screen.height + 'px';}
+				}	
+				else{
+					if(screen.width<screen.height){
+						document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.width*1.775 + 'px ' + screen.width + 'px';
+					}
+					else{document.getElementsByTagName('BODY')[0].style.backgroundSize = screen.height*1.775 + 'px ' + screen.height + 'px';}
+				}
+
+				if(screen.width<screen.height){
+					document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availWidth-document.body.clientWidth)+'px';
+				}
+				else{document.getElementsByTagName('BODY')[0].style.backgroundPosition = '0px -'+(window.screen.availHeight-document.body.clientHeight)+'px';}
+			}
+		</script>
+
+		<!-- Google Analytics -->
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-6064237-13', 'auto');
+		  ga('send', 'pageview');
+		</script>
 	</body>
 </html>

@@ -328,4 +328,12 @@ body {
   .st_sharethis_custom{
   background-image: url(../../images/ST.png);
   background-size: 30px auto;
+  z-index: 1; 
+  position: absolute; 
+  top: 10px; 
+  right: 50px;
+  height: 30px;
+  width: 30px;
+  opacity: 0.7;
+  cursor: pointer;
 }
